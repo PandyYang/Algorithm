@@ -9,29 +9,60 @@ import java.util.Queue;
 /**
  * @Author Pandy
  * @Date 2021/7/31 14:54
+ *
+ * 使用广度优先遍历解决树的层次遍历问题
+ *
+ * DFS 深度优先搜索
+ * void dfs(TreeNode root) {
+ *     if (root == null) {
+ *         return;
+ *     }
+ *     dfs(root.left);
+ *     dfs(root.right);
+ *  }
+ *
+ *
+ *
+ * BFS 广度优先搜索 层次遍历 最短路径
+ *
+ *  void bfs(TreeNode root) {
+ *     Queue<TreeNode> queue = new ArrayDeque<>();
+ *     queue.add(root);
+ *     while (!queue.isEmpty()) {
+ *         TreeNode node = queue.poll(); // Java 的 pop 写作 poll()
+ *         if (node.left != null) {
+ *             queue.add(node.left);
+ *         }
+ *         if (node.right != null) {
+ *             queue.add(node.right);
+ *         }
+ *     }
+ * }
+ *
+ *
+ *
+ * 二叉树的层序遍历
+ * 使用队列实现
+ *
  */
 public class LevelOrder {
     public static ArrayList<ArrayList<Integer>> levelOrder1(TreeNode root) {
+        // 创建一个二位数组
         ArrayList<ArrayList<Integer>> res = new ArrayList<ArrayList<Integer>>();
-        if (root == null)
-            return res;
-
+        if (root == null) return res;
+        // 创建队列将根节点放入队列 根节点是单独的一层
         Queue<TreeNode> queue = new LinkedList<TreeNode>();
         queue.offer(root);
 
         while (!queue.isEmpty()) {
-                ArrayList<Integer> level = new ArrayList<Integer>();
-
+            // 创建收集每一层的元素的列表
+            ArrayList<Integer> level = new ArrayList<Integer>();
             int levelNum = queue.size();
+            // 记录这一层中的节点数量n
             for (int i = 0; i < levelNum; i++) {
-
-                if (queue.peek().left != null)
-                    queue.offer(queue.peek().left);
-
-                if (queue.peek().right != null)
-                    queue.offer(queue.peek().right);
-
                 level.add(queue.poll().val);
+                if (queue.peek().left != null) queue.offer(queue.peek().left);
+                if (queue.peek().right != null) queue.offer(queue.peek().right);
             }
             res.add(level);
         }
