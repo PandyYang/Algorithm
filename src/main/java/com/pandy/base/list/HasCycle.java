@@ -8,6 +8,8 @@ import java.util.Set;
 /**
  * @Author Pandy
  * @Date 2021/7/31 14:29
+ * 使用set存储所有的节点 一直顺着链表向下查找
+ * 如果查找到相同的元素 则证明有环
  */
 public class HasCycle {
     public boolean hasCycle(ListNode head) {
