@@ -22,6 +22,7 @@ public class LRUCache {
 
     public int get(int key) {
         if (map.keySet().contains(key)) {
+            // 移除之后再加入，为了确保顺序在前
             int value = map.get(key);
             map.remove(key);
             // 保证每次查询之后都在末尾
