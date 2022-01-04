@@ -1,7 +1,6 @@
 package com.pandy.base.tree;
 
 import com.pandy.common.TreeNode;
-import sun.reflect.generics.tree.Tree;
 
 /**
  * @Author Pandy
