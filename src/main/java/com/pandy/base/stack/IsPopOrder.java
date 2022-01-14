@@ -4,6 +4,7 @@ import java.util.Stack;
 
 /**
  * 输入两个栈 判断栈的压入弹出序列
+ * 通过 Stack 进行模拟 push，当 pop 的节点等于 Stack 的 top 节点时，pop Stack
  *
  * 假设有一串数字要将他们压栈: 1 2 3 4 5
  *
@@ -35,7 +36,7 @@ public class IsPopOrder {
             s.push(pushA[i]);
             while (j < len && s.peek() == popA[j]) {
                 s.pop();
-                j = j+1;
+                j++;
             }
         }
         return s.empty();
@@ -43,6 +44,7 @@ public class IsPopOrder {
 
     public static void main(String[] args) {
         System.out.println(is(new int[]{1, 2, 3, 4, 5}, new int[]{4, 3, 5, 1, 2}));
+        System.out.println(is(new int[]{1, 2, 3, 4, 5}, new int[]{5, 4, 3, 2, 1}));
     }
 
 }
