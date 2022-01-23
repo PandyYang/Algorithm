@@ -22,4 +22,14 @@ public class TreeDepth {
         depth(root.left, max, curDepth+1);
         depth(root.right, max, curDepth+1);
     }
+
+    /**
+     * 二叉树的最大深度 二叉树的深度为根节点到最远子节点的最长路径上的节点数
+     * @param root
+     * @return
+     */
+    private int maxDepth(TreeNode root) {
+        if (root == null) return 0;
+        return Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;
+    }
 }
