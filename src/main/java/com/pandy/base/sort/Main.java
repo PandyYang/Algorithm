@@ -190,8 +190,6 @@ class Main {
      * 每次遍历，刷新最后一个元素的位置（自减1），直至其与首元素相交，即完成排序。
      *
      * 时间复杂度：O(NlogN) 　　稳定性：不稳定
-     *
-     * @param arr
      */
     void heapSort(int[] nums) {
         int size = nums.length;
