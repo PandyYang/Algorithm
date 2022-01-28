@@ -23,4 +23,39 @@ public class MergeList {
         }
     }
 
+    private static ListNode merge2(ListNode a, ListNode b) {
+        if (a == null && b == null)
+            return null;
+        if (a == null)
+            return b;
+        if (b == null)
+            return a;
+        ListNode head = a.val > b.val ? b : a;
+        ListNode index1 = head.next;
+        ListNode index2 = head == a ? b : a;
+        while (index1 != null && index2 != null) {
+            if (index1.val < index2.val) {
+                head.next = (index1);
+                index1 = index1.next;
+            } else {
+                head.next = (index2);
+                index2 = index2.next;
+            }
+            head = head.next;
+        }
+        if (index1 == null) {
+            while (index2 != null) {
+                head.next = (index2);
+                index2 = index2.next;
+                head = head.next;
+            }
+        } else {
+            while (index1 != null) {
+                head.next = (index1);
+                index1 = index1.next;
+                head = head.next;
+            }
+        }
+        return a.val > b.val ? b : a;
+    }
 }
