@@ -37,6 +37,12 @@ public class PackageProblem {
         return dp[weight.length][packageContainWeight];
     }
 
+    /**
+     * 递归解法
+     * @param i
+     * @param j
+     * @return
+     */
     public static int pro2(int i, int j) {
         if (i == -1)
             return 0;
