@@ -7,30 +7,45 @@ package com.pandy.base.array;
  * 奇数位于数组的前半部分，所有偶数位于数组的后半部分。
  **/
 public class EvenAndOdd {
+    public static void reOrder(int[] datas)
+    {
+        if (datas == null || datas.length <= 0)
+        {
+            return;
+        }
 
-    public static void mysort(int[] arr) {
-        if (arr == null) return;
-        int left = 0;
-        int right = arr.length - 1;
-        while (left < right) {
-            while (left < right && isEven(arr[left])) {
-                left ++ ;
+        int begin = 0;
+        int end = datas.length - 1;
+        int temp = -1;
+
+        while (begin < end)
+        {
+            // 向后移动begin，直到它指向偶数
+            while (begin < end && datas[begin] % 2 != 0)
+            {
+                begin++;
+            }
+            // 向前移动pEnd，直到它指向奇数
+            while (begin < end && datas[end] % 2 == 0)
+            {
+                end--;
             }
 
-            while (left < right && isEven(arr[right])) {
-                right --;
+            if (begin < end)
+            {
+                // 交换偶数和奇数
+                temp = datas[begin];
+                datas[begin] = datas[end];
+                datas[end] = temp;
             }
-
-            if (left < right) {
-                int temp = arr[right];
-                arr[right] = arr[left];
-                arr[left] = temp;
-            }
-            if (left >= right) break;
         }
     }
 
-    private static boolean isEven(int i) {
-        return (i & 0x1) == 0;
+    public static void main(String[] args) {
+        int[] arr = new int[]{1,3,6,4,7,8,2};
+        reOrder(arr);
+        for (int i : arr) {
+            System.out.println("i = " + i);
+        }
     }
 }
