@@ -3,6 +3,11 @@ package com.pandy.base.array;
 /**
  * @author: Pandy
  * @create: 2022/1/3
+ *
+ * 股票的最大利润
+ *
+ * 重点的步骤有两个，
+ *
  **/
 public class MaxProfit {
     public int maxProfit(int[] prices) {

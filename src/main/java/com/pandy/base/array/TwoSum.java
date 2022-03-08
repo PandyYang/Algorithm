@@ -10,7 +10,7 @@ import java.util.Map;
  * 使用map存储坐标
  **/
 public class TwoSum {
-    public static int[] twoSum(int arr[], int target) {
+    public static int[] twoSum(int[] arr, int target) {
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < arr.length; i++) {
             int res = target - arr[i];

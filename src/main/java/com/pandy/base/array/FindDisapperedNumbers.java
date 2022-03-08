@@ -8,7 +8,7 @@ import java.util.List;
  * @create: 2022/2/26
  * 找出数组中消失的数字
  *
- * 数字范围1 - n，而数组下标 0 - n-1 则可用数组原地标记数字是否出现过
+ * 数字范围1 ---- n，而数组下标 0 ---- n-1 则可用数组原地标记数字是否出现过
  **/
 public class FindDisapperedNumbers {
 

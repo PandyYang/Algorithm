@@ -13,6 +13,7 @@ public class GreatestSumOfSubArray {
 
         int max = arr[0];
         int sum = 0;
+
         for (int i : arr) {
             if (sum + i > i) {
                 sum += i;

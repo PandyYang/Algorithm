@@ -18,6 +18,7 @@ public class FindNumberWithSum {
         int start = 0, end = arr.length - 1;
 
         int minMulti = Integer.MAX_VALUE;
+
         int a = -1, b = -1;
 
         while (start < end) {

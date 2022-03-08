@@ -15,6 +15,10 @@ package com.pandy.base.array;
  * 则最右边从mid开始，若左中右三值相等，取mid前后值中较小的数。
  * 1 2 3 4 5
  *
+ * 2 3 4 5 1
+ *
+ * 3 4 5 1 2
+ *
  * 4 5 1 2 3
  */
 public class MinNumInRotateArray {

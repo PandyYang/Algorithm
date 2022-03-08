@@ -18,8 +18,10 @@ package com.pandy.base.array;
 public class FindNumber {
     public static Integer findNum(int[] arr) {
         if (arr == null) return null;
+
         int result = arr[0];
         int count = 1;
+
         for (int i = 1; i < arr.length; i++) {
             if (count == 0) {
                 result = arr[i];
