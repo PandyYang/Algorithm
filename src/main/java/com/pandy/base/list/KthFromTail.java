@@ -16,6 +16,7 @@ public class KthFromTail {
 
         ListNode node1 = a;
         ListNode node2 = null;
+        // 快链表先走k步
         for (int i = 0; i < k - 1; i++) {
             if (node1.next == null) {
                 // k比链表的长度大
