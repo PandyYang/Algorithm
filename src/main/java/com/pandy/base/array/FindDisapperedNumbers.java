@@ -19,6 +19,7 @@ public class FindDisapperedNumbers {
             int index = Math.abs(nums[i]) - 1;
             if (nums[index] > 0) {
                 nums[index] = -nums[index];
+                System.out.println(nums[index]);
             }
         }
 
@@ -28,5 +29,42 @@ public class FindDisapperedNumbers {
             }
         }
         return res;
+    }
+
+    public List<Integer> findDisappearedNumbers(int[] nums) {
+        int len = nums.length;
+        int index = 0;
+        while (index < len) {
+            // 数字在对应的索引位置上
+            if (nums[index] == index + 1) {
+                index++;
+            } else {
+                int targetIndex = nums[index] - 1;
+                if (nums[targetIndex] == nums[index]) {
+                    index++;
+                    continue;
+                }
+                int temp = nums[targetIndex];
+                nums[targetIndex] = nums[index];
+                nums[index] = temp;
+            }
+        }
+
+        List<Integer> res = new ArrayList<>();
+        for (int i = 0; i < len; i++) {
+            if (nums[i] != i+1) {
+                res.add(i+1);
+            }
+        }
+        return res;
+    }
+
+    public static void main(String[] args) {
+        System.out.println("=====================");
+        int[] arr = new int[]{4,3,2,7,8,2,3,1};
+        List<Integer> integers = find(arr);
+        for (Integer integer : integers) {
+            System.out.println(integer);
+        }
     }
 }
