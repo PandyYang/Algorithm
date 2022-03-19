@@ -11,7 +11,7 @@ package com.pandy.base.array;
  **/
 public class GetNumOfK {
 
-    public int getNumOfk(int[] arr, int k) {
+    public static int getNumOfk(int[] arr, int k) {
         if (arr == null || arr.length == 0) return 0;
 
         // 二分查找 先找出第一个k出现得位置
@@ -55,5 +55,11 @@ public class GetNumOfK {
         }
 
         return sum;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = new int[]{1, 2, 2, 3, 4, 5, 6, 7, 8};
+        int res = getNumOfk(arr, 2);
+        System.out.println("res = " + res);
     }
 }
