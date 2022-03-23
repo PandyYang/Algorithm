@@ -3,12 +3,17 @@ package com.pandy.base.divide;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 加括号的位置
+ */
 // 加括号的位置 各种组合得出的值
 public class DiffWaysToCompute {
     public static List<Integer> diffWaysToCompute(String input) {
         List<Integer> cow = new ArrayList<>();
+
         for (int i = 0; i < input.length(); i++) {
             char c = input.charAt(i);
+
             if (c == '+' || c == '-' || c == '*') {
                 List<Integer> left = diffWaysToCompute(input.substring(0, i));
                 List<Integer> right = diffWaysToCompute(input.substring(i + 1));
