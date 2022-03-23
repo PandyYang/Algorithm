@@ -15,7 +15,8 @@ public class Find {
         int rowA = 0;
         int colA = row;
         while (rowA < arr[0].length && colA >= 0) {
-            if (arr[rowA][colA] == target) return true;
+            if (arr[rowA][colA] == target)
+                return true;
             if (arr[rowA][colA] > target) {
                 colA--;
             } else if (arr[rowA][colA] < target) {
