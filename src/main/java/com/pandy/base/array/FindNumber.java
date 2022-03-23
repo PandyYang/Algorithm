@@ -17,6 +17,10 @@ import java.util.Map;
  *
  * 因为数组中有一个数字出现的次数超过数组长度的一半
  * 如果我们把众数（出现次数超过一半的数字）记为 +1，把其他数记为 −1，将它们全部加起来，显然和大于 0，从结果本身我们可以看出众数比其他数多。
+ *
+ *
+ * 解法2：
+ * 使用map存储元素与出现的次数，遍历map，寻找出现次数最大的
  **/
 public class FindNumber {
     public static Integer findNum(int[] arr) {
