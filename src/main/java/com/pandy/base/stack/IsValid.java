@@ -3,7 +3,6 @@ package com.pandy.base.stack;
 import java.util.Stack;
 
 /**
- * 阿里巴巴面试题
  * 判断括号的合法性
  *
  * 思路：
@@ -20,11 +19,11 @@ public class IsValid {
         Stack<Character> stack = new Stack<>();
         for (char c : s.toCharArray()) {
             if (c == '(')
-                stack.push(c);
+                stack.push(')');
             else if (c == '{')
-                stack.push(c);
+                stack.push('}');
             else if (c == '[')
-                stack.push(c);
+                stack.push(']');
             //未完成之前栈不能为空 并且弹出的元素要和c相等 否则直接为false
             else if (stack.isEmpty() || stack.pop() != c)
                 return false;
