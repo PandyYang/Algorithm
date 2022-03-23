@@ -5,6 +5,11 @@ package com.pandy.base.array;
  * @create: 2022/1/8
  * 输⼊⼀个整数数组，实现⼀个函数来调整该数组中数字的顺序，使得所有
  * 奇数位于数组的前半部分，所有偶数位于数组的后半部分。
+ *
+ *
+ * 解法：
+ * 双指针遍历，从前遍历寻找偶数，从前遍历寻找奇数
+ * 找到之后 交换
  **/
 public class EvenAndOdd {
     public static void reOrder(int[] datas)
@@ -20,12 +25,12 @@ public class EvenAndOdd {
 
         while (begin < end)
         {
-            // 向后移动begin，直到它指向偶数
+            // 从前移动begin，直到它指向偶数
             while (begin < end && datas[begin] % 2 != 0)
             {
                 begin++;
             }
-            // 向前移动pEnd，直到它指向奇数
+            // 从后移动pEnd，直到它指向奇数
             while (begin < end && datas[end] % 2 == 0)
             {
                 end--;
