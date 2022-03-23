@@ -12,13 +12,13 @@ public class MaxSubArray {
         int res = arr[0];
         // 最大值
         int sum = 0;
-        for (int num : arr) {
-            if (num > 0) {
+        for (int i : arr) {
+            if (i > 0) {
                 // 子序列最大和
-                res += num;
+                res += i;
             } else {
                 // 此时上一个子序列不可能为最大 初始化坐标为当前的负值
-                sum = num;
+                sum = i;
             }
             res = Math.max(res, sum);
         }
