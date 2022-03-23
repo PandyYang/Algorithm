@@ -1,4 +1,4 @@
-package com.pandy.base.array;
+package com.pandy.base.map;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -24,7 +24,7 @@ public class TwoSum {
     }
 
     public static void main(String[] args) {
-        int arr[] = {2, 7 , 11, 15};
+        int[] arr = {2, 7, 11, 15};
         int[] ints = twoSum(arr, 9);
         for (int anInt : ints) {
             System.out.println("anInt = " + anInt);

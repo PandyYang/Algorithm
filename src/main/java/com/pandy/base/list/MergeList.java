@@ -8,6 +8,8 @@ import java.util.List;
  * @author: Pandy
  * @create: 2022/1/3
  * 合并两个有序的链表
+ *
+ * 使用递归的方式
  **/
 public class MergeList {
     public ListNode merge(ListNode l1, ListNode l2) {

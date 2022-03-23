@@ -39,8 +39,10 @@ public class ReverseList {
      * @return
      */
     private ListNode reverseList3(ListNode head) {
+
         ListNode prev = null;
         ListNode curr = head;
+
         while (curr != null) {
             ListNode nxt = curr.next;
             // 反转

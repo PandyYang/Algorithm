@@ -7,6 +7,9 @@ import java.util.List;
 
 /**
  * 环形链表的入口
+ * <p>
+ * list存储扫描过的节点
+ * 求下一个节点是否在链表中出现过
  */
 public class EntryNodeOfLoop {
     public ListNode test(ListNode listNode) {

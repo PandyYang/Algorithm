@@ -8,7 +8,7 @@ import com.pandy.common.ListNode;
  * 求链表的中间节点
  **/
 public class MiddleNode {
-    private static ListNode getMin(ListNode root) {
+    private static ListNode getMiddle(ListNode root) {
         if (root == null) return null;
         ListNode slow = root;
         ListNode fast = root;

@@ -7,7 +7,10 @@ import java.util.Set;
  * @author Pandy
  * @date 31/12/2021
  * 无重复字符的最长子串 使用滑动窗口求解
+ *
  * 使用set进行滑动窗口
+ * 使用两个指针
+ * 滑动窗口都使用双指针解决，并且记录最长长度
  */
 public class MaxSubString {
     public int lengthOfLongestSubstring(String s) {

@@ -1,4 +1,4 @@
-package com.pandy.base.list;
+package com.pandy.base.array;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;

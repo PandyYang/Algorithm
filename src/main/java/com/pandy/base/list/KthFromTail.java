@@ -6,6 +6,9 @@ import com.pandy.common.ListNode;
  * @author: Pandy
  * @create: 2022/1/9
  * 打印倒数第k个节点
+ *
+ * 快慢指针
+ * 快指针走k个，慢指针才开始走，等快指针走到末尾，慢指针处于倒数第k个链表
  **/
 public class KthFromTail {
     private static Integer kthFromTail(ListNode a, int k) {

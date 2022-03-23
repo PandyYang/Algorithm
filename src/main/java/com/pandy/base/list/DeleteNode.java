@@ -5,6 +5,11 @@ import com.pandy.common.ListNode;
 /**
  * @author Pandy
  * @date 27/12/2021
+ *
+ * 删除节点分为三种情况"
+ * 头结点
+ * 尾结点
+ * 中间节点
  */
 public class DeleteNode {
     public void deleteNode(ListNode head, ListNode deListNode) {
