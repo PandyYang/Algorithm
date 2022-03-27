@@ -22,36 +22,26 @@ package com.pandy.base.array;
  * 4 5 1 2 3
  */
 public class MinNumInRotateArray {
-    public int minNumberInRotateArray(int[] array) {
-        if (array == null || array.length == 0) return 0;
-        int left = 0;
-        int right = array.length - 1;
-        int mid = 0;
-        // 左大于右 数组已经旋转
-        while (array[left] >= array[right]) {
+    public static int minNumberInRotateArray(int[] numbers) {
+        int low = 0;
+        int high = numbers.length - 1;
+        while (low < high) {
+            int pivot = low + (high - low) / 2;
 
-            if(right - left <= 1) {
-                mid = right;
-                break;
-            }
-            mid = (left + right)/2;
-            if (array[left] == array[mid] && array[mid] == array[right]) {
-                // 出现相同的数字
-                if (array[left + 1] != array[right - 1]) {
-                    mid = array[left + 1] < array[right - 1] ? left + 1 : right - 1;
-                } else {
-                    left++;
-                    right--;
-                }
+            //
+            if (numbers[pivot] < numbers[high]) {
+                high = pivot;
+            } else if (numbers[pivot] > numbers[high]) {
+                low = pivot + 1;
             } else {
-                if (array[left] <= array[mid]) {
-                    left = mid;
-                } else {
-                    right = mid;
-                }
+                high -= 1;
             }
         }
+        return numbers[low];
+    }
 
-        return array[mid];
+    public static void main(String[] args) {
+        int i = minNumberInRotateArray(new int[]{2,3,4,5,1});
+        System.out.println("i = " + i);
     }
 }
