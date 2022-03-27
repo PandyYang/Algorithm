@@ -9,7 +9,7 @@ import com.pandy.common.TreeNode;
  *
  * 创建一个二叉树
  */
-public class BuildTree {
+public class BinaryTree {
     public TreeNode root = null;
 
     public TreeNode createBinaryTree(int[] arr, int index) {
