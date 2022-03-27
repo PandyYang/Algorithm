@@ -49,7 +49,7 @@ public class LowestCommonAncestor {
     }
 
     public static void main(String[] args) {
-        BinaryTree binaryTree = new BinaryTree();
+        BuildTree binaryTree = new BuildTree();
         TreeNode root = binaryTree.createBinaryTree(new int[]{3, 5, 1, 6, 2, 0, 8, 0, 0, 7, 4}, 0);
         System.out.println(low(root, 5, 1));
     }
