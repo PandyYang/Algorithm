@@ -17,7 +17,7 @@ import java.util.Arrays;
  * 思想就是根据前序遍历的第一个节点是跟节点，找到中序遍历此节点的位置，
  * 左边就是左子树，右边就是右子树，然后递归重建。
  */
-public class ReConstruct {
+public class BuildTree {
     private static TreeNode reConstructBinaryTree(int []pre, int []in) {
         if (pre == null || in == null) return null;
         if (pre.length == 0 || in.length == 0) return null;
