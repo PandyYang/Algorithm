@@ -42,9 +42,22 @@ public class IsPopOrder {
         return s.empty();
     }
 
+    public static boolean validate(int[] pushed, int[] popped) {
+        Stack<Integer> stack = new Stack<>();
+        int i = 0;
+        for (int num : pushed) {
+            stack.push(num);
+            while (!stack.isEmpty() && stack.peek() == popped[i]) {
+                stack.pop();
+                i++;
+            }
+        }
+        return stack.isEmpty();
+    }
+
     public static void main(String[] args) {
-        System.out.println(is(new int[]{1, 2, 3, 4, 5}, new int[]{4, 3, 5, 1, 2}));
-        System.out.println(is(new int[]{1, 2, 3, 4, 5}, new int[]{5, 4, 3, 2, 1}));
+        System.out.println(validate(new int[]{1, 2, 3, 4, 5}, new int[]{4, 3, 5, 1, 2}));
+        System.out.println(validate(new int[]{1, 2, 3, 4, 5}, new int[]{5, 4, 3, 2, 1}));
     }
 
 }
