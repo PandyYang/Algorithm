@@ -11,13 +11,13 @@ package com.pandy.base.array;
  */
 public class TwoSum {
 
-    public int[] twoSum(int[] numbers, int target) {
+    public static int[] twoSum(int[] numbers, int target) {
         int n = numbers.length;
         int left = 0;
         int right = n - 1;
         while (left <= right) {
             if (numbers[left] + numbers[right] == target) {
-                return new int[]{left + 1, right + 1};
+                return new int[]{left, right};
             } else if (numbers[left] + numbers[right] > target) {
                 right --;
             } else {
@@ -25,5 +25,12 @@ public class TwoSum {
             }
         }
         return new int[]{-1, -1};
+    }
+
+    public static void main(String[] args) {
+        int[] ints = twoSum(new int[]{2, 7, 11, 15}, 9);
+        for (int anInt : ints) {
+            System.out.println("anInt = " + anInt);
+        }
     }
 }
