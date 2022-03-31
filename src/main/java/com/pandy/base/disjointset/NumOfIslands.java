@@ -59,7 +59,7 @@ public class NumOfIslands {
 
         int nr = grid.length;
         int nc = grid[0].length;
-        int res = 0;
+
         UnionFind uf = new UnionFind(grid);
         for (int r = 0; r < nr; r++) {
             for (int c = 0; c < nc; c++) {
@@ -89,8 +89,8 @@ public class NumOfIslands {
                 {'0', '0', '1', '0', '0'}, {'0', '0', '0', '1', '0'}
         };
 
-        com.pandy.base.dfs.NumOfIslands numOfIslands = new com.pandy.base.dfs.NumOfIslands();
-        int i = numOfIslands.numOfIslands(arr);
+        NumOfIslands numOfIslands = new NumOfIslands();
+        int i = numOfIslands.numIslands(arr);
         System.out.println("i = " + i);
     }
 }
