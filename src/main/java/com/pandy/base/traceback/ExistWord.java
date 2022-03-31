@@ -1,5 +1,8 @@
 package com.pandy.base.traceback;
 
+/**
+ * 二维矩阵中存在单词
+ */
 class ExistWord {
 
     private boolean find;
