@@ -2,6 +2,8 @@ package com.pandy.base.list;
 
 import com.pandy.common.ListNode;
 
+import java.util.Stack;
+
 /**
  * @Author Pandy
  * @Date 2021/7/31 13:19
@@ -53,5 +55,27 @@ public class ReverseList {
             curr = nxt;
         }
         return prev;
+    }
+
+    public void reverseList(ListNode head) {
+        if (head == null || head.next == null) return;
+
+        ListNode currentNode = head;
+        Stack<ListNode> stack = new Stack<>();
+
+        while (currentNode != null) {
+            stack.push(currentNode);
+            ListNode tempNode = currentNode.next;
+            currentNode.next = null;
+            currentNode = tempNode;
+        }
+
+        head = stack.pop();
+        currentNode = head;
+
+        while (!stack.isEmpty()) {
+            currentNode.next = stack.pop();
+            currentNode = currentNode.next;
+        }
     }
 }
