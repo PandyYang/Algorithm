@@ -10,24 +10,14 @@ package com.pandy.base.sort;
  */
 public class FastSort {
    private static void quickSort(int[] arr, int left, int right) {
-       if (left > right) {
-           return;
-       }
-
        // base中存放基准数
        int base = arr[left];
        int i = left, j = right;
        while (i != j) {
            // 顺序很重要，先从右边开始往左找，直到找到比base值小的数
-           while (arr[j] >= base && i < j) {
-               j--;
-           }
-
+           while (arr[j] >= base && i < j) j--;
            // 再从左往右找，直到找到比base值大的数
-           while (arr[i] <= base && i < j) {
-               i++;
-           }
-
+           while (arr[i] <= base && i < j) i++;
            if (i < j) {
                int temp = arr[i];
                arr[i] = arr[j];
@@ -42,4 +32,29 @@ public class FastSort {
        quickSort(arr, left, i - 1);
        quickSort(arr, i + 1, right);
    }
+
+    class Solution {
+        public int[] sortArray(int[] nums) {
+            if(nums.length <= 1) return nums;
+            qSort(nums, 0, nums.length - 1);
+            return nums;
+        }
+
+        void qSort(int[] arr, int s, int e) {
+            int l = s, r = e;
+            if(l < r) {
+                int temp = arr[l];
+                while(l < r) {
+                    while(l < r && arr[r] >= temp) r--;
+                    if(l < r) arr[l] = arr[r];
+                    while(l < r &&  arr[l] < temp) l++;
+                    if(l < r) arr[r] = arr[l];
+                }
+
+                arr[l] = temp;
+                qSort(arr, s, l);
+                qSort(arr, l+1, e);
+            }
+        }
+    }
 }
