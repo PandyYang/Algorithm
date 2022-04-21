@@ -66,4 +66,13 @@ public class Permute {
             used[i] = false;
         }
     }
+
+    public static void main(String[] args) {
+        Permute p = new Permute();
+        List<List<Integer>> permute = p.permute(new int[]{1, 2, 3});
+
+        for (List<Integer> integers : permute) {
+            System.out.println("integers = " + integers);
+        }
+    }
 }
