@@ -13,8 +13,8 @@ public class In {
     public void inOrderTraversal(TreeNode root) {
         if (root != null) {
             inOrderTraversal(root.left);
-            inOrderTraversal(root.right);
             System.out.println(root.val);
+            inOrderTraversal(root.right);
         }
     }
 
