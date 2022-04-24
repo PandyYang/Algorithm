@@ -1,4 +1,4 @@
-package com.pandy.base.array.chapter01;
+package com.pandy.base.array;
 
 import java.util.ArrayList;
 import java.util.List;

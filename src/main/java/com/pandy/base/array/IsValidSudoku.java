@@ -1,4 +1,4 @@
-package com.pandy.base.array.chapter01;
+package com.pandy.base.array;
 
 /**
  * @author: Pandy

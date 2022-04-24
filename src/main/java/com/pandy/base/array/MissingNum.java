@@ -1,4 +1,4 @@
-package com.pandy.base.array.chapter01;
+package com.pandy.base.array;
 
 /**
  * @author: Pandy
@@ -9,7 +9,7 @@ package com.pandy.base.array.chapter01;
  * 只要是有序的数组 都可以使用二分法进行查找
  **/
 public class MissingNum {
-    
+
     public int missingNum(int[] nums) {
         int i = 0, j = nums.length -1;
         while (i <= j) {
