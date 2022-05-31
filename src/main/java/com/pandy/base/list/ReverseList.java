@@ -46,13 +46,13 @@ public class ReverseList {
         ListNode curr = head;
 
         while (curr != null) {
-            ListNode nxt = curr.next;
+            ListNode next = curr.next;
             // 反转
             curr.next = prev;
             // 向前移动
             prev = curr;
             // 向前移动
-            curr = nxt;
+            curr = next;
         }
         return prev;
     }

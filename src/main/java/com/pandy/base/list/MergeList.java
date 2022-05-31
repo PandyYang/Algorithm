@@ -2,8 +2,6 @@ package com.pandy.base.list;
 
 import com.pandy.common.ListNode;
 
-import java.util.List;
-
 /**
  * @author: Pandy
  * @create: 2022/1/3

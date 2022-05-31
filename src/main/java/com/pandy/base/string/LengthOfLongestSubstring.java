@@ -1,15 +1,15 @@
 package com.pandy.base.string;
 
-import java.util.*;
+import java.util.HashMap;
 
 /**
  * @author: Pandy
  * @create: 2022/3/29
- *
+ * 
  * 无重复字符的最长子串
  * 给定一个字符串 s ，请你找出其中不含有重复字符的 最长子串 的长度。
- *
- *
+ * 
+ * 
  * abcabcbb，当i等于3时，也就是指向了第二个a, 此时我就需要查之前有没有出现过a,
  * 如果出现了是在哪一个位置出现的。然后通过last[index] 查到等于1, 也就是说，
  * 如果start 依然等于0的话，那么当前窗口就有两个a了，也就是字符串重复了，
@@ -19,7 +19,7 @@ import java.util.*;
  **/
 public class LengthOfLongestSubstring {
     public static int length(String s) {
-       int[] last = new int[128];
+        int[] last = new int[128];
         int n = s.length();
 
         int res = 0;
@@ -38,22 +38,22 @@ public class LengthOfLongestSubstring {
         return res;
     }
 
+    public static void main(String[] args) {
+        int abcabcbb = length("aab");
+        System.out.println("abcabcbb = " + abcabcbb);
+    }
+
     public int lengthOfLongestSubstring(String s) {
         HashMap<Character, Integer> map = new HashMap<>();
         int max = 0, start = 0;
         for (int end = 0; end < s.length(); end++) {
             char ch = s.charAt(end);
-            if (map.containsKey(ch)){
-                start = Math.max(map.get(ch)+1,start);
+            if (map.containsKey(ch)) {
+                start = Math.max(map.get(ch) + 1, start);
             }
-            max = Math.max(max,end - start + 1);
-            map.put(ch,end);
+            max = Math.max(max, end - start + 1);
+            map.put(ch, end);
         }
         return max;
-    }
-
-    public static void main(String[] args) {
-        int abcabcbb = length("aab");
-        System.out.println("abcabcbb = " + abcabcbb);
     }
 }

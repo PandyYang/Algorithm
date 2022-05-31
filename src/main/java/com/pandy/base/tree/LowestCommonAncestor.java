@@ -9,27 +9,6 @@ import com.pandy.common.TreeNode;
  */
 public class LowestCommonAncestor {
 
-    /**
-     * 所有的递归返回值有4种情况 null p q 公共祖先
-     * @param root
-     * @param p
-     * @param q
-     * @return
-     */
-    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-        // 遍历到叶节点就会返回null
-        if (root == p || root == q || root == null) return root;
-        TreeNode left = lowestCommonAncestor(root.left, p, q);
-        TreeNode right = lowestCommonAncestor(root.right, p, q);
-
-        if (left != null && right != null) {
-            return root;
-        } else if (left != null) {
-            return left;
-        } else return right;
-    }
-
-
     public static int low(TreeNode root, int o1, int o2) {
         return commonAncestor(root, o1, o2).val;
     }
@@ -52,5 +31,26 @@ public class LowestCommonAncestor {
         BinaryTree binaryTree = new BinaryTree();
         TreeNode root = binaryTree.createBinaryTree(new int[]{3, 5, 1, 6, 2, 0, 8, 0, 0, 7, 4}, 0);
         System.out.println(low(root, 5, 1));
+    }
+
+    /**
+     * 所有的递归返回值有4种情况 null p q 公共祖先
+     *
+     * @param root
+     * @param p
+     * @param q
+     * @return
+     */
+    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+        // 遍历到叶节点就会返回null
+        if (root == p || root == q || root == null) return root;
+        TreeNode left = lowestCommonAncestor(root.left, p, q);
+        TreeNode right = lowestCommonAncestor(root.right, p, q);
+
+        if (left != null && right != null) {
+            return root;
+        } else if (left != null) {
+            return left;
+        } else return right;
     }
 }

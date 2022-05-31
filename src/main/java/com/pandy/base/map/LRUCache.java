@@ -7,21 +7,20 @@ import java.util.Map;
 /**
  * @author: Pandy
  * @create: 2022/1/1
- *
  **/
 public class LRUCache {
 
     // 缓存容量
-    private int cap;
+    private final int cap;
 
-    private Map<Integer, Integer> map = new LinkedHashMap<>(); // 保持插入顺序
+    private final Map<Integer, Integer> map = new LinkedHashMap<>(); // 保持插入顺序
 
     public LRUCache(int capacity) {
         this.cap = capacity;
     }
 
     public int get(int key) {
-        if (map.keySet().contains(key)) {
+        if (map.containsKey(key)) {
             // 移除之后再加入，为了确保顺序在前
             int value = map.get(key);
             map.remove(key);
@@ -33,7 +32,7 @@ public class LRUCache {
     }
 
     public void put(int key, int value) {
-        if (map.keySet().contains(key)) {
+        if (map.containsKey(key)) {
             map.remove(key);
         } else if (map.size() == cap) {
             Iterator<Map.Entry<Integer, Integer>> iterator = map.entrySet().iterator();

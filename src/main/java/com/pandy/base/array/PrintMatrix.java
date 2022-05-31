@@ -28,7 +28,7 @@ public class PrintMatrix {
 
         for (; left <= right && top <= bottom; ) {
             if (top == bottom) {
-                for (int i = left; i <= right ; i++) {
+                for (int i = left; i <= right; i++) {
                     res.add(matrix[top][i]);
                 }
                 break;

@@ -3,7 +3,7 @@ package com.pandy.base.string;
 /**
  * @author: Pandy
  * @create: 2022/1/15
- *
+ * 
  * 反转句子
  **/
 public class ReverseSentence {
@@ -13,7 +13,7 @@ public class ReverseSentence {
 
         String[] split = str.split(" ");
         StringBuilder builder = new StringBuilder();
-        for (int i = split.length - 1;  i >= 0 ; i--) {
+        for (int i = split.length - 1; i >= 0; i--) {
             builder.append(split[i]);
 
             if (i != 0) builder.append(" ");

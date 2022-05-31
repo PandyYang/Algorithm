@@ -23,7 +23,7 @@ public class ZConvert {
             rows.get(i).append(c);
 
             //  i为0或最后一个 分别加1 或者减去 1 z字形振动
-            if (i==0 || i == numRows - 1) flag = -flag;
+            if (i == 0 || i == numRows - 1) flag = -flag;
             i += flag;
         }
 

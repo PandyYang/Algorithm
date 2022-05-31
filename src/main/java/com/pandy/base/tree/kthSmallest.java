@@ -5,7 +5,7 @@ import com.pandy.common.TreeNode;
 /**
  * @author Pandy
  * @date 19/4/2022
- *
+ * 
  * 二叉搜索树 找到树中第k小的节点
  */
 public class kthSmallest {
@@ -23,6 +23,7 @@ public class kthSmallest {
 
     /**
      * 查找子节点的个数
+     *
      * @param root
      * @return
      */

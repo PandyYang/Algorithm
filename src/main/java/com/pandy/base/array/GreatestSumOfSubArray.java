@@ -8,7 +8,7 @@ package com.pandy.base.array;
  **/
 public class GreatestSumOfSubArray {
 
-    public int find(int[] arr) {
+    public int greatestSumOfSubArray(int[] arr) {
         if (arr == null || arr.length == 0) return 0;
 
         int max = arr[0];

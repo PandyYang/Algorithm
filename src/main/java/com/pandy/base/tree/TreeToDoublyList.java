@@ -8,11 +8,11 @@ import java.util.List;
 /**
  * @author Pandy
  * @date 29/3/2022
- *
+ * 
  * 将二叉搜索树转换为双向循环链表
  */
 public class TreeToDoublyList {
-    private List<TreeNode> list = new ArrayList<>();
+    private final List<TreeNode> list = new ArrayList<>();
 
     public TreeNode treeToDoublyList(TreeNode root) {
         if (root == null) return null;

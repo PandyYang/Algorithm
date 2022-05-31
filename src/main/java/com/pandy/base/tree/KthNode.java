@@ -11,7 +11,7 @@ public class KthNode {
     public TreeNode kth(TreeNode pRoot, int k) {
         TreeNode[] nodes = new TreeNode[1];
         int[] ints = {0};
-        
+
         kthNode(pRoot, k, nodes, ints);
 
         return nodes[0];

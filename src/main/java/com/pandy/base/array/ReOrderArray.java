@@ -10,7 +10,7 @@ public class ReOrderArray {
         if (array == null) return;
         for (int i = 1; i < array.length; i++) {
             int temp = array[i];
-            int j = i-1;
+            int j = i - 1;
             // 奇数
             if (array[i] % 2 != 0) {
                 // 遍历所有i之前的元素
@@ -21,19 +21,19 @@ public class ReOrderArray {
                     }
                     // 偶数 和前面的奇数调换顺序
                     if (array[j] % 2 == 0) {
-                        int t = array[j+1];
-                        array[j+1] = array[j];
+                        int t = array[j + 1];
+                        array[j + 1] = array[j];
                         array[j] = t;
                         j--;
                     }
                 }
             }
-            array[j+1] = temp;
+            array[j + 1] = temp;
         }
     }
 
     public static void main(String[] args) {
-        int[] arr = new int[]{1,3,2,6,8,4,5};
+        int[] arr = new int[]{1, 3, 2, 6, 8, 4, 5};
         reOrderArray(arr);
         for (int i : arr) {
             System.out.println("i = " + i);

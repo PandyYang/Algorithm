@@ -6,7 +6,8 @@ package com.pandy.base.dynamic;
  **/
 public class Fib {
 
-    private int mod = 1000000007;
+    private final int mod = 1000000007;
+
     public int fib(int n) {
         int f0 = 0, f1 = 1;
         if (n < 2) return n;

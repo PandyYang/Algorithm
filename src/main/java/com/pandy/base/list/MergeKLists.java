@@ -2,7 +2,6 @@ package com.pandy.base.list;
 
 import com.pandy.common.ListNode;
 
-import java.util.Comparator;
 import java.util.PriorityQueue;
 
 /**

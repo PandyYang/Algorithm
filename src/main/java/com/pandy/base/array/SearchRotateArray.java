@@ -4,11 +4,10 @@ package com.pandy.base.array;
  * @author: Pandy
  * @create: 2022/1/6
  * 搜索旋转排序数组
- *
+ * 
  * 0 1 2 4 5 6 7
- *
+ * 
  * 4,5,6,7,0,1,2
- *
  **/
 public class SearchRotateArray {
 
@@ -41,7 +40,7 @@ public class SearchRotateArray {
     }
 
     public static void main(String[] args) {
-        int[] arr = new int[] {4, 5, 6, 7 ,0, 1, 2};
+        int[] arr = new int[]{4, 5, 6, 7, 0, 1, 2};
         int search = search(arr, 6);
         System.out.println("search = " + search);
     }

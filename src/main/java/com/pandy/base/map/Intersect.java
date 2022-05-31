@@ -38,7 +38,7 @@ public class Intersect {
     }
 
     public static void main(String[] args) {
-        int[] ints = intersect(new int[]{4,9,5}, new int[]{9,4,9,8,4});
+        int[] ints = intersect(new int[]{4, 9, 5}, new int[]{9, 4, 9, 8, 4});
         for (int anInt : ints) {
             System.out.println("anInt = " + anInt);
         }

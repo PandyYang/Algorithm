@@ -5,18 +5,13 @@ import com.pandy.common.TreeNode;
 /**
  * @author: Pandy
  * @create: 2022/1/23
- *
+ * 
  * 判断一个二叉树是否为平衡二叉树
- *
+ * 
  * 思路：根据二叉树的定义，我们可以递归遍历二叉树的每一个节点，求出每个节点的左右子树的高度，如果每个节点的
  * 左右子树的高度差不超过1，按照定义，他就是一颗平衡二叉树。
  **/
 public class isBalance {
-
-    public boolean isBalanced(TreeNode root) {
-        if (root == null) return true;
-        return helper(root)  != -1;
-    }
 
     private static int helper(TreeNode root) {
         if (root == null) return 0;
@@ -29,5 +24,10 @@ public class isBalance {
         }
 
         return Math.max(left, right) + 1;
+    }
+
+    public boolean isBalanced(TreeNode root) {
+        if (root == null) return true;
+        return helper(root) != -1;
     }
 }

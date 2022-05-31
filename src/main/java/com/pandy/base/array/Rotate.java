@@ -8,7 +8,6 @@ package com.pandy.base.array;
  *
  * 由于矩阵中的行列从 00 开始计数，因此对于矩阵中的元素 matrix[row][col]
  * 在旋转后，它的新位置为[col][n−row−1]。
- *
  **/
 public class Rotate {
 
@@ -17,7 +16,7 @@ public class Rotate {
         int[][] matrix_new = new int[n][n];
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                matrix_new[j][n-i-1] = matrix[i][j];
+                matrix_new[j][n - i - 1] = matrix[i][j];
             }
         }
 

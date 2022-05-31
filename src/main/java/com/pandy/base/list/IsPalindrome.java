@@ -28,7 +28,7 @@ public class IsPalindrome {
         }
 
         while (!stack.isEmpty()) {
-            if (!Integer.valueOf(stack.pop().val).equals(Integer.valueOf(head.val))) {
+            if (!stack.pop().val.equals(head.val)) {
                 return false;
             }
             head = head.next;

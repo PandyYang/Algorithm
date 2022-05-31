@@ -27,9 +27,10 @@ public class CalPoints {
                         list.add(Integer.parseInt(cur));
                         break;
                 }
-
         }
+
         int sum = 0;
+
         for (Integer integer : list) {
             sum += integer;
         }

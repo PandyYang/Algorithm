@@ -18,6 +18,8 @@ public class FastSort {
            while (arr[j] >= base && i < j) j--;
            // 再从左往右找，直到找到比base值大的数
            while (arr[i] <= base && i < j) i++;
+
+           // 大小做交换
            if (i < j) {
                int temp = arr[i];
                arr[i] = arr[j];

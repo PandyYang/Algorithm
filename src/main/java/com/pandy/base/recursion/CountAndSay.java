@@ -15,7 +15,7 @@ public class CountAndSay {
             StringBuilder builder = new StringBuilder();
             // 记录每一位的数字
             char pre = str.charAt(0);
-            int  count = 1;
+            int count = 1;
 
             // 每一位数字 还要进行拆分 和当前数字进行
             for (int j = 1; j < str.length(); j++) {

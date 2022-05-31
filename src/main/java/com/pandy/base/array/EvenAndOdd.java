@@ -12,10 +12,9 @@ package com.pandy.base.array;
  * 找到之后 交换
  **/
 public class EvenAndOdd {
-    public static void reOrder(int[] datas)
-    {
-        if (datas == null || datas.length <= 0)
-        {
+    public static void reOrder(int[] datas) {
+
+        if (datas == null || datas.length <= 0) {
             return;
         }
 
@@ -23,8 +22,7 @@ public class EvenAndOdd {
         int end = datas.length - 1;
         int temp = -1;
 
-        while (begin < end)
-        {
+        while (begin < end) {
             // 从前移动begin，直到它指向偶数
             while (begin < end && datas[begin] % 2 != 0)
             {

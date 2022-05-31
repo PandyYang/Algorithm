@@ -6,6 +6,17 @@ package com.pandy.base.dfs;
  */
 public class NumOfIslands {
 
+    public static void main(String[] args) {
+        char[][] arr = new char[][]{
+                {'1', '1', '0', '0', '0'}, {'1', '1', '0', '0', '0'},
+                {'0', '0', '1', '0', '0'}, {'0', '0', '0', '1', '0'}
+        };
+
+        NumOfIslands numOfIslands = new NumOfIslands();
+        int i = numOfIslands.numOfIslands(arr);
+        System.out.println("i = " + i);
+    }
+
     public int numOfIslands(char[][] grid) {
         if (grid == null || grid.length == 0) return 0;
 
@@ -25,7 +36,7 @@ public class NumOfIslands {
     }
 
     private void dfs(char[][] grid, int r, int c) {
-        int nr =grid.length;
+        int nr = grid.length;
         int nc = grid[0].length;
 
         // 跳过越界或者不为1的地方  只寻找范围内的岛屿
@@ -43,17 +54,5 @@ public class NumOfIslands {
         dfs(grid, r, c - 1);
         // 右
         dfs(grid, r, c + 1);
-    }
-
-
-    public static void main(String[] args) {
-        char[][] arr = new char[][] {
-                {'1', '1', '0', '0', '0'}, {'1', '1', '0', '0', '0'},
-                {'0', '0', '1', '0', '0'}, {'0', '0', '0', '1', '0'}
-        };
-
-        NumOfIslands numOfIslands = new NumOfIslands();
-        int i = numOfIslands.numOfIslands(arr);
-        System.out.println("i = " + i);
     }
 }

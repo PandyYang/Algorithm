@@ -26,32 +26,7 @@ class Node {
 };
 */
 class Solution {
-    private List<Node> list = new ArrayList<>();
-    public Node treeToDoublyList(Node root) {
-        if(root == null) return null;
-        mid(root);
-
-        Node p = list.get(0);
-        Node head = p;
-
-        for(int i = 1; i < list.size(); i++) {
-            Node q = list.get(i);
-            p.right = q;
-            q.left = p;
-            p = q;
-        }
-
-        p.right = head;
-        head.left = p;
-        return head;
-    }
-
-    private void mid(Node root) {
-        if(root == null) return;
-        mid(root.left);
-        list.add(root);
-        mid(root.right);
-    }
+    private final List<Node> list = new ArrayList<>();
 
     public static void main(String[] args) {
         Node root1 = new Node(1);
@@ -68,5 +43,31 @@ class Solution {
         Solution solution = new Solution();
         Node node = solution.treeToDoublyList(root4);
         System.out.println("node = " + node);
+    }
+
+    public Node treeToDoublyList(Node root) {
+        if (root == null) return null;
+        mid(root);
+
+        Node p = list.get(0);
+        Node head = p;
+
+        for (int i = 1; i < list.size(); i++) {
+            Node q = list.get(i);
+            p.right = q;
+            q.left = p;
+            p = q;
+        }
+
+        p.right = head;
+        head.left = p;
+        return head;
+    }
+
+    private void mid(Node root) {
+        if (root == null) return;
+        mid(root.left);
+        list.add(root);
+        mid(root.right);
     }
 }

@@ -35,6 +35,10 @@ public class AddString {
         return stringBuffer.reverse().toString();
     }
 
+    public static void main(String[] args) {
+        String s = addString("999", "999");
+        System.out.println("s = " + s);
+    }
 
     public String addStrings(String num1, String num2) {
         int i = num1.length() - 1, j = num2.length() - 1, add = 0;
@@ -51,11 +55,5 @@ public class AddString {
         // 计算完以后的答案需要翻转过来
         ans.reverse();
         return ans.toString();
-    }
-
-
-    public static void main(String[] args) {
-        String s = addString("999", "999");
-        System.out.println("s = " + s);
     }
 }

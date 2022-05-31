@@ -9,6 +9,12 @@ import java.util.Set;
  * @create: 2022/3/29
  **/
 public class NthUglyNum {
+    public static void main(String[] args) {
+        NthUglyNum nthUglyNum = new NthUglyNum();
+        int i = nthUglyNum.nthUglyNumber(1690);
+        System.out.println(i);
+    }
+
     public int nthUglyNumber(int n) {
         if (n <= 0) {
             return 0;
@@ -39,7 +45,7 @@ public class NthUglyNum {
     }
 
     public int nUglyNumber(int n) {
-        int[] factors = {2,3,5};
+        int[] factors = {2, 3, 5};
         Set<Long> seen = new HashSet<>();
         PriorityQueue<Long> heap = new PriorityQueue<>();
         seen.add(1L);
@@ -56,12 +62,6 @@ public class NthUglyNum {
             }
         }
         return ugly;
-    }
-
-    public static void main(String[] args) {
-        NthUglyNum nthUglyNum = new NthUglyNum();
-        int i = nthUglyNum.nthUglyNumber(1690);
-        System.out.println(i);
     }
 
 }

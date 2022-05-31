@@ -3,7 +3,7 @@ package com.pandy.base.math;
 /**
  * @author: Pandy
  * @create: 2022/3/23
- *
+ * 
  * 7进制数
  **/
 public class ConvertToBase7 {

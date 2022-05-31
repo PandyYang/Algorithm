@@ -22,10 +22,10 @@ public class LongestPalindrome {
                 if (i - j < 2) {
                     lps[j][i] = chars[i] == chars[j];
                 } else {
-                    lps[j][i] = lps[j+1][i-1] && (chars[i] == chars[j]);
+                    lps[j][i] = lps[j + 1][i - 1] && (chars[i] == chars[j]);
                 }
 
-                if (lps[j][i] && i-j+1 > maxLen) {
+                if (lps[j][i] && i - j + 1 > maxLen) {
                     maxLen = i - j + 1;
                     start = j;
                 }

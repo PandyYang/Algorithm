@@ -10,9 +10,9 @@ public class MaxArea {
 
     public int maxArea(int[] arr) {
         int max = 0;
-        for (int i = 0, j = arr.length - 1; i < j;) {
+        for (int i = 0, j = arr.length - 1; i < j; ) {
             int minLength = arr[i] < arr[j] ? arr[i++] : arr[j--];
-            max = Math.max(max, (j-i+1) * minLength);
+            max = Math.max(max, (j - i + 1) * minLength);
         }
         return max;
     }

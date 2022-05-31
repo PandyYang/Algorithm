@@ -5,9 +5,9 @@ import com.pandy.common.TreeNode;
 /**
  * @author Pandy
  * @date 23/3/2022
- *
+ * 
  * 将有序数组转换为二叉搜索树
- *
+ * 
  * 由于输入是一个升序排列的有序数组。因此任意选择一点，将其作为根节点，其左部分左节点，
  * 其右部分右节点即可。 因此我们很容易写出递归代码。
  * 而题目要求是高度平衡的二叉搜索树，因此我们必须要取中点。
@@ -29,7 +29,7 @@ public class SortedArrayToBST {
 
         TreeNode root = new TreeNode(nums[mid]);
         root.left = dfs(nums, low, mid - 1);
-        root.right = dfs(nums, mid+1, high);
+        root.right = dfs(nums, mid + 1, high);
         return root;
     }
 }

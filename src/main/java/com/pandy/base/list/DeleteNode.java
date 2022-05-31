@@ -12,8 +12,15 @@ import com.pandy.common.ListNode;
  * 中间节点
  */
 public class DeleteNode {
+
+    /**
+     * 按照节点删除
+     * @param head
+     * @param deListNode
+     */
     public void deleteNode(ListNode head, ListNode deListNode) {
         if (deListNode == null || head == null) return;
+        // 头结点
         if (head == deListNode) head = null;
         else{
             // 最后一个节点
@@ -26,13 +33,19 @@ public class DeleteNode {
                 // 移除最后一个节点
                 pointListNode.next = null;
             } else {
-                // 非最后一个节点 指针后移
+                // 中间节点
                 deListNode.val = deListNode.next.val;
                 deListNode.next = deListNode.next.next;
             }
         }
     }
 
+    /**
+     * 按照节点值删除
+     * @param head
+     * @param val
+     * @return
+     */
     public ListNode deleteNode(ListNode head, int val) {
         if(head == null) return head;
         ListNode cur = head;

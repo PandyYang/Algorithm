@@ -14,7 +14,7 @@ public class Divide {
 
         // 记录符号位
         int sign = -1;
-        if ((dividend > 0 && divisor >0) || (dividend < 0 && divisor < 0)) {
+        if ((dividend > 0 && divisor > 0) || (dividend < 0 && divisor < 0)) {
             sign = 1;
         }
 

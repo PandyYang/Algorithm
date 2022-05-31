@@ -13,9 +13,9 @@ public class TranslateNum {
         for (int i = 2; i < str.length(); i++) {
             String tmpStr = str.substring(i - 2, i);
             if (tmpStr.compareTo("10") >= 0 && tmpStr.compareTo("25") <= 0) {
-                dp[i] = dp[i-1] + dp[i-2];
+                dp[i] = dp[i - 1] + dp[i - 2];
             } else {
-                dp[i] = dp[i-1];
+                dp[i] = dp[i - 1];
             }
         }
         return dp[dp.length - 1];
@@ -27,7 +27,7 @@ public class TranslateNum {
         if (ba <= 9 || ba >= 26) {
             return translateNum2(num / 10);
         } else {
-            return translateNum2(num/10) + translateNum2(num/100);
+            return translateNum2(num / 10) + translateNum2(num / 100);
         }
     }
 }

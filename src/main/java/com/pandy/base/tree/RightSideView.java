@@ -10,14 +10,17 @@ import java.util.Queue;
 /**
  * @author: Pandy
  * @create: 2022/5/6
- *
+ * 
  * 二叉树的右视图
  **/
 public class RightSideView {
 
 
+    List<Integer> res = new ArrayList<>();
+
     /**
      * BFS 利用广度优先搜索进行层次遍历，只记录下每层的最后一个元素。
+     *
      * @param root
      * @return
      */
@@ -48,8 +51,6 @@ public class RightSideView {
         }
         return res;
     }
-
-    List<Integer> res = new ArrayList<>();
 
     public List<Integer> rightSideView2(TreeNode root) {
         dfs(root, 0);

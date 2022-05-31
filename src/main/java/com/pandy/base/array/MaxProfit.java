@@ -7,7 +7,6 @@ package com.pandy.base.array;
  * 股票的最大利润
  *
  * 重点的步骤有两个，
- *
  **/
 public class MaxProfit {
     public int maxProfit(int[] prices) {

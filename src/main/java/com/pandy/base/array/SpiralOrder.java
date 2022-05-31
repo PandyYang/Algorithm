@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * @author: Pandy
  * @create: 2022/3/27
- *
+ * 
  * 螺旋矩阵
  **/
 class Solution {
@@ -17,11 +17,11 @@ class Solution {
 
         // 左 上从0开始
         // 下 右 分别是row - 1 和 col - 1
-        int l = 0, t = 0, b = row - 1, r  = col - 1;
+        int l = 0, t = 0, b = row - 1, r = col - 1;
 
         while (true) {
             // 左右
-            for (int i = l; i<= r; i++) res.add(matrix[t][i]);
+            for (int i = l; i <= r; i++) res.add(matrix[t][i]);
 
             // 上下
             if (++t > b) break;
@@ -29,12 +29,12 @@ class Solution {
 
             // 右左
             if (--r < l) break;
-            for (int i = r; i>= l; i--) res.add(matrix[b][i]);
+            for (int i = r; i >= l; i--) res.add(matrix[b][i]);
 
             // 下上
             if (--b < t) break;
-            for (int i = b; i>= t; i--) res.add(matrix[i][l]);
-            if (++l > r) break;;
+            for (int i = b; i >= t; i--) res.add(matrix[i][l]);
+            if (++l > r) break;
         }
         return res;
     }

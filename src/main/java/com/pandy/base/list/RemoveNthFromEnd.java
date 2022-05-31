@@ -1,7 +1,6 @@
 package com.pandy.base.list;
 
 import com.pandy.common.ListNode;
-import com.pandy.common.TreeNode;
 
 /**
  * @author: Pandy

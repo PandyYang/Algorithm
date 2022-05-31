@@ -21,7 +21,7 @@ public class RemoveDuplicates {
             }
             j++;
         }
-        return i+1;
+        return i + 1;
     }
 
     public static int remove2(int[] nums) {
@@ -33,11 +33,11 @@ public class RemoveDuplicates {
                 nums[i] = nums[j];
             }
         }
-        return i+1;
+        return i + 1;
     }
 
     public static void main(String[] args) {
-        int[] arr = new int[]{1,2,2,3,4,5,5,6};
+        int[] arr = new int[]{1, 2, 2, 3, 4, 5, 5, 6};
         int i = removeDuplicates(arr);
         System.out.println(i);
     }

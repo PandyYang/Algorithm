@@ -5,9 +5,9 @@ import com.pandy.common.TreeNode;
 /**
  * @author: Pandy
  * @create: 2022/4/5
- *
+ * 
  * 判断是否为二叉树
- *
+ * 
  * 记录下每个节点的前一个节点的值 采用中序遍历
  * 若前一个节点的值大于此节点的值
  * 即停止递归 不是二叉树

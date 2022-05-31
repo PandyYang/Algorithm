@@ -12,9 +12,7 @@ public class KthLargest {
     public static int kth(int[] arr, int k) {
 
         // 使用优先队列进行解决
-        PriorityQueue<Integer> priorityQueue = new PriorityQueue<Integer>((o1, o2) -> {
-            return o1 - o2;
-        });
+        PriorityQueue<Integer> priorityQueue = new PriorityQueue<Integer>(Comparator.comparingInt(o -> o));
 
         for (int i : arr) {
             if (priorityQueue.size() < k) {
@@ -28,7 +26,7 @@ public class KthLargest {
     }
 
     public static void main(String[] args) {
-        int[] arr = {1,2,3,4,5,6,7};
+        int[] arr = {1, 2, 3, 4, 5, 6, 7};
         int kth = kth(arr, 2);
         System.out.println("kth = " + kth);
     }

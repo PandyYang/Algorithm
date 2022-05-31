@@ -1,4 +1,4 @@
-package com.pandy.base.list;
+package com.pandy.base.stack;
 
 import java.util.Stack;
 

@@ -1,22 +1,48 @@
 package com.pandy.base.array;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * @author: Pandy
  * @create: 2022/3/28
  *
- * 数组中缺失的数字 二分法求解
+ * 给定一个包含 0, 1, 2, ..., n 中 n 个数的序列，找出 0 .. n 中没有出现在序列中的那个数。
  *
- * 只要是有序的数组 都可以使用二分法进行查找
+ * 排序 哈希 位运算
  **/
 public class MissingNum {
 
-    public int missingNum(int[] nums) {
-        int i = 0, j = nums.length -1;
-        while (i <= j) {
-            int m = (i + j) / 2;
-            if (nums[m] == m) i = m + 1;
-            else j = m - 1;
+    public static int missingNum(int[] nums) {
+        Arrays.sort(nums);
+        int n = nums.length;
+        for (int i = 0; i < n; i++) {
+            if (nums[i] != i) {
+                return i;
+            }
         }
-        return i;
+        return n;
+    }
+
+    public int missingNumber(int[] nums) {
+        Set<Integer> set = new HashSet<Integer>();
+        int n = nums.length;
+        for (int i = 0; i < n; i++) {
+            set.add(nums[i]);
+        }
+        int missing = -1;
+        for (int i = 0; i <= n; i++) {
+            if (!set.contains(i)) {
+                missing = i;
+                break;
+            }
+        }
+        return missing;
+    }
+
+    public static void main(String[] args) {
+        int i = missingNum(new int[]{0, 1, 2, 4, 5});
+        System.out.println("i = " + i);
     }
 }

@@ -6,9 +6,9 @@ import java.util.Queue;
 /**
  * @author Pandy
  * @date 31/3/2022
- *
- *  岛屿的数量
- *  广度优先遍历求解
+ * 
+ * 岛屿的数量
+ * 广度优先遍历求解
  */
 public class NumOfIslands {
 
@@ -35,22 +35,22 @@ public class NumOfIslands {
                         int col = id % nc;
                         if (row - 1 >= 0 && grid[row - 1][col] == '1') {
                             neighbors.add((row - 1) * nc + col);
-                            grid[row-1][col] = '0';
+                            grid[row - 1][col] = '0';
                         }
 
-                        if (row + 1 < nr &&  grid[row+1][col] == '1') {
-                            neighbors.add((row+1) * nc + col);
-                            grid[row+1][col] = '0';
+                        if (row + 1 < nr && grid[row + 1][col] == '1') {
+                            neighbors.add((row + 1) * nc + col);
+                            grid[row + 1][col] = '0';
                         }
 
                         if (col - 1 >= 0 && grid[row][col - 1] == '1') {
-                            neighbors.add(row * nc + col-1);
-                            grid[row][col-1] = '0';
+                            neighbors.add(row * nc + col - 1);
+                            grid[row][col - 1] = '0';
                         }
 
-                        if (col + 1 < nc && grid[row][col+1] == '1') {
+                        if (col + 1 < nc && grid[row][col + 1] == '1') {
                             neighbors.add(row * nc + col + 1);
-                            grid[row][col+1] = '0';
+                            grid[row][col + 1] = '0';
                         }
                     }
                 }
