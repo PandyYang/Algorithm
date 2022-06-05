@@ -12,6 +12,7 @@ public class AddTwoList {
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode dummyHead = new ListNode(0);
         ListNode p = l1, q = l2, curr = dummyHead;
+
         int carry = 0;
         while (p != null || q != null) {
             int x = (p != null) ? p.val : 0;
@@ -26,6 +27,7 @@ public class AddTwoList {
         if (carry > 0) curr.next = new ListNode(carry);
         return dummyHead.next;
     }
+
     // 逆序
     public ListNode addTwoNumbers2(ListNode l1, ListNode l2) {
         ListNode p1 = l1, p2 = l2;
