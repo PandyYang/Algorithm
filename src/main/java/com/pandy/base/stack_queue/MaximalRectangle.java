@@ -1,4 +1,4 @@
-package com.pandy.base.stack;
+package com.pandy.base.stack_queue;
 
 /**
  * @author Pandy
