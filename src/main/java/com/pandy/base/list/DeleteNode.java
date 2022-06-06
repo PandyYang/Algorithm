@@ -52,7 +52,7 @@ public class DeleteNode {
         ListNode pre = null;
         if(cur.val == val) return head.next;
         while(cur.val != val) {
-            pre= cur;
+            pre = cur;
             cur = cur.next;
         }
 
