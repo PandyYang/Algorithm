@@ -8,6 +8,8 @@ import java.util.StringJoiner;
 /**
  * @author: Pandy
  * @create: 2022/1/14
+ *
+ * 把数组排成最小的数
  **/
 public class PrintMinNum {
     public static String print(int[] numbers) {
