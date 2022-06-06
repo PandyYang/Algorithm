@@ -5,6 +5,10 @@ import com.pandy.common.TreeNode;
 /**
  * @author: Pandy
  * @create: 2022/1/15
+ *
+ * 二叉搜索树的第k大节点
+ *
+ * BST中序遍历的结果就是排序后的结果
  **/
 public class KthNode {
 
