@@ -46,10 +46,11 @@ public class ReverseList {
         ListNode curr = head;
 
         while (curr != null) {
+            // 找到下一个要反转的节点
             ListNode next = curr.next;
-            // 反转
+            // 进行反转
             curr.next = prev;
-            // 向前移动
+            // 然后赋值
             prev = curr;
             // 向前移动
             curr = next;
