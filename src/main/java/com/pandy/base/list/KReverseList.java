@@ -2,6 +2,8 @@ package com.pandy.base.list;
 
 import com.pandy.common.ListNode;
 
+import java.util.Stack;
+
 /**
  * @author: Pandy
  * @create: 2022/4/21
@@ -53,6 +55,8 @@ public class KReverseList {
             // 将子链表放回原链表
             pre.next = head;
             tail.next = nex;
+
+
             pre = tail;
             head = tail.next;
         }
@@ -70,6 +74,46 @@ public class KReverseList {
             curr = nex;
         }
         return new ListNode[]{tail, head};
+    }
+
+    public ListNode reverseKGroup2(ListNode head, int k) {
+        Stack<ListNode> stack = new Stack<>();
+
+        // 初始化一个链表用于存放结果
+        ListNode ret = new ListNode(0);
+
+        // 为新链表定义一个指针，防止后续操作改变链表的头节点
+        ListNode p = ret;
+
+        while (true) {
+            int count = 0;
+
+            // 定义指针操作原有链表
+            ListNode tmp = head;
+            // 每k个入栈
+            while (tmp != null && count < k) {
+                stack.push(tmp);
+                tmp = tmp.next;
+                count++;
+            }
+
+            // 不足k 说明完了 直接剩余节点插入末尾结束
+            if (count != k) {
+                p.next = head;
+                break;
+            }
+
+            // 出栈翻转
+            while (!stack.isEmpty()) {
+                p.next = stack.pop();
+                p = p.next;
+            }
+
+            // 重置下次操作的初始节点
+            p.next = tmp;
+            head = tmp;
+        }
+        return ret.next;
     }
 
     public static void main(String[] args) {
