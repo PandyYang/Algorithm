@@ -17,15 +17,18 @@ public class RemoveNthFromEnd {
         ListNode first = dummy;
         ListNode second = dummy;
 
+        // 找到第n个节点
         for (int i = 0; i <= n; i++) {
             first = first.next;
         }
 
+        // 计算倒数第N个，顺数是第几个：size - N + 1
         while (first != null) {
             first = first.next;
             second = second.next;
         }
 
+        // 删除节点
         second.next = second.next.next;
 
         return dummy.next;
