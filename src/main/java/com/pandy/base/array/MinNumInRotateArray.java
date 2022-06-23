@@ -29,13 +29,21 @@ public class MinNumInRotateArray {
     public static int minNumberInRotateArray(int[] array) {
        if (array.length == 0) return 0;
        int start = 0, end = array.length - 1;
+
+       if (array[start] < array[end]) {
+           return -1;
+       }
+
        while (end - start != 1) {
            int mid = (start + end) / 2;
+
            if (array[mid] >= array[start]) {
+               // 最小在右边
                start = mid;
            }
 
            if (array[mid] <= array[end]) {
+               // 最小的在左边
                end = mid;
            }
        }
@@ -44,6 +52,7 @@ public class MinNumInRotateArray {
 
     public static void main(String[] args) {
         int i2 = minNumberInRotateArray(new int[]{2, 3, 4, 5, 1});
+        System.out.println("i2 = " + i2);
         int i = minNumberInRotateArray(new int[]{1, 2, 3, 4, 5});
         System.out.println("i = " + i);
     }
