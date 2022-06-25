@@ -51,9 +51,7 @@ public class MinNumInRotateArray {
     }
 
     public static void main(String[] args) {
-        int i2 = minNumberInRotateArray(new int[]{2, 3, 4, 5, 1});
-        System.out.println("i2 = " + i2);
-        int i = minNumberInRotateArray(new int[]{1, 2, 3, 4, 5});
+        int i = minNumberInRotateArray(new int[]{2, 3, 4, 5, 1});
         System.out.println("i = " + i);
     }
 }
