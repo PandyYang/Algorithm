@@ -7,9 +7,9 @@ import java.util.Set;
 /**
  * @author: Pandy
  * @create: 2022/3/28
- *
+ * <p>
  * 给定一个包含 0, 1, 2, ..., n 中 n 个数的序列，找出 0 .. n 中没有出现在序列中的那个数。
- *
+ * <p>
  * 排序 哈希 位运算
  **/
 public class MissingNum {
@@ -23,6 +23,11 @@ public class MissingNum {
             }
         }
         return n;
+    }
+
+    public static void main(String[] args) {
+        int i = missingNum(new int[]{0, 1, 2, 4, 5});
+        System.out.println("i = " + i);
     }
 
     public int missingNumber(int[] nums) {
@@ -39,10 +44,5 @@ public class MissingNum {
             }
         }
         return missing;
-    }
-
-    public static void main(String[] args) {
-        int i = missingNum(new int[]{0, 1, 2, 4, 5});
-        System.out.println("i = " + i);
     }
 }

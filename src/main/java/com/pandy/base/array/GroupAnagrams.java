@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * @author: Pandy
  * @create: 2022/3/27
- *
+ * <p>
  * 数组的相同元素分组
  **/
 public class GroupAnagrams {
@@ -27,6 +27,6 @@ public class GroupAnagrams {
     public static void main(String[] args) {
         String[] arr = new String[]{"eat", "tea", "tan", "ate", "nat", "bat"};
         List<List<String>> lists = groupAnagrams(arr);
-        System.out.println(lists.toString());
+        System.out.println(lists);
     }
 }
