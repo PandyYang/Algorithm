@@ -5,11 +5,11 @@ import java.util.ArrayList;
 /**
  * @author: Pandy
  * @create: 2022/1/15
- * <p>
+ * 
  * 和为s的连续子序列
- * <p>
+ * 
  * 解法1： 暴力解法
- * <p>
+ * 
  * 解法2： 使用等差数列
  **/
 public class FindContinuesSequence {

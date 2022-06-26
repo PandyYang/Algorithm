@@ -6,13 +6,13 @@ import java.util.Map;
 /**
  * @author: Pandy
  * @create: 2022/2/26
- * <p>
+ * 
  * 寻找众数
- * <p>
+ * 
  * 解法1： hashmap
  * 一个大小为n的数组，找到其中的多数元素，多数元素是指在数组中出现次数大于n/2的元素。
  * Map遍历所有元素出现次数 找出最大的即可
- * <p>
+ * 
  * 解法2：投票算法
  **/
 public class MajorityElement {

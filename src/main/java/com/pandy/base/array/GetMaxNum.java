@@ -7,7 +7,7 @@ import java.util.Objects;
 /**
  * @author: Pandy
  * @create: 2022/6/11
- * <p>
+ * 
  * 能被K整除最多次的整数一共有多少个
  **/
 public class GetMaxNum {

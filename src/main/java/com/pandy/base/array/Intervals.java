@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * @author: Pandy
  * @create: 2022/4/4
- * <p>
+ * 
  * 合并区间
  **/
 public class Intervals {
