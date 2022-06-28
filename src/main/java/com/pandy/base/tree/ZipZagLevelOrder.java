@@ -19,7 +19,6 @@ public class ZipZagLevelOrder {
         return res;
     }
 
-
     private void travelsal(TreeNode root, List<List<Integer>> res, int level) {
         if (root == null) return;
 
@@ -27,11 +26,15 @@ public class ZipZagLevelOrder {
             res.add(new ArrayList<Integer>());
         }
 
+        // 奇数 表头添加元素
         if ((level & 1) == 1) {
             res.get(level).add(0, root.val);
         } else {
+            // 偶数 在末尾添加元素
             res.get(level).add(root.val);
         }
+
+        // 左右依次遍历
         travelsal(root.left, res, level + 1);
         travelsal(root.right, res, level + 1);
     }
