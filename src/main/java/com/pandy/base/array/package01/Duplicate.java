@@ -14,21 +14,21 @@ public class Duplicate {
     private static void swap(int[] nums, int i, int j) {
         int temp = nums[i];
         nums[i] = nums[j];
-        nums[j] = nums[i];
+        nums[j] = temp;
     }
 
     public boolean duplicate(int[] numbers, int length, int[] duplication) {
         if (numbers == null || numbers.length == 0) return false;
 
-        for (int i = 0; i < numbers.length; i++) {
+        for (int i = 0; i < length; i++) {
+
             while (numbers[i] != i) {
-                int number = numbers[i];
-                int wrongNum = numbers[number];
-                if (number == wrongNum) {
-                    duplication[0] = number;
+                if (numbers[i] == numbers[numbers[i]]) {
                     return true;
                 }
-                swap(numbers, i, number);
+
+                // 如果arr[i]的值与arr中下标为arr[i]的值不相等，则互换两个值
+                swap(numbers, i, numbers[i]);
             }
         }
         return false;

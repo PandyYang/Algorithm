@@ -11,16 +11,18 @@ package com.pandy.base.array.package01;
  */
 public class Find {
     private static boolean find(int[][] arr, int target) {
-        int row = arr.length - 1;
-        int rowA = 0;
-        int colA = row;
-        while (rowA < arr[0].length && colA >= 0) {
-            if (arr[rowA][colA] == target)
+
+        if (arr.length == 0 || arr[0].length == 0) return false;
+
+        int x = 0, y = arr[0].length - 1;
+        while (x < arr.length && y > 0) {
+            int num = arr[x][y];
+            if (num == target) {
                 return true;
-            if (arr[rowA][colA] > target) {
-                colA--;
-            } else if (arr[rowA][colA] < target) {
-                rowA++;
+            } else if (num > target){
+                y--;
+            } else {
+                x++;
             }
         }
         return false;

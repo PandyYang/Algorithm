@@ -38,7 +38,7 @@ public class ContainsNearbyDuplicate {
         for (int i = 0; i < length; i++) {
             // 数组向右滑动
             if (i > k) set.remove(nums[i - k - 1]);
-            // 有重复元素
+            // 添加失败，说明存在重复的i，i = k
             if (!set.add(nums[i])) return true;
         }
         return false;

@@ -18,6 +18,7 @@ public class MaxProduct {
                 imin = temp;
             }
 
+            // 求子数组最大、最小乘积
             imax = Math.max(imax*nums[i], nums[i]);
             imin = Math.min(imin*nums[i], nums[i]);
 

@@ -12,13 +12,16 @@ public class FirstNotRepeatingChar {
 
     public int firstNotRepeatingChar(String str) {
         LinkedHashMap<Character, Integer> data = new LinkedHashMap<>();
+
         char[] chars = str.toCharArray();
+
         for (char c : chars) {
             Integer count = data.getOrDefault(c, 0);
             data.put(c, count + 1);
         }
 
         Character res = null;
+
         for (Character c : data.keySet()) {
             if (data.get(c) == 1) {
                 res = c;

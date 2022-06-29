@@ -34,11 +34,10 @@ public class GetNumOfK {
             return 0;
         }
 
-        //  找到第一个出现得位置之后 在其得左右两侧继续进行寻找
+        //  找到第一个出现得位置之后 在其得左右两侧继续进行寻找 // 左侧
         int sum = 0;
         int a = t;
 
-        // 左侧
         while (a >= 0 && arr[a] == k) {
             sum++;
             a--;
