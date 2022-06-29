@@ -3,6 +3,7 @@ package com.pandy.base.list;
 import com.pandy.common.ListNode;
 
 import java.util.LinkedList;
+import java.util.Stack;
 
 /**
  * @author: Pandy
@@ -20,6 +21,26 @@ public class IsPalindrome {
         if (head == null || head.next == null) return true;
 
         LinkedList<ListNode> stack = new LinkedList<>();
+        ListNode cur = head;
+
+        while (cur != null) {
+            stack.push(cur);
+            cur = cur.next;
+        }
+
+        while (!stack.isEmpty()) {
+            if (!stack.pop().val.equals(head.val)) {
+                return false;
+            }
+            head = head.next;
+        }
+        return true;
+    }
+
+    public boolean isPalindrome2(ListNode head) {
+        if (head == null || head.next == null) return true;
+
+        Stack<ListNode> stack = new Stack<>();
         ListNode cur = head;
 
         while (cur != null) {
