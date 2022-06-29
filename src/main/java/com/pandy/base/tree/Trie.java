@@ -1,16 +1,14 @@
 package com.pandy.base.tree;
 
-import com.pandy.common.TreeNode;
-
 /**
  * @author: Pandy
  * @create: 2022/6/29
- *
+ * <p>
  * 前缀树
  **/
 public class Trie {
 
-    private Trie[] children;
+    private final Trie[] children;
     private boolean isEnd;
 
     public Trie() {

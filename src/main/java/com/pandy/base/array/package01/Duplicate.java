@@ -3,9 +3,9 @@ package com.pandy.base.array.package01;
 /**
  * @author: Pandy
  * @create: 2022/6/6
- *
+ * <p>
  * 数组中的重复的数字
- *
+ * <p>
  * 由于数组内数字在 0 ~ n-1 的范围内，可以将数组按 数字做下标 进行重排序
  * 将 n 放置到 num[n] 上，交换之前再判定在 num[n] 上是否为相同数字
  **/

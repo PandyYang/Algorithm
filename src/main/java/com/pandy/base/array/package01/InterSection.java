@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 /**
  * @author: Pandy
  * @create: 2022/3/23
- *
+ * <p>
  * 计算两个数组的交集
  **/
 public class InterSection {

@@ -3,7 +3,7 @@ package com.pandy.base.greedy;
 /**
  * @author: Pandy
  * @create: 2022/3/23
- *
+ * <p>
  * 非递减的数列
  **/
 public class CheckPossibility {

@@ -2,13 +2,11 @@ package com.pandy.base.list;
 
 import com.pandy.common.ListNode;
 
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 
 /**
  * 环形链表的入口
- *
+ * <p>
  * list存储扫描过的节点
  * 求下一个节点是否在链表中出现过
  */
@@ -36,13 +34,14 @@ public class EntryNodeOfLoop {
     /**
      * 将所有扫描过的节点都放在set
      * 看是否下一个节点已经在set出现过
+     *
      * @param pHead
      * @return
      */
     public ListNode entryNodeOfLoop(ListNode pHead) {
         HashSet<ListNode> set = new HashSet<>();
-        while(pHead != null) {
-            if(set.contains(pHead)) {
+        while (pHead != null) {
+            if (set.contains(pHead)) {
                 return pHead;
             }
             set.add(pHead);

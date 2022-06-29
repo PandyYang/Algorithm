@@ -8,6 +8,12 @@ import java.util.Arrays;
  **/
 public class EditDistance {
 
+    public static void main(String[] args) {
+        EditDistance distance = new EditDistance();
+        int i = distance.editDistance("abc", "abcd");
+        System.out.println("i = " + i);
+    }
+
     public int editDistance(String str1, String str2) {
         // write code here
         int len1 = str1.length();
@@ -31,11 +37,5 @@ public class EditDistance {
         //这里都用str1 i,j不相等替换f(i-1,j-1)  删除i f(i-1,j) 插入i f(i,j-1)
         return dp[index1][index2] = Math.min(dfs(str1, index1 - 1, str2, index2 - 1, dp),
                 Math.min(dfs(str1, index1, str2, index2 - 1, dp), dfs(str1, index1 - 1, str2, index2, dp))) + 1;
-    }
-
-    public static void main(String[] args) {
-        EditDistance distance = new EditDistance();
-        int i = distance.editDistance("abc", "abcd");
-        System.out.println("i = " + i);
     }
 }

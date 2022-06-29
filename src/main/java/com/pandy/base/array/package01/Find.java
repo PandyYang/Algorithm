@@ -19,7 +19,7 @@ public class Find {
             int num = arr[x][y];
             if (num == target) {
                 return true;
-            } else if (num > target){
+            } else if (num > target) {
                 y--;
             } else {
                 x++;

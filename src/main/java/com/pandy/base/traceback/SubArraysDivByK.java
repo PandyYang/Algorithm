@@ -8,6 +8,14 @@ import java.util.*;
  */
 public class SubArraysDivByK {
 
+    public static void main(String[] args) {
+        SubArraysDivByK subArraysDivByK = new SubArraysDivByK();
+        int i = subArraysDivByK.subarraysDivByK(new int[]{4, 5, 0, -2, -3, 1}, 5);
+        System.out.println(i);
+    }
+
+    /////////////////////////////////////////下方胡言乱语
+
     public int divByK(int[] nums, int k) {
         Map<Integer, Integer> record = new HashMap<>();
         record.put(0, 1);
@@ -21,9 +29,6 @@ public class SubArraysDivByK {
         }
         return ans;
     }
-
-    /////////////////////////////////////////下方胡言乱语
-
 
     public int subarraysDivByK(int[] nums, int k) {
         List<List<Integer>> permutation = permutation(nums);
@@ -54,11 +59,5 @@ public class SubArraysDivByK {
             cur.removeLast();
             valid[i] = false;
         }
-    }
-
-    public static void main(String[] args) {
-        SubArraysDivByK subArraysDivByK = new SubArraysDivByK();
-        int i = subArraysDivByK.subarraysDivByK(new int[]{4, 5, 0, -2, -3, 1}, 5);
-        System.out.println(i);
     }
 }

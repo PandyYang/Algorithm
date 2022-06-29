@@ -9,6 +9,14 @@ import java.util.Set;
  **/
 public class Permutation {
 
+    public static void main(String[] args) {
+        Permutation permutation = new Permutation();
+        String[] abcs = permutation.permutation("abc");
+        for (String abc : abcs) {
+            System.out.println("abc = " + abc);
+        }
+    }
+
     public String[] permutation(String s) {
         char[] chars = new char[s.length()];
         Set<String> set = new HashSet<>();
@@ -19,7 +27,7 @@ public class Permutation {
     }
 
     private void dfs(String s, int index, char[] chars, boolean[] isViewed, Set<String> set) {
-        if (index == s.length()){
+        if (index == s.length()) {
             set.add(new String(chars));
             return;
         }
@@ -29,14 +37,6 @@ public class Permutation {
             chars[index] = s.charAt(i);
             dfs(s, index + 1, chars, isViewed, set);
             isViewed[i] = false;
-        }
-    }
-
-    public static void main(String[] args) {
-        Permutation permutation = new Permutation();
-        String[] abcs = permutation.permutation("abc");
-        for (String abc : abcs) {
-            System.out.println("abc = " + abc);
         }
     }
 }

@@ -3,10 +3,16 @@ package com.pandy.base.array.package02;
 /**
  * @author Pandy
  * @date 24/3/2022
- *
+ * <p>
  * 能盛水的最大容器
  */
 public class MaxArea {
+
+    public static void main(String[] args) {
+        MaxArea maxArea = new MaxArea();
+        int i = maxArea.maxArea(new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7});
+        System.out.println("i = " + i);
+    }
 
     public int maxArea(int[] arr) {
         int max = 0;
@@ -15,11 +21,5 @@ public class MaxArea {
             max = Math.max(max, (j - i + 1) * minLength);
         }
         return max;
-    }
-
-    public static void main(String[] args) {
-        MaxArea maxArea = new MaxArea();
-        int i = maxArea.maxArea(new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7});
-        System.out.println("i = " + i);
     }
 }

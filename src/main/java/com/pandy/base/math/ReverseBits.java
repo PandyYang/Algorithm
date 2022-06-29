@@ -3,7 +3,7 @@ package com.pandy.base.math;
 /**
  * @author Pandy
  * @date 23/3/2022
- * 
+ * <p>
  * 反转二进制的位
  */
 public class ReverseBits {

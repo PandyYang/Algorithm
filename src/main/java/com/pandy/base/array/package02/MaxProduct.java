@@ -3,10 +3,16 @@ package com.pandy.base.array.package02;
 /**
  * @author: Pandy
  * @create: 2022/6/29
- *
+ * <p>
  * 子数组的最大乘积
  **/
 public class MaxProduct {
+
+    public static void main(String[] args) {
+        MaxProduct maxProduct = new MaxProduct();
+        int i = maxProduct.maxProduct(new int[]{2, 3, -2, 4});
+        System.out.println("i = " + i);
+    }
 
     public int maxProduct(int[] nums) {
         int max = Integer.MIN_VALUE, imax = 1, imin = 1;
@@ -19,17 +25,11 @@ public class MaxProduct {
             }
 
             // 求子数组最大、最小乘积
-            imax = Math.max(imax*nums[i], nums[i]);
-            imin = Math.min(imin*nums[i], nums[i]);
+            imax = Math.max(imax * nums[i], nums[i]);
+            imin = Math.min(imin * nums[i], nums[i]);
 
             max = Math.max(max, imax);
         }
         return max;
-    }
-
-    public static void main(String[] args) {
-        MaxProduct maxProduct = new MaxProduct();
-        int i = maxProduct.maxProduct(new int[]{2, 3, -2, 4});
-        System.out.println("i = " + i);
     }
 }

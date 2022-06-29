@@ -3,7 +3,7 @@ package com.pandy.base.list;
 import com.pandy.common.ListNode;
 
 public class IsPail {
-    public boolean isPail (ListNode head) {
+    public boolean isPail(ListNode head) {
         ListNode slow = head, fast = head;
         while (fast != null && fast.next != null) {
             slow = slow.next;

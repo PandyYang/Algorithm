@@ -8,10 +8,10 @@ import java.util.List;
 /**
  * @author Pandy
  * @date 6/6/2022
- *
+ * <p>
  * 组合
  * 给定两个整数 n 和 k，返回范围 [1, n] 中所有可能的 k 个数的组合。
- *
+ * <p>
  * 你可以按 任何顺序 返回答案。
  */
 public class Combine {
@@ -34,7 +34,7 @@ public class Combine {
 
         for (int i = begin; i <= n; i++) {
             path.addLast(i);
-            dfs(n, k, i+1, path, res);
+            dfs(n, k, i + 1, path, res);
             path.removeLast();
         }
     }

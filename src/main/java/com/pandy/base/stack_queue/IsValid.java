@@ -4,14 +4,14 @@ import java.util.Stack;
 
 /**
  * 判断括号的合法性
- *
+ * <p>
  * 思路：
  * 首先从左至右遍历一次字符串，将括号的左半部分全部按顺序入栈。
  * 之后如果不为左半部分，则弹栈对比。
  * （【「           」】）
  * 因为按照栈的先入后出，刚好遍历到的值可以弹出直接对比。
  * 最后遍历完成，栈必须为空。
- *  「  ------- 」
+ * 「  ------- 」
  */
 public class IsValid {
 
@@ -24,7 +24,7 @@ public class IsValid {
                 stack.push('}');
             else if (c == '[')
                 stack.push(']');
-            //未完成之前栈不能为空 并且弹出的元素要和c相等 否则直接为false
+                //未完成之前栈不能为空 并且弹出的元素要和c相等 否则直接为false
             else if (stack.isEmpty() || stack.pop() != c)
                 return false;
         }

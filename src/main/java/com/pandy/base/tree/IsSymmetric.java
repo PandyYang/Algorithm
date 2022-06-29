@@ -5,7 +5,7 @@ import com.pandy.common.TreeNode;
 /**
  * @author: Pandy
  * @create: 2022/2/26
- * 
+ * <p>
  * 给定一个二叉树，检查它是否是镜像对称。
  * 加入左子树和右子树都为null 返回true
  * 左右子树的val不相等，return false

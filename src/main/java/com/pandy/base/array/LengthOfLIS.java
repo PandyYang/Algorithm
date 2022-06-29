@@ -5,9 +5,9 @@ import java.util.Arrays;
 /**
  * @author: Pandy
  * @create: 2022/6/29
- *
+ * <p>
  * 最长递增子序列
- *
+ * <p>
  * 本题最关键的是要想到dp[i]由哪些状态可以推出来，并取最大值，那么很自然就能想到递推公式：dp[i] = max(dp[i], dp[j] + 1);
  **/
 public class LengthOfLIS {

@@ -3,17 +3,16 @@ package com.pandy.base.array.package01;
 /**
  * @author Pandy
  * @date 16/6/2022
- *
+ * <p>
  * 寻找山峰
- *
+ * <p>
  * 峰值元素是指其值大于左右相邻值的元素。
- *
+ * <p>
  * 给定一个输入数组 nums，其中 nums[i] ≠ nums[i+1]，找到峰值元素并返回其索引。
- *
+ * <p>
  * 数组可能包含多个峰值，在这种情况下，返回任何一个峰值所在位置即可。
- *
+ * <p>
  * 你可以假设 nums[-1] = nums[n] = -∞。
- *
  */
 public class FindPeakElement {
     public int findPeakElement(int[] nums) {

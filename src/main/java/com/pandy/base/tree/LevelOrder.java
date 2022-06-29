@@ -9,9 +9,9 @@ import java.util.Queue;
 /**
  * @Author Pandy
  * @Date 2021/7/31 14:54
- * 
+ * <p>
  * 使用广度优先遍历解决树的层次遍历问题
- * 
+ * <p>
  * DFS 深度优先搜索
  * void dfs(TreeNode root) {
  * if (root == null) {
@@ -20,11 +20,11 @@ import java.util.Queue;
  * dfs(root.left);
  * dfs(root.right);
  * }
- * 
- * 
- * 
+ * <p>
+ * <p>
+ * <p>
  * BFS 广度优先搜索 层次遍历 最短路径
- * 
+ * <p>
  * void bfs(TreeNode root) {
  * Queue<TreeNode> queue = new ArrayDeque<>();
  * queue.add(root);
@@ -38,9 +38,9 @@ import java.util.Queue;
  * }
  * }
  * }
- * 
- * 
- * 
+ * <p>
+ * <p>
+ * <p>
  * 二叉树的层序遍历
  * 使用队列实现
  */

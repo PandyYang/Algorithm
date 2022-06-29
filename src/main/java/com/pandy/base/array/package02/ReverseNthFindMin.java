@@ -15,6 +15,12 @@ package com.pandy.base.array.package02;
  **/
 public class ReverseNthFindMin {
 
+    public static void main(String[] args) {
+        ReverseNthFindMin reverseNthFindMin = new ReverseNthFindMin();
+        int min = reverseNthFindMin.findMin(new int[]{4, 5, 6, 7, 0, 1, 2});
+        System.out.println("min = " + min);
+    }
+
     public int findMin(int[] nums) {
         if (nums[0] > nums[nums.length - 1]) {
             for (int i = nums.length - 1; i > 0; i--) {
@@ -24,12 +30,5 @@ public class ReverseNthFindMin {
             }
         }
         return nums[0];
-    }
-
-
-    public static void main(String[] args) {
-        ReverseNthFindMin reverseNthFindMin = new ReverseNthFindMin();
-        int min = reverseNthFindMin.findMin(new int[]{4, 5, 6, 7, 0, 1, 2});
-        System.out.println("min = " + min);
     }
 }

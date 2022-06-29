@@ -6,13 +6,14 @@ import java.util.List;
 /**
  * @author: Pandy
  * @create: 2022/3/27
- *
+ * <p>
  * 求子集
  **/
 public class SubSets {
 
-    List<Integer> t = new ArrayList<>();
     public List<List<Integer>> ans = new ArrayList<>();
+    List<Integer> t = new ArrayList<>();
+
     public List<List<Integer>> subSets(int[] nums) {
         dfs(0, nums);
         return ans;
@@ -27,7 +28,7 @@ public class SubSets {
         t.add(nums[cur]);
         dfs(cur + 1, nums);
         t.remove(t.size() - 1);
-        dfs(cur+1, nums);
+        dfs(cur + 1, nums);
     }
 
     /////////////////////////////////////////////////////////////////////////////////

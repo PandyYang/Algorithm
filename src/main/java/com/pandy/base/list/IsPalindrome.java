@@ -8,12 +8,12 @@ import java.util.Stack;
 /**
  * @author: Pandy
  * @create: 2022/2/26
- *
- *
+ * <p>
+ * <p>
  * 判断一个链表是否为回文链表
  * 借助栈的结构 进栈出栈再判断一次
- *
- *
+ * <p>
+ * <p>
  * 链表入栈 之后遍历和弹栈进行对比
  **/
 public class IsPalindrome {

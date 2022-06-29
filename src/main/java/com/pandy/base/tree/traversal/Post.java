@@ -11,6 +11,11 @@ import java.util.Stack;
  * @date 2/4/2022
  */
 public class Post {
+    /**
+     * 非递归法
+     */
+    List<Integer> ret = new ArrayList<>();
+
     public void postOrderTraversal(TreeNode root) {
         if (root != null) {
             postOrderTraversal(root.left);
@@ -18,11 +23,6 @@ public class Post {
             System.out.println(root.val);
         }
     }
-
-    /**
-     * 非递归法
-     */
-    List<Integer> ret = new ArrayList<>();
 
     public List<Integer> postorderTraversal(TreeNode root) {
         if (root == null) {

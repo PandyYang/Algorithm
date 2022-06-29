@@ -3,13 +3,13 @@ package com.pandy.base.math;
 /**
  * @author: Pandy
  * @create: 2022/3/23
- * 
+ * <p>
  * 不适用加减乘除求两个整数的和
- * 
+ * <p>
  * 位运算
  * 异或是一种不进位的加减法
  * 求与 之后 左移一位来可以表示进位
- * 
+ * <p>
  * https://leetcode-solution-leetcode-pp.gitbook.io/leetcode-solution/easy/371.sum-of-two-integers
  **/
 public class GetSum {

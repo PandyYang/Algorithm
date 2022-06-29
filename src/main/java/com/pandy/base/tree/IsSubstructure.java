@@ -5,7 +5,7 @@ import com.pandy.common.TreeNode;
 /**
  * @author: Pandy
  * @create: 2022/3/28
- * 
+ * <p>
  * 树的子结构
  **/
 public class IsSubstructure {

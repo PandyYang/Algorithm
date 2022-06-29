@@ -26,7 +26,7 @@ public class ReconstructQueue {
         List<int[]> list = new ArrayList<>();
 
         for (int[] each : people) {
-            list.add(each[1],each);
+            list.add(each[1], each);
         }
         return list.toArray(new int[list.size()][2]);
     }

@@ -3,7 +3,7 @@ package com.pandy.base.string;
 /**
  * @author: Pandy
  * @create: 2022/1/25
- * 
+ * <p>
  * 替换空白字符串
  **/
 public class ReplaceString {

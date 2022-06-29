@@ -5,7 +5,7 @@ import com.pandy.common.ListNode;
 /**
  * @author Pandy
  * @date 27/12/2021
- *
+ * <p>
  * 删除节点分为三种情况"
  * 头结点
  * 尾结点
@@ -15,6 +15,7 @@ public class DeleteNode {
 
     /**
      * 按照节点删除
+     *
      * @param head
      * @param deListNode
      */
@@ -22,7 +23,7 @@ public class DeleteNode {
         if (deListNode == null || head == null) return;
         // 头结点
         if (head == deListNode) head = null;
-        else{
+        else {
             // 最后一个节点
             if (deListNode.next == null) {
                 ListNode pointListNode = head;
@@ -42,16 +43,17 @@ public class DeleteNode {
 
     /**
      * 按照节点值删除
+     *
      * @param head
      * @param val
      * @return
      */
     public ListNode deleteNode(ListNode head, int val) {
-        if(head == null) return head;
+        if (head == null) return head;
         ListNode cur = head;
         ListNode pre = null;
-        if(cur.val == val) return head.next;
-        while(cur.val != val) {
+        if (cur.val == val) return head.next;
+        while (cur.val != val) {
             pre = cur;
             cur = cur.next;
         }

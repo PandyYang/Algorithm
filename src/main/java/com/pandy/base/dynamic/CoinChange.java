@@ -19,11 +19,11 @@ public class CoinChange {
 
         for (int i = 0; i < coins.length; i++) {
             for (int j = coins[i]; j <= amount; j++) {
-                if (dp[j-coins[i]] != max) {
-                    dp[j] = Math.min(dp[j], dp[j-coins[i]] + 1);
+                if (dp[j - coins[i]] != max) {
+                    dp[j] = Math.min(dp[j], dp[j - coins[i]] + 1);
                 }
             }
         }
-        return dp[amount] == max ? - 1 : dp[amount];
+        return dp[amount] == max ? -1 : dp[amount];
     }
 }

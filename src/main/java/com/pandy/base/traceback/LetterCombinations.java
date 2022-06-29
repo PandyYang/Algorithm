@@ -23,10 +23,10 @@ public class LetterCombinations {
         List<String> str = new ArrayList<>();
         for (int i = 0; i < s2.length(); i++) {
             if (s1.isEmpty()) {
-                str.add(s2.substring(i, i+1));
+                str.add(s2.substring(i, i + 1));
             } else {
-                for (String s: s1) {
-                    str.add(s+s2.substring(i, i+1));
+                for (String s : s1) {
+                    str.add(s + s2.charAt(i));
                 }
             }
         }

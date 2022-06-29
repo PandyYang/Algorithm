@@ -10,7 +10,7 @@ import java.util.Queue;
 /**
  * @author: Pandy
  * @create: 2022/5/6
- * 
+ * <p>
  * 二叉树的右视图
  **/
 public class RightSideView {

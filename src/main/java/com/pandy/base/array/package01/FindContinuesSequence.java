@@ -6,11 +6,11 @@ import java.util.List;
 /**
  * @author: Pandy
  * @create: 2022/1/15
- *
+ * <p>
  * 和为s的连续子序列
- *
+ * <p>
  * 解法1： 暴力解法
- *
+ * <p>
  * 解法2： 使用等差数列
  **/
 public class FindContinuesSequence {
@@ -35,32 +35,6 @@ public class FindContinuesSequence {
             }
         }
         return lists;
-    }
-
-    public int[][] find(int target) {
-        int i = 1, j = 2, s = 3;
-        List<int[]> res = new ArrayList<>();
-        while (i < j) {
-
-            // 当S = target 记录连续的整数序列 并向右移动左边界 i = i + 1
-            if (s == target) {
-                int[] ans = new int[j - i + 1];
-                for (int k = i; k <= j; k++)
-                    ans[k - i] = k;
-                res.add(ans);
-            }
-
-            // s > target 向右移动左边界 i = i + 1，并更新元素和S
-            if (s >= target) {
-                s -= i;
-                i++;
-            } else {
-                // s < target 向右移动右边界 并更新元素和S
-                j++;
-                s += j;
-            }
-        }
-        return res.toArray(new int[0][]);
     }
 
     public static ArrayList<ArrayList<Integer>> findContinuesSequence2(int sum) {
@@ -89,5 +63,31 @@ public class FindContinuesSequence {
             }
         }
         return result;
+    }
+
+    public int[][] find(int target) {
+        int i = 1, j = 2, s = 3;
+        List<int[]> res = new ArrayList<>();
+        while (i < j) {
+
+            // 当S = target 记录连续的整数序列 并向右移动左边界 i = i + 1
+            if (s == target) {
+                int[] ans = new int[j - i + 1];
+                for (int k = i; k <= j; k++)
+                    ans[k - i] = k;
+                res.add(ans);
+            }
+
+            // s > target 向右移动左边界 i = i + 1，并更新元素和S
+            if (s >= target) {
+                s -= i;
+                i++;
+            } else {
+                // s < target 向右移动右边界 并更新元素和S
+                j++;
+                s += j;
+            }
+        }
+        return res.toArray(new int[0][]);
     }
 }

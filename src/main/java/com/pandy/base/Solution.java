@@ -9,17 +9,17 @@ class Solution {
     public static int[] intersect(int[] nums1, int[] nums2) {
         List<Integer> list = new ArrayList<>();
         Set<Integer> set = new HashSet<>();
-        for(int num1 : nums1) {
+        for (int num1 : nums1) {
             set.add(num1);
         }
-        for(int num2: nums2) {
-            if(set.contains(num2)) {
+        for (int num2 : nums2) {
+            if (set.contains(num2)) {
                 list.add(num2);
             }
         }
         int len = list.size();
         int[] arr = new int[len];
-        for(int l : list) {
+        for (int l : list) {
             len--;
             arr[len] = l;
         }

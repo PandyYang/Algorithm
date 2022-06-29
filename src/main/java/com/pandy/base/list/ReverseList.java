@@ -18,6 +18,7 @@ public class ReverseList {
      * 也就等于
      * node1.next.next = node1
      * 以此实现反转
+     *
      * @param head
      * @return
      */
@@ -37,6 +38,7 @@ public class ReverseList {
      * nxt 防止后面的链断掉
      * 详情查看
      * https://segmentfault.com/a/1190000037518253
+     *
      * @param head
      * @return
      */

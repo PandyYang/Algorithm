@@ -6,6 +6,12 @@ package com.pandy.base.list;
  **/
 public class FindDuplicate {
 
+    public static void main(String[] args) {
+        FindDuplicate findDuplicate = new FindDuplicate();
+        int duplicate = findDuplicate.findDuplicate(new int[]{1, 3, 4, 2, 2});
+        System.out.println("duplicate = " + duplicate);
+    }
+
     public int findDuplicate(int[] nums) {
         /**
          * 快慢指针思想, fast 和 slow 是指针, nums[slow] 表示取指针对应的元素
@@ -29,11 +35,5 @@ public class FindDuplicate {
                 return nums[slow];
             }
         }
-    }
-
-    public static void main(String[] args) {
-        FindDuplicate findDuplicate = new FindDuplicate();
-        int duplicate = findDuplicate.findDuplicate(new int[]{1, 3, 4, 2, 2});
-        System.out.println("duplicate = " + duplicate);
     }
 }

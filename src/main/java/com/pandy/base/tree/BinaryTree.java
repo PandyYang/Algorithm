@@ -6,7 +6,7 @@ import com.pandy.common.TreeNode;
 /**
  * @Author Pandy
  * @Date 2021/7/31 19:12
- *
+ * <p>
  * 创建一个二叉树
  */
 public class BinaryTree {

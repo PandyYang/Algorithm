@@ -3,14 +3,13 @@ package com.pandy.base.string;
 /**
  * @author: Pandy
  * @create: 2022/6/6
- *
+ * <p>
  * 字符序列左移
- *
+ * <p>
  * 解题思路：
  * 对于 abcXYZdef 左移 3位，可以将字符串分为两个部分：abc & XYZdef
  * 分别将两个部分进行反转得到：cba & fedZYX
  * 将两部分和在一起再进行反转：XYZdefabc
- *
  **/
 public class LeftRotateString {
 

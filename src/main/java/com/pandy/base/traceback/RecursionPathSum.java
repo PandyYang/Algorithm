@@ -8,31 +8,31 @@ import java.util.Map;
 /**
  * @author: Pandy
  * @create: 2022/3/23
- *
- *
- *
+ * <p>
+ * <p>
+ * <p>
  * 给定一个二叉树，它的每个结点都存放着一个整数值。
- *
+ * <p>
  * 找出路径和等于给定数值的路径总数。
- *
+ * <p>
  * 路径不需要从根节点开始，也不需要在叶子节点结束，但是路径方向必须是向下的（只能从父节点到子节点）。
- *
+ * <p>
  * 二叉树不超过1000个节点，且节点数值范围是 [-1000000,1000000] 的整数。
- *
+ * <p>
  * 示例：
- *
+ * <p>
  * root = [10,5,-3,3,2,null,11,3,-2,null,1], sum = 8
- *
- *       10
- *      /  \
- *     5   -3
- *    / \    \
- *   3   2   11
- *  / \   \
+ * <p>
+ * 10
+ * /  \
+ * 5   -3
+ * / \    \
+ * 3   2   11
+ * / \   \
  * 3  -2   1
- *
+ * <p>
  * 返回 3。和等于 8 的路径有:
- *
+ * <p>
  * 1.  5 -> 3
  * 2.  5 -> 2 -> 1
  * 3.  -3 -> 11
@@ -52,10 +52,11 @@ public class RecursionPathSum {
      * 从当前节点反推到根节点(反推比较好理解，正向其实也只有一条)，有且仅有一条路径，因为这是一棵树
      * 如果此前有和为currSum-target,而当前的和又为currSum,两者的差就肯定为target了
      * 所以前缀和对于当前路径来说是唯一的，当前记录的前缀和，在回溯结束，回到本层时去除，保证其不影响其他分支的结果
-     * @param node 树节点
+     *
+     * @param node           树节点
      * @param prefixSumCount 前缀和Map
-     * @param target 目标值
-     * @param currSum 当前路径和
+     * @param target         目标值
+     * @param currSum        当前路径和
      * @return 满足题意的解
      */
     private int recursionPathSum(TreeNode node, Map<Integer, Integer> prefixSumCount, int target, int currSum) {

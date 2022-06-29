@@ -6,9 +6,9 @@ import java.util.Deque;
 /**
  * @author Pandy
  * @date 5/6/2022
- *
+ * <p>
  * 柱状图中的最大矩形
- *
+ * <p>
  * 单调栈：在一维数组中对每一个数找到第一个比自己小的元素。
  */
 public class LargestRectangleArea {
@@ -19,7 +19,7 @@ public class LargestRectangleArea {
         int[] new_heights = new int[heights.length + 2];
 
         for (int i = 1; i < heights.length + 1; i++) {
-            new_heights[i] = heights[i-1];
+            new_heights[i] = heights[i - 1];
         }
 
         for (int i = 0; i < new_heights.length; i++) {
@@ -43,7 +43,7 @@ public class LargestRectangleArea {
                 if (heights[left] < value) {
                     break;
                 }
-                left --;
+                left--;
             }
 
             while (right < heights.length) {

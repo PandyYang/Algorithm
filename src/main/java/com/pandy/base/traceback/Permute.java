@@ -8,19 +8,27 @@ import java.util.List;
 /**
  * @author: Pandy
  * @create: 2022/3/26
- *
+ * <p>
  * 数组的全排列
- *
+ * <p>
  * 树的广度优先遍历以及深度优先遍历
  * 深度优先也称为回溯
- *  状态：每一个节点表示了求解问题的不同阶段
- *  状态变量：
- *      1、递归到了第几层 depth
- *      2、已经选择了哪些数 path
- *      3、布尔数组used
- *
+ * 状态：每一个节点表示了求解问题的不同阶段
+ * 状态变量：
+ * 1、递归到了第几层 depth
+ * 2、已经选择了哪些数 path
+ * 3、布尔数组used
  **/
 public class Permute {
+    public static void main(String[] args) {
+        Permute p = new Permute();
+        List<List<Integer>> permute = p.permute(new int[]{1, 2, 3});
+
+        for (List<Integer> integers : permute) {
+            System.out.println("integers = " + integers);
+        }
+    }
+
     public List<List<Integer>> permute(int[] nums) {
         int len = nums.length;
         List<List<Integer>> res = new ArrayList<>();
@@ -28,7 +36,7 @@ public class Permute {
             return res;
         }
         Deque<Integer> path = new ArrayDeque<>();
-        boolean [] used = new boolean[len];
+        boolean[] used = new boolean[len];
         dfs(nums, len, 0, path, used, res);
         return res;
     }
@@ -64,15 +72,6 @@ public class Permute {
             // 逆操作 回溯 需要返回上层节点 继续向下搜索 因为depth已经+1
             path.removeLast();
             used[i] = false;
-        }
-    }
-
-    public static void main(String[] args) {
-        Permute p = new Permute();
-        List<List<Integer>> permute = p.permute(new int[]{1, 2, 3});
-
-        for (List<Integer> integers : permute) {
-            System.out.println("integers = " + integers);
         }
     }
 }

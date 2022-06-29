@@ -7,6 +7,12 @@ import java.util.Stack;
  * @create: 2022/6/29
  **/
 public class DecodeString {
+    public static void main(String[] args) {
+        DecodeString decodeString = new DecodeString();
+        String s = decodeString.decodeString("3[a2[c]]");
+        System.out.println("s = " + s);
+    }
+
     public String decodeString(String s) {
 
         StringBuffer ans = new StringBuffer();
@@ -17,7 +23,7 @@ public class DecodeString {
         int multi = 0;
         for (char c : s.toCharArray()) {
             if (Character.isDigit(c)) multi = multi * 10 + c - '0';
-            else if (c =='[') {
+            else if (c == '[') {
                 ansStack.add(ans);
                 multiStack.add(multi);
                 ans = new StringBuffer();
@@ -34,11 +40,5 @@ public class DecodeString {
             }
         }
         return ans.toString();
-    }
-
-    public static void main(String[] args) {
-        DecodeString decodeString = new DecodeString();
-        String s = decodeString.decodeString("3[a2[c]]");
-        System.out.println("s = " + s);
     }
 }

@@ -5,7 +5,7 @@ import java.util.HashSet;
 /**
  * @author: Pandy
  * @create: 2022/6/29
- *
+ * <p>
  * 最长连续子序列
  **/
 public class LongestConsecutive {

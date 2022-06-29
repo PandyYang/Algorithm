@@ -5,12 +5,12 @@ import com.pandy.common.ListNode;
 /**
  * @author Pandy
  * @date 13/6/2022
- *
+ * <p>
  * 从m到n的区间内反转链表
  */
 public class ReverseBetween {
 
-    public ListNode reverseBetween (ListNode head, int m, int n) {
+    public ListNode reverseBetween(ListNode head, int m, int n) {
         // write code here
         // 表头
         ListNode dummy = new ListNode(-1);
@@ -25,13 +25,13 @@ public class ReverseBetween {
         ListNode start = head;
 
         // 找到m
-        for(int i =1; i < m; i++) {
+        for (int i = 1; i < m; i++) {
             preStart = start;
             start = start.next;
         }
 
         // 从m反转到n
-        for(int i = m; i < n; i++) {
+        for (int i = m; i < n; i++) {
             ListNode temp = start.next;
             start.next = temp.next;
             temp.next = preStart.next;

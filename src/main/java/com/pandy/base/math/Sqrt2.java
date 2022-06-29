@@ -3,7 +3,7 @@ package com.pandy.base.math;
 /**
  * @author Pandy
  * @date 19/4/2022
- * 
+ * <p>
  * sqrt(2)约等于1.414 不用数学库 求小数点后10位
  */
 public class Sqrt2 {

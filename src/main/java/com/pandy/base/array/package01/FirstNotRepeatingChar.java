@@ -5,7 +5,7 @@ import java.util.LinkedHashMap;
 /**
  * @author: Pandy
  * @create: 2022/6/6
- *
+ * <p>
  * 第一个只出现一次的字符
  **/
 public class FirstNotRepeatingChar {

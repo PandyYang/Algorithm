@@ -3,7 +3,7 @@ package com.pandy.base.dynamic;
 /**
  * @author: Pandy
  * @create: 2022/6/17
- * 
+ * <p>
  * 数组的区间
  **/
 public class NumArray {
