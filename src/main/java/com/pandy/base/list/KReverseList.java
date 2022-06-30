@@ -21,24 +21,6 @@ import java.util.Stack;
  * 但是对于第一个子链表，它的头结点head前面是没有节点pre的。构建一个节点，作为边界条件。
  **/
 public class KReverseList {
-
-    public static void main(String[] args) {
-        ListNode listNode1 = new ListNode(1);
-        ListNode listNode2 = new ListNode(2);
-        ListNode listNode3 = new ListNode(3);
-        ListNode listNode4 = new ListNode(4);
-
-        listNode1.next = listNode2;
-        listNode2.next = listNode3;
-        listNode3.next = listNode4;
-
-        KReverseList list = new KReverseList();
-        ListNode[] reverse = list.myReverse(listNode1, listNode4);
-        for (ListNode listNode : reverse) {
-            System.out.println(listNode.val);
-        }
-    }
-
     public ListNode reverseKGroup(ListNode head, int k) {
 
         // 构建虚拟节点 用于前驱的边界条件

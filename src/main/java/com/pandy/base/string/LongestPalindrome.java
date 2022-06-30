@@ -15,8 +15,8 @@ public class LongestPalindrome {
             for (int j = i + 1; j <= len; j++) {
                 String test = s.substring(i, j);
                 if (isPalindromic(test) && test.length() > max) {
-                    ans = s.substring(i, j);
-                    max = Math.max(max, ans.length());
+//                    ans = s.substring(i, j);
+                    max = Math.max(max, test.length());
                 }
             }
         }

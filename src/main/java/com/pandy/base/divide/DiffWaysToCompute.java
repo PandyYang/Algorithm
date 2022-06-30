@@ -17,6 +17,7 @@ public class DiffWaysToCompute {
             if (c == '+' || c == '-' || c == '*') {
                 List<Integer> left = diffWaysToCompute(input.substring(0, i));
                 List<Integer> right = diffWaysToCompute(input.substring(i + 1));
+
                 for (int i1 : left) {
                     for (int i2 : right) {
                         switch (c) {

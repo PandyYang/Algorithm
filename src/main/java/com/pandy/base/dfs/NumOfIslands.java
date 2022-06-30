@@ -11,18 +11,6 @@ package com.pandy.base.dfs;
  * 此外，你可以假设该网格的四条边均被水包围。
  */
 public class NumOfIslands {
-
-    public static void main(String[] args) {
-        char[][] arr = new char[][]{
-                {'1', '1', '0', '0', '0'}, {'1', '1', '0', '0', '0'},
-                {'0', '0', '1', '0', '0'}, {'0', '0', '0', '1', '0'}
-        };
-
-        NumOfIslands numOfIslands = new NumOfIslands();
-        int i = numOfIslands.numOfIslands(arr);
-        System.out.println("i = " + i);
-    }
-
     public int numOfIslands(char[][] grid) {
         if (grid == null || grid.length == 0) return 0;
 

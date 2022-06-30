@@ -32,13 +32,18 @@ public class LRUCache {
     }
 
     public void put(int key, int value) {
+
+        // 有key移除key，没有移除第一个key
         if (map.containsKey(key)) {
             map.remove(key);
         } else if (map.size() == cap) {
             Iterator<Map.Entry<Integer, Integer>> iterator = map.entrySet().iterator();
+            // 删除掉第一个key
             iterator.next();
             iterator.remove();
         }
+
+        // 在放入
         map.put(key, value);
     }
 

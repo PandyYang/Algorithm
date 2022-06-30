@@ -9,7 +9,7 @@ import java.util.List;
  * <p>
  * 螺旋矩阵
  **/
-class Solution {
+class SpiralOrder {
     private static List<Integer> spiralOrder2(int[][] matrix) {
         List<Integer> res = new ArrayList<>();
         int row = matrix.length;

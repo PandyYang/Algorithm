@@ -20,15 +20,6 @@ import java.util.List;
  * 3、布尔数组used
  **/
 public class Permute {
-    public static void main(String[] args) {
-        Permute p = new Permute();
-        List<List<Integer>> permute = p.permute(new int[]{1, 2, 3});
-
-        for (List<Integer> integers : permute) {
-            System.out.println("integers = " + integers);
-        }
-    }
-
     public List<List<Integer>> permute(int[] nums) {
         int len = nums.length;
         List<List<Integer>> res = new ArrayList<>();

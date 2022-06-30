@@ -17,14 +17,6 @@ package com.pandy.base.array.package02;
  **/
 public class SearchInRotateSortedArray {
 
-    public static void main(String[] args) {
-        SearchInRotateSortedArray searchInRotateSortedArray = new SearchInRotateSortedArray();
-        int search = searchInRotateSortedArray.search(new int[]{4, 5, 1, 2, 3}, 2);
-        System.out.println("search = " + search);
-        int search2 = searchInRotateSortedArray.search(new int[]{4, 5, 1, 2, 3}, 5);
-        System.out.println("search = " + search2);
-    }
-
     public int search(int[] nums, int target) {
         int left = 0;
         int right = nums.length - 1;
