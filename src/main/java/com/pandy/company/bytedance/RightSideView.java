@@ -2,19 +2,19 @@ package com.pandy.company.bytedance;
 
 import com.pandy.common.TreeNode;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
 
 /**
  * @author: Pandy
- * @create: 2022/6/30
- *
- * 二叉树的层序遍历
+ * @create: 2022/7/1
+ * 使用层序遍历，并只保留每层最后一个节点的值
  **/
-public class LevelOrder {
-
-    public List<List<Integer>> levelOrder(TreeNode root) {
-
-        List<List<Integer>> res = new ArrayList<>();
+public class RightSideView {
+    public List<Integer> rightSideView(TreeNode root) {
+        List<Integer> res = new ArrayList<>();
         if (root == null) return res;
 
         Queue<TreeNode> queue = new LinkedList<>();
@@ -33,9 +33,8 @@ public class LevelOrder {
                 if (node.left != null) queue.offer(node.left);
                 if (node.right != null) queue.offer(node.right);
             }
-            res.add(level); // [[3], [9, 20], [15, 7]]
+            res.add(level.get(level.size() - 1)); // [[3], [9, 20], [15, 7]]
         }
         return res;
     }
-
 }
