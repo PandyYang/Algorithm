@@ -1,16 +1,13 @@
-package com.pandy.base.array;
+package com.pandy.company.bytedance;
 
 /**
  * @author: Pandy
- * @create: 2022/1/6
- * 搜索旋转排序数组
- * <p>
- * 0 1 2 4 5 6 7
- * <p>
- * 4,5,6,7,0,1,2
- **/
-public class SearchRotateArray {
-
+ * @create: 2022/7/1
+ *
+ *  搜索旋转排序数组
+ *
+ * */
+public class Search {
     public static int search(int[] nums, int target) {
         int len = nums.length;
         int left = 0, right = len - 1;
