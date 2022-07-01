@@ -21,11 +21,15 @@ public class In {
     public void inOrderTraversal2(TreeNode root) {
         LinkedList<TreeNode> stack = new LinkedList<>();
         TreeNode pNode = root;
+
         while (pNode != null || !stack.isEmpty()) {
+
             if (pNode != null) {
                 stack.push(pNode);
+                // 一直压左边
                 pNode = pNode.left;
             } else {
+                // 到头了 边弹出 边走右边
                 TreeNode node = stack.pop();
                 System.out.println(node.val);
                 pNode = pNode.right;

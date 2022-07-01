@@ -23,7 +23,7 @@ public class Solve {
         // 遍历上下边界
         for (int i = 0; i < n; i++) {
             dfs(board, 0, i);
-            dfs(board, m-1, i);
+            dfs(board, m - 1, i);
         }
 
         for (int i = 0; i < m; i++) {

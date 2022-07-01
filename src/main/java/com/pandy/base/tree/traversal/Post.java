@@ -28,6 +28,7 @@ public class Post {
         if (root == null) {
             return ret;
         }
+
         Stack<TreeNode> stack = new Stack<>();
         // 当前正在访问的节点
         TreeNode cur = root;
@@ -42,9 +43,8 @@ public class Post {
             }
 
             // 此时走到最左侧节点，但不能访问根节点
-            // 要判断右节点是否为空，或右节点已经访问
             cur = stack.pop();
-
+            // 要判断右节点是否为空，或右节点已经访问
             if (cur.right == null || cur.right == prev) {
                 ret.add(cur.val);
                 prev = cur; // 更新prev的指向
