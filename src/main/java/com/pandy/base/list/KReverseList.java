@@ -76,7 +76,6 @@ public class KReverseList {
 
     public ListNode reverseKGroup2(ListNode head, int k) {
         Stack<ListNode> stack = new Stack<>();
-
         // 初始化一个链表用于存放结果
         ListNode ret = new ListNode(0);
 
