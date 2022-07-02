@@ -25,8 +25,11 @@ public class NextGreaterElement {
         }
 
         swap(nums, i, j);
+
         reverse(nums, i +1);
+
         long ans = Long.parseLong(new String(nums));
+
         return ans > Integer.MAX_VALUE ? - 1 : (int) ans;
     }
 
