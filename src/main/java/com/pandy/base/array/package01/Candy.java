@@ -16,7 +16,7 @@ package com.pandy.base.array.package01;
  * <p>
  * 具体地，以左规则为例：我们从左到右遍历该数组，假设当前遍历到位置 ii，如果有 ratings[i - 1] < ratings[i]
  * ratings[i−1]<ratings[i] 那么 ii 号学生的糖果数量将比 i - 1i−1 号孩子的糖果数量多，
- * 我们令 \textit{left}[i] = \textit{left}[i - 1] + 1left[i]=left[i−1]+1 即可，否则我们令 \textit{left}[i] = 1left[i]=1。
+ * 我们令 {left}[i] = {left}[i - 1] + 1left[i]=left[i−1]+1 即可，否则我们令 {left}[i] = 1left[i]=1。
  * <p>
  * 在实际代码中，我们先计算出左规则 left 数组，在计算右规则的时候只需要用单个变量记录当前位置的右规则，同时计算答案即可。
  */
