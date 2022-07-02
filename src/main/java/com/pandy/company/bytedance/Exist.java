@@ -24,6 +24,7 @@ class Exist {
 
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
+
                 //起点如果不是word的首字符，那就跳过当前位置，不从这里开始遍历
                 if (board[i][j] != word.charAt(0)) {
                     continue;
@@ -44,16 +45,20 @@ class Exist {
         if (cur == word.length()) {
             return true;
         }
+
         //i和j如果越界则返回false
         if (i < 0 || j < 0 || i >= m || j >= n) {
             return false;
         }
+
         //如果当前网络字符不等于word的第cur个字符，或者当前字符已经被访问，则false
         if (board[i][j] != word.charAt(cur) || visited[i][j]) {
             return false;
         }
+
         //回溯
         visited[i][j] = true;
+
         //如果从当前点(i,j)散发的四个方向中有一个方向能成功匹配剩下的字母，则可以返回true
         for (int[] dir : direct) {
 
@@ -61,7 +66,9 @@ class Exist {
                 return true;
             }
         }
+
         visited[i][j] = false;
+
         //前面如果没有找到完整匹配的结果则返回false
         return false;
     }
