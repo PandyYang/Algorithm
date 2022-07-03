@@ -5,6 +5,8 @@ import com.pandy.common.TreeNode;
 /**
  * @author: Pandy
  * @create: 2022/7/1
+ *
+ * 左叶子之和
  **/
 public class SumOfLeftLeaves {
 
