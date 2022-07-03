@@ -13,12 +13,18 @@ import com.pandy.common.TreeNode;
  **/
 public class isBalance {
 
+    public boolean isBalanced(TreeNode root) {
+        if (root == null) return true;
+        return helper(root) != -1;
+    }
+
     private static int helper(TreeNode root) {
         if (root == null) return 0;
         // 左树高度
         int left = helper(root.left);
         // 右树高度
         int right = helper(root.right);
+
         if (left == -1 || right == -1 || Math.abs(left - right) > 1) {
             return -1;
         }
@@ -26,8 +32,4 @@ public class isBalance {
         return Math.max(left, right) + 1;
     }
 
-    public boolean isBalanced(TreeNode root) {
-        if (root == null) return true;
-        return helper(root) != -1;
-    }
 }
