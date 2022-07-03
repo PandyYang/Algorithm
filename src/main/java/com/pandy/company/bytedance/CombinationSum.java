@@ -1,32 +1,38 @@
 package com.pandy.company.bytedance;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 class CombinationSum {
-    public List<List<Integer>> combinationSum(int[] candidates, int target) {
-        List<List<Integer>> ans = new ArrayList<>();
-        List<Integer> combine = new ArrayList<>();
-        dfs(candidates, target, ans, combine, 0);
-        return ans;
+    private List<List<Integer>> res = new ArrayList<>();
+
+    public List<List<Integer>> combinationSum2(int[] candidates, int target) {
+        Arrays.sort(candidates);
+        List<Integer> path = new ArrayList<>();
+        backtrack(path,candidates,target,0,0);
+        return res;
     }
 
-    public void dfs(int[] candidates, int target, List<List<Integer>> ans, List<Integer> combine, int idx) {
-        if (idx == candidates.length) {
+    private void backtrack(List<Integer> path,int[] candidates,int target,int sum,int begin) {
+        if(sum == target) {
+            res.add(new ArrayList<>(path));
             return;
         }
 
-        if (target == 0) {
-            ans.add(new ArrayList<Integer>(combine));
-            return;
-        }
-        // 直接跳过
-        dfs(candidates, target, ans, combine, idx + 1);
-        // 选择当前数
-        if (target - candidates[idx] >= 0) {
-            combine.add(candidates[idx]);
-            dfs(candidates, target - candidates[idx], ans, combine, idx);
-            combine.remove(combine.size() - 1);
+        for(int i = begin;i < candidates.length;i++) {
+
+            if(i > begin && candidates[i] == candidates[i-1]) continue;
+
+            sum = (candidates[i] + sum);
+
+            if(sum <= target) {
+                path.add(candidates[i]);
+                backtrack(path,candidates,target,sum,i+1);
+                path.remove(path.size()-1);
+            } else {
+                break;
+            }
         }
     }
 }
