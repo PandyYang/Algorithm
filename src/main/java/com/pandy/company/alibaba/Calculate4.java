@@ -44,6 +44,7 @@ public class Calculate4 {
             }
         }
         calculate(stack, sign, num);
+        // 记录当前的索引和计算求和
         return new int[]{index, stack.stream().reduce(0, Integer::sum)};
     }
 
