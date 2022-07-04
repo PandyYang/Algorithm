@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * @author: Pandy
  * @create: 2022/7/1
- *
+ * <p>
  * 使数组唯一的最小增量
  **/
 public class MinIncrementForUnique {
@@ -14,9 +14,9 @@ public class MinIncrementForUnique {
         int move = 0;
 
         for (int i = 1; i < nums.length; i++) {
-            if (nums[i] <= nums[i-1]) {
+            if (nums[i] <= nums[i - 1]) {
                 int pre = nums[i];
-                nums[i] = nums[i-1] + 1;
+                nums[i] = nums[i - 1] + 1;
                 move += nums[i] - pre;
             }
         }

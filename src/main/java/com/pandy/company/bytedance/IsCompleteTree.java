@@ -8,11 +8,11 @@ import java.util.Queue;
 /**
  * @author: Pandy
  * @create: 2022/7/1
- *
+ * <p>
  * 完全二叉树的检验
- *
+ * <p>
  * 给定一个二叉树的root，确定它是否是一个完全二叉树。
- *
+ * <p>
  * 在一个完全二叉树中，除了最后一个关卡外，所有关卡都是完全被填满的，
  * 并且最后一个关卡中的所有节点都是尽可能靠左的。它可以包含1到2h节点之间的最后一级 h。
  **/
@@ -29,7 +29,7 @@ public class IsCompleteTree {
         while (!queue.isEmpty()) {
             temp = queue.remove();
 
-            if (temp == null){
+            if (temp == null) {
                 flag = true;
                 continue;
             }

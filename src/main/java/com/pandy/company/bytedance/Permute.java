@@ -1,7 +1,5 @@
 package com.pandy.company.bytedance;
 
-import com.pandy.base.tree.traversal.In;
-
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Deque;
@@ -10,7 +8,7 @@ import java.util.List;
 /**
  * @author: Pandy
  * @create: 2022/7/2
- *
+ * <p>
  * 全排列
  **/
 public class Permute {
@@ -18,7 +16,7 @@ public class Permute {
     public List<List<Integer>> permute(int[] nums) {
         int len = nums.length;
 
-        List<List<Integer>> res= new ArrayList<>();
+        List<List<Integer>> res = new ArrayList<>();
 
         if (len == 0) return res;
 

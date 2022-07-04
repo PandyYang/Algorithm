@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * @author: Pandy
  * @create: 2022/7/3
- *
+ * <p>
  * 合并区间
  **/
 public class MergeII {
@@ -23,8 +23,8 @@ public class MergeII {
             int left = intervals[i][0];
             int right = intervals[i][1];
 
-            while (i < n - 1 && right >= intervals[i+1][0]) {
-                right = Math.max(right, intervals[i+1][1]);
+            while (i < n - 1 && right >= intervals[i + 1][0]) {
+                right = Math.max(right, intervals[i + 1][1]);
                 i++;
             }
             list.add(new int[]{left, right});

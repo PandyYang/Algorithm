@@ -3,6 +3,10 @@ package com.pandy.company.bytedance;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * z字型变换
+ */
+
 class Zconvert {
     public String convert(String s, int numRows) {
         if (numRows < 2) return s;
@@ -18,7 +22,7 @@ class Zconvert {
             rows.get(i).append(c);
 
             //  i为0或最后一个 分别加1 或者减去 1 z字形振动
-            if (i==0 || i == numRows - 1) flag = -flag;
+            if (i == 0 || i == numRows - 1) flag = -flag;
             i += flag;
         }
 

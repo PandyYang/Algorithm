@@ -3,10 +3,9 @@ package com.pandy.company.bytedance;
 /**
  * @author: Pandy
  * @create: 2022/7/1
- *
- *  搜索旋转排序数组
- *
- * */
+ * <p>
+ * 搜索旋转排序数组
+ */
 public class Search {
     public static int search(int[] nums, int target) {
         int len = nums.length;

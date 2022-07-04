@@ -3,6 +3,9 @@ package com.pandy.company.bytedance;
 /**
  * @author: Pandy
  * @create: 2022/7/2
+ *
+ * 最长回文子串
+ *
  **/
 public class LongestPalindrome {
 
@@ -29,17 +32,17 @@ public class LongestPalindrome {
                 int j = L + i - 1;
                 if (j >= len) break;
                 if (charArray[i] != charArray[j]) {
-                    dp[i][j] =false;
+                    dp[i][j] = false;
                 } else {
                     if (j - i < 3) {
                         dp[i][j] = true;
                     } else {
-                        dp[i][j] = dp[i+1][j-1];
+                        dp[i][j] = dp[i + 1][j - 1];
                     }
                 }
 
                 if (dp[i][j] && j - i + 1 > maxLen) {
-                    maxLen = j - i +1;
+                    maxLen = j - i + 1;
                     begin = i;
                 }
             }

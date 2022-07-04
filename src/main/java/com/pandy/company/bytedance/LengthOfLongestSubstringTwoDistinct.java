@@ -7,19 +7,25 @@ import java.util.Map;
 /**
  * @author: Pandy
  * @create: 2022/7/2
- *
+ * <p>
  * 最多包含两个不重复元素的最长子串、
- *
- *定义一个 HashMap，key 为字符，value 为该字符在区间 left 到 right 中最靠右的那个索引。
- *
+ * <p>
+ * 定义一个 HashMap，key 为字符，value 为该字符在区间 left 到 right 中最靠右的那个索引。
+ * <p>
  * 于是，right 每往右走一步，都进行以下操作：
- *
+ * <p>
  * 1、map.put(s.charAt(right), right)，如果 s.charAt(right) 已存在，刚好顺便把它更新到最靠右；
  * 不存在的话，添加后就是唯一的存在，value 也是最靠右的。
- *
+ * <p>
  * 2、判断 map 里面的元素是不是等于三个，如果是，说明得删除一个，找出三个元素 value 最小的那个进行删除；
  **/
 public class LengthOfLongestSubstringTwoDistinct {
+    public static void main(String[] args) {
+        LengthOfLongestSubstringTwoDistinct length = new LengthOfLongestSubstringTwoDistinct();
+        int eceba = length.length("eceba");
+        System.out.println("eceba = " + eceba);
+    }
+
     public int length(String s) {
         int len = s.length();
         if (len < 3) return len;
@@ -40,11 +46,5 @@ public class LengthOfLongestSubstringTwoDistinct {
             maxLen = Math.max(maxLen, right - left);
         }
         return maxLen;
-    }
-
-    public static void main(String[] args) {
-        LengthOfLongestSubstringTwoDistinct length = new LengthOfLongestSubstringTwoDistinct();
-        int eceba = length.length("eceba");
-        System.out.println("eceba = " + eceba);
     }
 }

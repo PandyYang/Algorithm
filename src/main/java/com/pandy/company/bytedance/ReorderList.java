@@ -7,12 +7,11 @@ import java.util.LinkedList;
 /**
  * @author: Pandy
  * @create: 2022/7/3
- *
+ * <p>
  * 重排链表
- *
+ * <p>
  * 输入：head = [1,2,3,4]
  * 输出：[1,4,2,3]
- *
  **/
 public class ReorderList {
     public void reorderList(ListNode head) {

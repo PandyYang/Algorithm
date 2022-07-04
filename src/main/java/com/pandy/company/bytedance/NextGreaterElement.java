@@ -3,7 +3,7 @@ package com.pandy.company.bytedance;
 /**
  * @author: Pandy
  * @create: 2022/7/2
- *
+ * <p>
  * 下一个更大元素III
  **/
 public class NextGreaterElement {
@@ -12,7 +12,7 @@ public class NextGreaterElement {
         char[] nums = Integer.toString(n).toCharArray();
         int i = nums.length - 2;
 
-        while (i >= 0 && nums[i] >= nums[i+1]) {
+        while (i >= 0 && nums[i] >= nums[i + 1]) {
             i--;
         }
 
@@ -26,11 +26,11 @@ public class NextGreaterElement {
 
         swap(nums, i, j);
 
-        reverse(nums, i +1);
+        reverse(nums, i + 1);
 
         long ans = Long.parseLong(new String(nums));
 
-        return ans > Integer.MAX_VALUE ? - 1 : (int) ans;
+        return ans > Integer.MAX_VALUE ? -1 : (int) ans;
     }
 
     public void reverse(char[] nums, int begin) {

@@ -10,6 +10,9 @@ import java.util.Queue;
 /**
  * @author: Pandy
  * @create: 2022/7/1
+ *
+ * 二叉树的右视图
+ *
  * 使用层序遍历，并只保留每层最后一个节点的值
  **/
 public class RightSideView {

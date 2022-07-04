@@ -8,6 +8,8 @@ import java.util.Set;
 /**
  * @author: Pandy
  * @create: 2022/7/1
+ *
+ * 判断链表是否有环
  **/
 public class HasCycle {
 

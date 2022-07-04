@@ -8,8 +8,11 @@ import java.util.Set;
  * @author: Pandy
  * @create: 2022/7/3
  *
- * 给你一个字符串 s 和一个字符串列表 wordDict 作为字典。请你判断是否可以利用字典中出现的单词拼接出 s 。
+ * 单词拼接
  *
+ * <p>
+ * 给你一个字符串 s 和一个字符串列表 wordDict 作为字典。请你判断是否可以利用字典中出现的单词拼接出 s 。
+ * <p>
  * 注意：不要求字典中出现的单词全部都使用，并且字典中的单词可以重复使用。
  **/
 public class WordBreak {

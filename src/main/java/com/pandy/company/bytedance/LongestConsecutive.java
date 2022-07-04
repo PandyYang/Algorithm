@@ -5,10 +5,16 @@ import java.util.HashSet;
 /**
  * @author: Pandy
  * @create: 2022/7/3
- *
- * 最长连续序列
+ * <p>
+ * 最长连续递增序列
  **/
 public class LongestConsecutive {
+    public static void main(String[] args) {
+        LongestConsecutive l = new LongestConsecutive();
+        int i = l.longestConsecutive(new int[]{100, 4, 200, 1, 3, 2});
+        System.out.println("i = " + i);
+    }
+
     public int longestConsecutive(int[] nums) {
         HashSet<Integer> hashSet = new HashSet<>();
         for (int i : nums) {
@@ -29,11 +35,5 @@ public class LongestConsecutive {
             }
         }
         return ans;
-    }
-
-    public static void main(String[] args) {
-        LongestConsecutive l = new LongestConsecutive();
-        int i = l.longestConsecutive(new int[]{100, 4, 200, 1, 3, 2});
-        System.out.println("i = " + i);
     }
 }

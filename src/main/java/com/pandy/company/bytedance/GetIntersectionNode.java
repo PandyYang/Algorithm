@@ -8,6 +8,9 @@ import java.util.Set;
 /**
  * @author: Pandy
  * @create: 2022/7/1
+ *
+ * 环形链表的入口
+ *
  **/
 public class GetIntersectionNode {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {

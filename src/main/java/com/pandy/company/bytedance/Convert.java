@@ -6,14 +6,19 @@ import java.util.List;
 /**
  * @author: Pandy
  * @create: 2022/7/2
- *
+ * <p>
  * z 字型变换
- *
+ * <p>
  * flag的变化: 1 1 -1 -1 循环
  * i的变化: 0 1 2 1。。。。。。  0 1 2 1循环，也就是0 - 2之间跳动
- *
  **/
 public class Convert {
+
+    public static void main(String[] args) {
+        Convert convert = new Convert();
+        String paypalishiring = convert.convert("PAYPALISHIRING", 3);
+        System.out.println("paypalishiring = " + paypalishiring);
+    }
 
     public String convert(String s, int numRows) {
         List<StringBuilder> rows = new ArrayList<>();
@@ -42,11 +47,5 @@ public class Convert {
             stringBuilder.append(row);
         }
         return stringBuilder.toString();
-    }
-
-    public static void main(String[] args) {
-        Convert convert = new Convert();
-        String paypalishiring = convert.convert("PAYPALISHIRING", 3);
-        System.out.println("paypalishiring = " + paypalishiring);
     }
 }

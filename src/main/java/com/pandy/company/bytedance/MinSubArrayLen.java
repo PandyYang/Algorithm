@@ -5,6 +5,12 @@ package com.pandy.company.bytedance;
  * @create: 2022/7/2
  **/
 public class MinSubArrayLen {
+    public static void main(String[] args) {
+        MinSubArrayLen minSubArrayLen = new MinSubArrayLen();
+        int min = minSubArrayLen.min(7, new int[]{2, 3, 1, 2, 4, 3});
+        System.out.println("min = " + min);
+    }
+
     public int min(int s, int[] nums) {
         int n = nums.length;
         if (n == 0) return 0;
@@ -21,11 +27,5 @@ public class MinSubArrayLen {
             }
         }
         return ans == Integer.MAX_VALUE ? 0 : ans;
-    }
-
-    public static void main(String[] args) {
-        MinSubArrayLen minSubArrayLen = new MinSubArrayLen();
-        int min = minSubArrayLen.min(7, new int[]{2, 3, 1, 2, 4, 3});
-        System.out.println("min = " + min);
     }
 }

@@ -5,27 +5,27 @@ import com.pandy.common.ListNode;
 /**
  * @author: Pandy
  * @create: 2022/7/1]
- *
- *
+ * <p>
+ * <p>
  * 链表排序
  **/
 public class SortList {
     public ListNode sortList(ListNode head) {
 
         // 快慢指针
-        if(head==null||head.next==null)return head;
+        if (head == null || head.next == null) return head;
 
-        ListNode slow=head;
-        ListNode fast=head.next;
+        ListNode slow = head;
+        ListNode fast = head.next;
 
-        while(fast!=null &&fast.next!=null){
-            slow=slow.next;
-            fast=fast.next.next;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
         }
 
-        ListNode head2=slow.next;
-        slow.next=null;
-        return mergeTwoLists(sortList(head),sortList(head2));
+        ListNode head2 = slow.next;
+        slow.next = null;
+        return mergeTwoLists(sortList(head), sortList(head2));
     }
 
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {

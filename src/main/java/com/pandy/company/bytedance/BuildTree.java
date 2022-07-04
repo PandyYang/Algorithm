@@ -7,7 +7,7 @@ import java.util.Arrays;
 /**
  * @author: Pandy
  * @create: 2022/6/30
- *
+ * <p>
  * 从前序遍历到中序遍历重建二叉树
  **/
 public class BuildTree {
@@ -19,9 +19,9 @@ public class BuildTree {
         for (int i = 0; i < inorder.length; i++) {
             if (preorder[0] == inorder[i]) {
                 // 前序 1- i+1  中序 0 - i
-                root.left = buildTree(Arrays.copyOfRange(preorder, 1, i+1), Arrays.copyOfRange(inorder, 0, i));
+                root.left = buildTree(Arrays.copyOfRange(preorder, 1, i + 1), Arrays.copyOfRange(inorder, 0, i));
                 // 右边是i + 1, 总长
-                root.right = buildTree(Arrays.copyOfRange(preorder, i + 1, preorder.length), Arrays.copyOfRange(inorder, i+1, inorder.length));
+                root.right = buildTree(Arrays.copyOfRange(preorder, i + 1, preorder.length), Arrays.copyOfRange(inorder, i + 1, inorder.length));
                 break;
             }
         }

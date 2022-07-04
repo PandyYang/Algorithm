@@ -5,7 +5,7 @@ import com.pandy.common.ListNode;
 /**
  * @author: Pandy
  * @create: 2022/6/30
- *
+ * <p>
  * 删除链表中的重复元素
  **/
 public class DeleteDuplicates {

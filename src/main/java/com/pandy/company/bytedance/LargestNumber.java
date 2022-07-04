@@ -5,8 +5,8 @@ import java.util.PriorityQueue;
 /**
  * @author: Pandy
  * @create: 2022/7/3
- *
- * 最大数
+ * <p>
+ * 数组的数字重新排列后 组成的最大数
  **/
 public class LargestNumber {
 

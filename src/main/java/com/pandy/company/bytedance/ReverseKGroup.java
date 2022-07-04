@@ -7,9 +7,9 @@ import java.util.Stack;
 /**
  * @author: Pandy
  * @create: 2022/7/2
- *
+ * <p>
  * k个一组翻转链表
- *
+ * <p>
  * 想了2个多小时，才搞清楚大佬所说的好理解的思路…实际上就是在每个组内，
  * 把cur后面的一个数提到最前面，拿12345， k=3举例，第一组就是123，1为cur，
  * 且在2次循环中，cur指向从未变化，第一轮把1后面的2提到最前面，变成213，
@@ -78,8 +78,8 @@ public class ReverseKGroup {
         int length = 0;
         ListNode checkPoint = head;
 
-        while(checkPoint != null) {
-            length ++;
+        while (checkPoint != null) {
+            length++;
             checkPoint = checkPoint.next;
         }
 
@@ -90,8 +90,8 @@ public class ReverseKGroup {
         ListNode curr = head;
         ListNode next;
 
-        for(int i=0; i < length / k ; i++) {
-            for(int j=0; j < k - 1; j++) {
+        for (int i = 0; i < length / k; i++) {
+            for (int j = 0; j < k - 1; j++) {
                 next = curr.next;
                 //当前节点会携带之前的子节点指向第3个节点
                 curr.next = next.next;
