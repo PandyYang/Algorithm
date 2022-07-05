@@ -20,12 +20,12 @@ public class ReverseWords {
         StringBuffer stringBuffer = new StringBuffer();
 
         for (int i = s.length - 1; i >= 0; i--) {
-            if (!s[i].isBlank()) {
+            if (!s[i].isEmpty()) {
                 StringBuilder stringBuilder = new StringBuilder();
                 StringBuilder reverse = stringBuilder.append(s[i]).append(" ");
                 stringBuffer.append(reverse);
             }
         }
-        return stringBuffer.toString().strip();
+        return stringBuffer.toString().trim();
     }
 }

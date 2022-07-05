@@ -1,5 +1,8 @@
 package com.pandy.company.bytedance;
 
+/**
+ * 最长连续递增序列
+ */
 class FindLength {
     public int findLength(int[] A, int[] B) {
         int n = A.length, m = B.length;
