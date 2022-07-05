@@ -13,7 +13,7 @@ public class ClimbStairs {
         for (int i = 1; i <= n; i++) {
             p = q;
             q = r;
-            r = q + q;
+            r = q + p;
         }
         return r;
     }
