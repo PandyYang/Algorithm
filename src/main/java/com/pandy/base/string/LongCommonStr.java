@@ -10,13 +10,7 @@ import java.util.Arrays;
 public class LongCommonStr {
 
     public static String longCommonStr(String[] strs) {
-        if (!checkStrs(strs)) {
-            return "";
-        }
-
-        // 数组长度
         int len = strs.length;
-        // 保存结果
         StringBuilder res = new StringBuilder();
         // 给字符串数组进行排序 按照升序排序 如果包含数字的时候 数字会出现在前面
         Arrays.sort(strs);
@@ -34,20 +28,8 @@ public class LongCommonStr {
         return res.toString();
     }
 
-
-    // 校验字符串数组的合法性 不能出现null或者长度为0的情况
-    private static boolean checkStrs(String[] strs) {
-        boolean flag = false;
-        if (strs != null) {
-            for (int i = 0; i < strs.length; i++) {
-                if (strs[i] != null && strs[i].length() != 0) {
-                    flag = true;
-                } else {
-                    flag = false;
-                    break;
-                }
-            }
-        }
-        return flag;
+    public static void main(String[] args) {
+        String s = LongCommonStr.longCommonStr(new String[]{"aab", "aabcc", "bcd"});
+        System.out.println("s = " + s);
     }
 }
