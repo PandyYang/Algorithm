@@ -16,7 +16,7 @@ import java.util.Map;
  * 一个支持 + - * / ^ % （）的「计算器」，基本逻辑是一样的，使用字典维护一个符号优先级：
  **/
 public class Calculate {
-    Map<Character, Integer> map = new HashMap<>(){
+    Map<Character, Integer> map = new HashMap<Character, Integer>(){
         {
             put('-', 1);
             put('+', 1);

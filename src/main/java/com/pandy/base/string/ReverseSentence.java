@@ -20,7 +20,7 @@ import java.util.Objects;
 public class ReverseSentence {
 
     public static String reverseSentence(String str) {
-        str = str.strip();
+        str = str.trim();
         if (str == null || str.trim().equals("")) return str;
 
         String[] split = str.split(" ");

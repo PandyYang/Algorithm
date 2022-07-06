@@ -1,4 +1,4 @@
-package com.pandy.base.array;
+package com.pandy.base.array.package3;
 
 import java.util.Arrays;
 
