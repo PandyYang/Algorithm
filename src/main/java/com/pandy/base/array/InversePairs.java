@@ -1,7 +1,5 @@
 package com.pandy.base.array;
 
-import com.pandy.base.tree.traversal.In;
-
 /**
  * @author Pandy
  * @date 6/7/2022
@@ -66,7 +64,7 @@ public class InversePairs {
 
     public static void main(String[] args) {
         InversePairs inversePairs = new InversePairs();
-        int i = inversePairs.inversePairs(new int[]{1, 2, 3, 4});
+        int i = inversePairs.inversePairs(new int[]{1, 2, 3, 4,5,6,7,0});
         System.out.println("i = " + i);
     }
 }
