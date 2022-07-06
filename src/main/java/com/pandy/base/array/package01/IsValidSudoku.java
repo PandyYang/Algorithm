@@ -14,14 +14,14 @@ public class IsValidSudoku {
 
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
-                if (board[i][j] == '.') {
-                    int num = board[i][j] - 1;
+                if (board[i][j] != '.') {
+                    int num = board[i][j] - '1';
                     int blockIndex = i / 3 * 3 + j / 3;
                     if (row[i][num] || col[j][num] || block[blockIndex][num]) {
                         return false;
                     } else {
                         row[i][num] = true;
-                        row[j][num] = true;
+                        col[j][num] = true;
                         block[blockIndex][num] = true;
                     }
                 }
@@ -31,7 +31,9 @@ public class IsValidSudoku {
     }
 
     public static void main(String[] args) {
-        char[][] arr = new char[][]{{'5', '3', '.', '.', '7', '.', '.', '.', '.'}
+        char[][] arr = new char[][]
+                {
+                  {'5', '3', '.', '.', '7', '.', '.', '.', '.'}
                 , {'6', '.', '.', '1', '9', '5', '.', '.', '.'}
                 , {'.', '9', '8', '.', '.', '.', '.', '6', '.'}
                 , {'8', '.', '.', '.', '6', '.', '.', '.', '3'}
@@ -39,7 +41,8 @@ public class IsValidSudoku {
                 , {'7', '.', '.', '.', '2', '.', '.', '.', '6'}
                 , {'.', '6', '.', '.', '.', '.', '2', '8', '.'}
                 , {'.', '.', '.', '4', '1', '9', '.', '.', '5'}
-                , {'.', '.', '.', '.', '8', '.', '.', '7', '9'}};
+                , {'.', '.', '.', '.', '8', '.', '.', '7', '9'}
+                };
         boolean validSudoku = isValidSudoku(arr);
         System.out.println("validSudoku = " + validSudoku);
     }
