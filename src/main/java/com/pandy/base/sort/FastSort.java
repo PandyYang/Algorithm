@@ -34,28 +34,27 @@ public class FastSort {
         quickSort(arr, i + 1, right);
     }
 
-    class Solution {
-        public int[] sortArray(int[] nums) {
-            if (nums.length <= 1) return nums;
-            qSort(nums, 0, nums.length - 1);
-            return nums;
-        }
 
-        void qSort(int[] arr, int s, int e) {
-            int l = s, r = e;
-            if (l < r) {
-                int temp = arr[l];
-                while (l < r) {
-                    while (l < r && arr[r] >= temp) r--;
-                    if (l < r) arr[l] = arr[r];
-                    while (l < r && arr[l] < temp) l++;
-                    if (l < r) arr[r] = arr[l];
-                }
+    public int[] quickSort(int[] nums) {
+        if (nums.length <= 1) return nums;
+        qSort(nums, 0, nums.length - 1);
+        return nums;
+    }
 
-                arr[l] = temp;
-                qSort(arr, s, l);
-                qSort(arr, l + 1, e);
+    void qSort(int[] arr, int start, int end) {
+        int l = start, r = end;
+        if (l < r) {
+            int temp = arr[l];
+            while (l < r) {
+                while (l < r && arr[r] >= temp) r--;
+                if (l < r) arr[l] = arr[r];
+                while (l < r && arr[l] < temp) l++;
+                if (l < r) arr[r] = arr[l];
             }
+
+            arr[l] = temp;
+            qSort(arr, start, l);
+            qSort(arr, l + 1, end);
         }
     }
 }
