@@ -21,15 +21,15 @@ public class Pre {
     // 非递归版本
     public void preOrderTraversal2(TreeNode root) {
         LinkedList<TreeNode> stack = new LinkedList<>();
-        TreeNode pNode = root;
-        while (pNode != null || !stack.isEmpty()) {
-            if (pNode != null) {
-                System.out.println(pNode.val);
-                stack.push(pNode);
-                pNode = pNode.left;
+        TreeNode cur = root;
+        while (cur != null || !stack.isEmpty()) {
+            if (cur != null) {
+                System.out.println(cur.val);
+                stack.push(cur);
+                cur = cur.left;
             } else {
                 TreeNode node = stack.pop();
-                pNode = node.right;
+                cur = node.right;
             }
         }
     }

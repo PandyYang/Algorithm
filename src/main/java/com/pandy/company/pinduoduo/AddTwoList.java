@@ -1,4 +1,4 @@
-package com.pandy.base.list;
+package com.pandy.company.pinduoduo;
 
 import com.pandy.common.ListNode;
 

@@ -20,19 +20,19 @@ public class In {
 
     public void inOrderTraversal2(TreeNode root) {
         LinkedList<TreeNode> stack = new LinkedList<>();
-        TreeNode pNode = root;
+        TreeNode cur = root;
 
-        while (pNode != null || !stack.isEmpty()) {
+        while (cur != null || !stack.isEmpty()) {
 
-            if (pNode != null) {
-                stack.push(pNode);
+            if (cur != null) {
+                stack.push(cur);
                 // 一直压左边
-                pNode = pNode.left;
+                cur = cur.left;
             } else {
                 // 到头了 边弹出 边走右边
                 TreeNode node = stack.pop();
                 System.out.println(node.val);
-                pNode = pNode.right;
+                cur = cur.right;
             }
         }
     }
