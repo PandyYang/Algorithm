@@ -4,14 +4,13 @@ package com.pandy.base.simulation;
  * @author Pandy
  * @date 6/7/2022
  * 螺旋矩阵II
- *
  */
 public class GenerateMatrixII {
 
     public int[][] generateMatrix(int n) {
 
         int[][] res = new int[n][n];
-        int up = 0, down = n-1, left = 0, right = n-1, index = 1;
+        int up = 0, down = n - 1, left = 0, right = n - 1, index = 1;
 
         while (index <= n * n) {
             for (int i = left; i <= right; i++) {
@@ -24,7 +23,7 @@ public class GenerateMatrixII {
             }
 
             right--;
-            for (int i = right; i >= left ; i--) {
+            for (int i = right; i >= left; i--) {
                 res[down][i] = index++;
             }
 

@@ -3,12 +3,17 @@ package com.pandy.base.traceback;
 import java.util.*;
 
 /**
- *
  * 全排列II
  * 给定一个可包含重复数字的序列 nums ，按任意顺序 返回所有不重复的全排列。
  */
 
 class PermuteUnique {
+
+    public static void main(String[] args) {
+        PermuteUnique permuteUnique = new PermuteUnique();
+        List<List<Integer>> lists = permuteUnique.permuteUnique(new int[]{1, 2, 3});
+        lists.forEach(System.out::println);
+    }
 
     public List<List<Integer>> permuteUnique(int[] nums) {
         Arrays.sort(nums);
@@ -27,7 +32,7 @@ class PermuteUnique {
 
         for (int i = 0; i < nums.length; i++) {
 
-            if (exist[i] || (i > 0 && nums[i] == nums[i-1] && !exist[i-1])) {
+            if (exist[i] || (i > 0 && nums[i] == nums[i - 1] && !exist[i - 1])) {
                 continue;
             }
 
@@ -40,11 +45,5 @@ class PermuteUnique {
             path.removeLast();
             exist[i] = false;
         }
-    }
-
-    public static void main(String[] args) {
-        PermuteUnique permuteUnique = new PermuteUnique();
-        List<List<Integer>> lists = permuteUnique.permuteUnique(new int[]{1, 2, 3});
-        lists.forEach(System.out::println);
     }
 }

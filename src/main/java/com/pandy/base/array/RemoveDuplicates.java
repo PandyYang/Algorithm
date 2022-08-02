@@ -5,6 +5,12 @@ package com.pandy.base.array;
  */
 
 class RemoveDuplicates {
+    public static void main(String[] args) {
+        RemoveDuplicates removeDuplicates = new RemoveDuplicates();
+        int i = removeDuplicates.removeDuplicates(new int[]{1, 1, 1, 2, 2, 2, 3, 3, 4});
+        System.out.println(i);
+    }
+
     public int removeDuplicates(int[] nums) {
         int n = nums.length;
         if (n <= 2) {
@@ -19,11 +25,5 @@ class RemoveDuplicates {
             ++fast;
         }
         return slow;
-    }
-
-    public static void main(String[] args) {
-        RemoveDuplicates removeDuplicates = new RemoveDuplicates();
-        int i = removeDuplicates.removeDuplicates(new int[]{1, 1, 1, 2, 2, 2, 3, 3, 4});
-        System.out.println(i);
     }
 }

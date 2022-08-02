@@ -3,9 +3,8 @@ package com.pandy.company.bytedance;
 /**
  * @author: Pandy
  * @create: 2022/6/30
- *
+ * <p>
  * 子数组的最大和
- *
  **/
 public class MaxSubArray {
 

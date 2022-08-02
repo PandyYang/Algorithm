@@ -2,26 +2,29 @@ package com.pandy.test;
 
 import com.pandy.common.TreeNode;
 
-import java.util.*;
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Deque;
+import java.util.List;
 
 class Solution {
     public static List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> res = new ArrayList<>();
-        if(root == null) return res;
+        if (root == null) return res;
 
         Deque<TreeNode> stack = new ArrayDeque<>();
         stack.push(root);
 
-        while(!stack.isEmpty()) {
+        while (!stack.isEmpty()) {
             List<Integer> level = new ArrayList();
 
             int size = stack.size();
 
-            for(int i =0; i < size; i++) {
+            for (int i = 0; i < size; i++) {
                 root = stack.pollLast();
                 level.add(root.val);
-                if(root.left != null) stack.push(root.left);
-                if(root.right != null) stack.push(root.right);
+                if (root.left != null) stack.push(root.left);
+                if (root.right != null) stack.push(root.right);
             }
             res.add(level);
         }

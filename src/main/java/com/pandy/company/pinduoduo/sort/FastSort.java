@@ -3,14 +3,22 @@ package com.pandy.company.pinduoduo.sort;
 /**
  * @author: Pandy
  * @create: 2022/7/7
- *
+ * <p>
  * 快速排序
  **/
 public class FastSort {
 
+    public static void main(String[] args) {
+        FastSort fastSort = new FastSort();
+        int[] ints = fastSort.quickSort(new int[]{5, 4, 3, 1, 2});
+        for (int anInt : ints) {
+            System.out.println("anInt = " + anInt);
+        }
+    }
+
     public int[] quickSort(int[] nums) {
         if (nums.length < 1) return nums;
-        qSort(nums, 0, nums.length -1);
+        qSort(nums, 0, nums.length - 1);
         return nums;
     }
 
@@ -31,14 +39,6 @@ public class FastSort {
             nums[l] = temp;
             qSort(nums, start, l);
             qSort(nums, l + 1, end);
-        }
-    }
-
-    public static void main(String[] args) {
-        FastSort fastSort = new FastSort();
-        int[] ints = fastSort.quickSort(new int[]{5, 4, 3, 1, 2});
-        for (int anInt : ints) {
-            System.out.println("anInt = " + anInt);
         }
     }
 }

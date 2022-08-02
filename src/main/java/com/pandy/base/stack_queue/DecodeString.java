@@ -24,7 +24,7 @@ public class DecodeString {
         for (char c : s.toCharArray()) {
             if (Character.isDigit(c)) multi = multi * 10 + c - '0';
 
-            // 在左括号之前必有数字或者字母。
+                // 在左括号之前必有数字或者字母。
             else if (c == '[') {
                 // 如果是左边的符号 要记录 对应的字母 以及次数
                 ansStack.add(ans); // 结果

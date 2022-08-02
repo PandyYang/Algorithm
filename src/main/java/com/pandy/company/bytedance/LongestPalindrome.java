@@ -3,9 +3,8 @@ package com.pandy.company.bytedance;
 /**
  * @author: Pandy
  * @create: 2022/7/2
- *
+ * <p>
  * 最长回文子串
- *
  **/
 public class LongestPalindrome {
 
