@@ -9,6 +9,12 @@ package com.pandy.base.array;
 public class InversePairs {
     public int count = 0;
 
+    public static void main(String[] args) {
+        InversePairs inversePairs = new InversePairs();
+        int i = inversePairs.inversePairs(new int[]{1, 2, 3, 4, 5, 6, 7, 0});
+        System.out.println("i = " + i);
+    }
+
     public int inversePairs(int[] array) {
         if (array.length < 2) return 0;
         mergeSort(array, 0, array.length - 1);
@@ -60,11 +66,5 @@ public class InversePairs {
         for (int num : arr) {
             array[s++] = num;
         }
-    }
-
-    public static void main(String[] args) {
-        InversePairs inversePairs = new InversePairs();
-        int i = inversePairs.inversePairs(new int[]{1, 2, 3, 4,5,6,7,0});
-        System.out.println("i = " + i);
     }
 }

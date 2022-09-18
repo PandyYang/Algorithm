@@ -9,12 +9,12 @@ import java.util.Stack;
 /**
  * @author: Pandy
  * @create: 2022/7/7
- *
+ * <p>
  * 二叉树的中序遍历
  **/
 public class InOrderTraversal {
 
-    public List<Integer>  inorderTraversal(TreeNode root) {
+    public List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> list = new ArrayList<>();
         Stack<TreeNode> stack = new Stack<>();
         TreeNode cur = root;

@@ -6,12 +6,12 @@ import java.util.Map;
 /**
  * @author Pandy
  * @date 6/7/2022
- *
+ * <p>
  * 罗马数字转整数
  */
 public class RomanToInt {
 
-    Map<Character, Integer> symbolValues = new HashMap<Character, Integer>(){{
+    Map<Character, Integer> symbolValues = new HashMap<Character, Integer>() {{
         put('I', 1);
         put('V', 5);
         put('X', 10);
@@ -26,7 +26,7 @@ public class RomanToInt {
         int n = s.length();
         for (int i = 0; i < n; i++) {
             int value = symbolValues.get(s.charAt(i));
-            if (i < n - 1 && value < symbolValues.get(s.charAt(i+1))) {
+            if (i < n - 1 && value < symbolValues.get(s.charAt(i + 1))) {
                 sum -= value;
             } else {
                 sum += value;

@@ -7,7 +7,7 @@ import java.util.List;
  * @author: Pandy
  * @create: 2022/7/1
  * <p>
- *     求数组的所有子集
+ * 求数组的所有子集
  * <p>
  * * 上面的代码中，{dfs}(it{cur}, n)dfs(cur,n) 参数表示当前位置是 it{cur}cur，
  * * 原序列总长度为 nn。原序列的每个位置在答案序列中的状态有被选中和不被选中两种，

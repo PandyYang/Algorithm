@@ -5,9 +5,8 @@ import java.util.Arrays;
 /**
  * @author: Pandy
  * @create: 2022/7/1
- *
+ * <p>
  * 最大的乘积
- *
  **/
 public class MaximumProduct {
 

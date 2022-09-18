@@ -5,9 +5,8 @@ import java.util.Stack;
 /**
  * @author: Pandy
  * @create: 2022/7/2
- *
+ * <p>
  * 验证括号的合法性
- *
  **/
 public class IsValid {
     public static void main(String[] args) {

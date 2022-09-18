@@ -1,13 +1,19 @@
 package com.pandy.base.string;
 
 class Multiply {
+    public static void main(String[] args) {
+        Multiply multiply = new Multiply();
+        String multiply1 = multiply.multiply("999", "999");
+        System.out.println("multiply1 = " + multiply1);
+    }
+
     /**
-    * 计算形式
-    *    num1
-    *  x num2
-    *  ------
-    *  result
-    */
+     * 计算形式
+     * num1
+     * x num2
+     * ------
+     * result
+     */
     public String multiply(String num1, String num2) {
         if (num1.equals("0") || num2.equals("0")) {
             return "0";
@@ -55,11 +61,5 @@ class Multiply {
             carry = (x + y + carry) / 10;
         }
         return builder.reverse().toString();
-    }
-
-    public static void main(String[] args) {
-        Multiply multiply = new Multiply();
-        String multiply1 = multiply.multiply("999", "999");
-        System.out.println("multiply1 = " + multiply1);
     }
 }

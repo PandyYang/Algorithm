@@ -1,6 +1,12 @@
 package com.pandy.base.simulation;
 
 class AddBinary {
+    public static void main(String[] args) {
+        AddBinary addBinary = new AddBinary();
+        String s = addBinary.addBinary("11", "1");
+        System.out.println("s = " + s);
+    }
+
     public String addBinary(String a, String b) {
         int i = a.length() - 1;
         int j = b.length() - 1;
@@ -32,11 +38,5 @@ class AddBinary {
         }
         //反转字符串获得正常结果
         return builder.reverse().toString();
-    }
-
-    public static void main(String[] args) {
-        AddBinary addBinary =  new AddBinary();
-        String s = addBinary.addBinary("11", "1");
-        System.out.println("s = " + s);
     }
 }

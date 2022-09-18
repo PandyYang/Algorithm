@@ -5,9 +5,8 @@ import com.pandy.common.TreeNode;
 /**
  * @author: Pandy
  * @create: 2022/7/3
- *
+ * <p>
  * 判断是否为镜像二叉树
- *
  **/
 public class IsSymmetric {
 

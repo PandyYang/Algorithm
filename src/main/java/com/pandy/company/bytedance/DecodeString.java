@@ -28,16 +28,16 @@ public class DecodeString {
             // 数字
             if (Character.isDigit(c)) {
                 multi = multi * 10 + c - '0';
-            // 左括号
+                // 左括号
             } else if (c == '[') {
                 ansStack.add(ans);
                 multiStack.add(multi);
                 ans = new StringBuffer();
                 multi = 0;
-            // 字母
+                // 字母
             } else if (Character.isAlphabetic(c)) {
                 ans.append(c);
-            // 右括号
+                // 右括号
             } else {
                 StringBuffer ansTmp = ansStack.pop();
                 int tmp = multiStack.pop();

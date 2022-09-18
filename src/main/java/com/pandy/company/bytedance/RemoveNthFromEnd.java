@@ -5,9 +5,8 @@ import com.pandy.common.ListNode;
 /**
  * @author: Pandy
  * @create: 2022/7/1
- *
+ * <p>
  * 移除链表倒数第n个元素
- *
  **/
 public class RemoveNthFromEnd {
 

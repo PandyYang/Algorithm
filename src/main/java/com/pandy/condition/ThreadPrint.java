@@ -12,6 +12,11 @@ public class ThreadPrint extends Thread {
     private static final int MAX_PRINT_NUM = 100;
 
     private static final AtomicInteger atomicInteger = new AtomicInteger(0);
+    /**
+     * 方法2： 使用volatile关键字实现
+     */
+
+    private static volatile int count = 0;
 
     /**
      * 方法1： 使用atomicInteger实现
@@ -36,12 +41,6 @@ public class ThreadPrint extends Thread {
         }).start();
     }
 
-    /**
-     * 方法2： 使用volatile关键字实现
-     */
-
-    private static volatile int count = 0;
-
     private static void printCD() {
         new Thread(() -> {
             while (count < MAX_PRINT_NUM) {
@@ -61,7 +60,6 @@ public class ThreadPrint extends Thread {
             }
         }).start();
     }
-
 
 
     public static void main(String[] args) {

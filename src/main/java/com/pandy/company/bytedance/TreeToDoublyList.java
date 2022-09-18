@@ -11,9 +11,9 @@ import java.util.List;
  **/
 public class TreeToDoublyList {
 
+    private final List<Node> list = new ArrayList<>();
     // 1. 中序，递归，来自解题大佬
     Node pre, head;
-    private final List<Node> list = new ArrayList<>();
 
     public Node treeToDoublyList2(Node root) {
         if (root == null) return null;

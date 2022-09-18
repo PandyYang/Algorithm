@@ -3,9 +3,8 @@ package com.pandy.company.bytedance;
 /**
  * @author: Pandy
  * @create: 2022/6/30
- *
+ * <p>
  * 买卖股票
- *
  **/
 public class MaxProfit {
 
