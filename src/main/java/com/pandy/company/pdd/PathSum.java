@@ -1,4 +1,4 @@
-package com.pandy.company.pinduoduo;
+package com.pandy.company.pdd;
 
 import com.pandy.common.TreeNode;
 

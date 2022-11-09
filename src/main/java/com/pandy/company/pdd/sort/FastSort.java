@@ -1,4 +1,4 @@
-package com.pandy.company.pinduoduo.sort;
+package com.pandy.company.pdd.sort;
 
 /**
  * @author: Pandy
