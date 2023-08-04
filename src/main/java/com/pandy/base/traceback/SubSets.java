@@ -1,6 +1,6 @@
 package com.pandy.base.traceback;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -10,41 +10,33 @@ import java.util.List;
  * 求子集
  **/
 public class SubSets {
+    List<List<Integer>> res = new LinkedList<>();
+    // 记录回溯算法的递归路径
+    LinkedList<Integer> track = new LinkedList<>();
 
-    public List<List<Integer>> ans = new ArrayList<>();
-    List<Integer> t = new ArrayList<>();
-
-    public List<List<Integer>> subSets(int[] nums) {
-        dfs(0, nums);
-        return ans;
-    }
-
-    public void dfs(int cur, int[] nums) {
-        if (cur == nums.length) {
-            ans.add(new ArrayList<>(t));
-            return;
-        }
-
-        t.add(nums[cur]);
-        dfs(cur + 1, nums);
-        t.remove(t.size() - 1);
-        dfs(cur + 1, nums);
-    }
-
-    /////////////////////////////////////////////////////////////////////////////////
-
-
-    public List<List<Integer>> subsets2(int[] nums) {
-        List<List<Integer>> res = new ArrayList<>();
-        res.add(new ArrayList<>());
-        for (int i = 0; i < nums.length; i++) {
-            int all = res.size();
-            for (int j = 0; j < all; j++) {
-                ArrayList<Integer> tmp = new ArrayList<>(res.get(j));
-                tmp.add(nums[i]);
-                res.add(tmp);
-            }
-        }
+    public List<List<Integer>> subsets(int[] nums) {
+        backtrack(nums, 0);
         return res;
+    }
+
+    // 遍历子集问题的回溯树
+    void backtrack(int[] nums, int start) {
+
+        // 前序位置 每个节点的值都是一个子集
+        res.add(new LinkedList<>(track));
+        for (int i = start; i < nums.length; i++) {
+            // 做选择
+            track.addLast(nums[i]);
+            // 通过start参数控制树枝的遍历 避免产生重复的子集
+            backtrack(nums, i + 1);
+            // 撤销选择
+            track.removeLast();
+        }
+    }
+
+    public static void main(String[] args) {
+        SubSets subSets = new SubSets();
+        List<List<Integer>> subsets = subSets.subsets(new int[]{1, 2, 3});
+        subsets.forEach(System.out::println);
     }
 }

@@ -11,9 +11,9 @@ public class Permutation {
 
     public static void main(String[] args) {
         Permutation permutation = new Permutation();
-        String[] abcs = permutation.permutation("abc");
+        String[] abcs = permutation.permutation("abcd");
         for (String abc : abcs) {
-            System.out.println("abc = " + abc);
+            System.out.println("res = " + abc);
         }
     }
 

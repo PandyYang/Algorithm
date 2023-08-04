@@ -38,4 +38,10 @@ public class Combine {
             path.removeLast();
         }
     }
+
+    public static void main(String[] args) {
+        Combine combine = new Combine();
+        List<List<Integer>> listList = combine.combine(3, 1);
+        listList.forEach(System.out::println);
+    }
 }
