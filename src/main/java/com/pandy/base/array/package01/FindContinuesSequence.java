@@ -90,4 +90,9 @@ public class FindContinuesSequence {
         }
         return res.toArray(new int[0][]);
     }
+
+    public static void main(String[] args) {
+        ArrayList<ArrayList<Integer>> continuesSequence = findContinuesSequence(10);
+        continuesSequence.forEach(System.out::println);
+    }
 }
