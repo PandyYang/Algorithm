@@ -14,7 +14,7 @@ package com.pandy.base.array.package01;
 public class EvenAndOdd {
     public static void reOrder(int[] datas) {
 
-        if (datas == null || datas.length <= 0) {
+        if (datas == null || datas.length == 0) {
             return;
         }
 
