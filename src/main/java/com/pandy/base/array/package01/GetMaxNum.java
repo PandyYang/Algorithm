@@ -9,6 +9,10 @@ import java.util.Objects;
  * @create: 2022/6/11
  * <p>
  * 能被K整除最多次的整数一共有多少个
+ * 比如在0 - 10的区间内计算3能被整除最多的
+ * 3 6 9
+ * 能被整除的次数是 1 1 2
+ * 能被整除的最多的次数只有9 为 2次，所以是1个
  **/
 public class GetMaxNum {
 
@@ -28,6 +32,7 @@ public class GetMaxNum {
             }
         }
 
+        // 此处计算list中的最大数出现了多少次
         Integer max = Collections.max(list);
         int sum = 0;
         for (Integer integer : list) {
@@ -37,6 +42,7 @@ public class GetMaxNum {
         return sum;
     }
 
+    // 计算j可以被i整除的次数
     public static int can(int i, int j) {
         int sum = 0;
         while (j / i > 1 || j % i == 0) {

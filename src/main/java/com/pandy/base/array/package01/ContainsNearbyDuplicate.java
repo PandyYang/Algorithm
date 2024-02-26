@@ -22,6 +22,7 @@ public class ContainsNearbyDuplicate {
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
 
+            // 假如存在这个元素 那么用当前位置 减去之前元素的位置 判断是否小于k
             if (map.get(nums[i]) != null && (i - map.get(nums[i]) <= k)) {
                 return true;
             }

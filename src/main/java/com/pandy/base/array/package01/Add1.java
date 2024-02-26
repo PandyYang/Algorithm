@@ -12,11 +12,14 @@ public class Add1 {
 
     public static int[] add1(int[] arr) {
         int n = arr.length;
+        // 从后向前 因为要从个位开始+1
         for (int i = arr.length - 1; i >= 0; i--) {
 
             // 遍历数组的每一位，小于9，则+1直接返回
             // 注意 只要不全为9 此处绝对会跳出
             if (arr[i] < 9) {
+
+                // 也会处理进位
                 arr[i]++;
                 return arr;
             }
@@ -32,7 +35,9 @@ public class Add1 {
     }
 
     public static void main(String[] args) {
-        int[] arr = new int[]{9, 1, 9};
+//        int[] arr = new int[]{1, 1, 1};
+//        int[] arr = new int[]{9, 9, 9};
+        int[] arr = new int[]{1, 1, 9};
         int[] ints = add1(arr);
         for (int anInt : ints) {
             System.out.println("anInt = " + anInt);
