@@ -14,9 +14,15 @@ public class IsValidSudoku {
 
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
+                // board[i][j]是某个点的值
                 if (board[i][j] != '.') {
                     int num = board[i][j] - '1';
+                    // blockIndex是九宫格的索引
+                    // x x x
+                    // x x x
+                    // x x x
                     int blockIndex = i / 3 * 3 + j / 3;
+                    // 检查当前数字num在当前格子所在的行 列 九宫格种是否出现过
                     if (row[i][num] || col[j][num] || block[blockIndex][num]) {
                         return false;
                     } else {
@@ -33,7 +39,7 @@ public class IsValidSudoku {
     public static void main(String[] args) {
         char[][] arr = new char[][]
                 {
-                        {'5', '3', '.', '.', '7', '.', '.', '.', '.'}
+                          {'5', '3', '.', '.', '7', '.', '.', '.', '.'}
                         , {'6', '.', '.', '1', '9', '5', '.', '.', '.'}
                         , {'.', '9', '8', '.', '.', '.', '.', '6', '.'}
                         , {'8', '.', '.', '.', '6', '.', '.', '.', '3'}
