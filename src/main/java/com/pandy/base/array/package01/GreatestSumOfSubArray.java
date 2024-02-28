@@ -8,7 +8,7 @@ package com.pandy.base.array.package01;
  **/
 public class GreatestSumOfSubArray {
 
-    public int greatestSumOfSubArray(int[] arr) {
+    public static int greatestSumOfSubArray(int[] arr) {
         if (arr == null || arr.length == 0) return 0;
 
         int max = arr[0];
@@ -26,5 +26,10 @@ public class GreatestSumOfSubArray {
             }
         }
         return max;
+    }
+
+    public static void main(String[] args) {
+        int sum = greatestSumOfSubArray(new int[]{-1, 2, -4, 5, 7, 9, 1, 0});
+        System.out.println("sum = " + sum);
     }
 }

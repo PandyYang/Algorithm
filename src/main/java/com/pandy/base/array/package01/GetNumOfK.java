@@ -16,7 +16,9 @@ public class GetNumOfK {
 
         // 二分查找 先找出第一个k出现得位置
         int start = 0, end = arr.length - 1;
+        // t记录数组中元素出现得位置
         int t = -1;
+
         while (start < end) {
             int mid = (start + end) / 2;
             if (arr[mid] == k) {
