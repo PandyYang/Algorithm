@@ -9,7 +9,7 @@ package com.pandy.base.string;
  * 只考虑字母和数字字符 可以忽略大小写
  **/
 public class isPalindrome {
-    public boolean isPalindrome(String s) {
+    public static boolean isPalindrome(String s) {
         if (s.length() == 0) return true;
         int l = 0, r = s.length() - 1;
         while (l < r) {
@@ -28,5 +28,10 @@ public class isPalindrome {
             }
         }
         return true;
+    }
+
+    public static void main(String[] args) {
+        boolean abcdcba = isPalindrome("abcdcba");
+        System.out.println("abcdcba = " + abcdcba);
     }
 }

@@ -3,7 +3,7 @@ package com.pandy.base.array;
 public class MaxProduct {
 
     public int maxProduct(String[] words) {
-        // ¼ÇÂ¼Ã¿¸ö×ÓÊı×éµÄÃ¿¸öÔªËØ³öÏÖµÄÎ»ÖÃ ×¢ÒâÄ¬ÈÏËùÓĞÎ»ÖÃÊÇfalse
+        // è®°å½•æ¯ä¸ªå­æ•°ç»„çš„æ¯ä¸ªå…ƒç´ å‡ºç°çš„ä½ç½® æ³¨æ„é»˜è®¤æ‰€æœ‰ä½ç½®æ˜¯false
         boolean[][] flags = new boolean[words.length][26];
         for (int i = 0; i < words.length; i++) {
             for (char c : words[i].toCharArray()) {
@@ -15,13 +15,13 @@ public class MaxProduct {
             for (int j = i+1; j < words.length; j++) {
                 int k = 0;
                 for (; k < 26; k++) {
-                    // ÕâÊÇÒ»¸ö±©Á¦±éÀú×ÓÊı×é
-                    // Ã¿¸ö×ÓÊı×éµÄÃ¿¸öÎ»ÖÃ ÏàÓë ²é¿´ÊÇ·ñ´æÔÚÏàÍ¬µÄÔªËØ
+                    // è¿™æ˜¯ä¸€ä¸ªæš´åŠ›éå†å­æ•°ç»„
+                    // æ¯ä¸ªå­æ•°ç»„çš„æ¯ä¸ªä½ç½® ç›¸ä¸ æŸ¥çœ‹æ˜¯å¦å­˜åœ¨ç›¸åŒçš„å…ƒç´ 
                     if (flags[i][k] && flags[j][k]) {
                         break;
                     }
                 }
-                // kÎª26 ËµÃ÷Ã»ÓĞÖØ¸´µÄ¡£
+                // kä¸º26 è¯´æ˜æ²¡æœ‰é‡å¤çš„ã€‚
                 if (k == 26) {
                     int prod = words[i].length() * words[j].length();
                     result = Math.max(result, prod);
