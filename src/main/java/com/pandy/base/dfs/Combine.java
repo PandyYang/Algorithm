@@ -41,7 +41,7 @@ public class Combine {
 
     public static void main(String[] args) {
         Combine combine = new Combine();
-        List<List<Integer>> listList = combine.combine(3, 1);
+        List<List<Integer>> listList = combine.combine(4, 3);
         listList.forEach(System.out::println);
     }
 }

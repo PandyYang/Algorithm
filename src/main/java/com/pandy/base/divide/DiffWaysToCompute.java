@@ -35,7 +35,7 @@ public class DiffWaysToCompute {
                 }
             }
         }
-        if (cow.size() == 0) {
+        if (cow.isEmpty()) {
             cow.add(Integer.valueOf(input));
         }
         return cow;
