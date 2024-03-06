@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 public class LengthOfLongestSubstring {
 
-    // ×î³¤ÎŞÖØ¸´µÄ×Ó´®
+    // æœ€é•¿æ— é‡å¤çš„å­ä¸²
     public static int lengthOfLongestSubstring(String s) {
         if (s == null || s.length() == 0) return 0;
         int start = 0;
@@ -13,7 +13,7 @@ public class LengthOfLongestSubstring {
         HashMap<Character, Integer> map = new HashMap<>();
 
         for (int i = 0; i < s.toCharArray().length; i++) {
-            // Ã¿¸öÔªËØ×î¿ªÊ¼µÄÎ»ÖÃ
+            // æ¯ä¸ªå…ƒç´ æœ€å¼€å§‹çš„ä½ç½®
             if (map.containsKey(s.charAt(i))) {
                 start = Math.max(map.put(s.charAt(i), i) + 1, start);
             }

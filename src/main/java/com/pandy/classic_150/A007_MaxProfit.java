@@ -1,4 +1,4 @@
-package com.pandy.test;
+package com.pandy.classic_150;
 
 public class A007_MaxProfit {
     public int maxProfit(int[] prices) {

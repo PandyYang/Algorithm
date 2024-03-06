@@ -1,4 +1,4 @@
-package com.pandy.test;
+package com.pandy.classic_150;
 
 public class A010_CanJumpII {
     public static int jump(int[] nums) {

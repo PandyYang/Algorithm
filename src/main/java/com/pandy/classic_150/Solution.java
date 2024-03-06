@@ -1,4 +1,4 @@
-package com.pandy.test;
+package com.pandy.classic_150;
 
 import com.pandy.common.TreeNode;
 

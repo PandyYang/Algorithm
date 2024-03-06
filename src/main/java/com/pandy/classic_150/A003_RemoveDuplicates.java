@@ -1,4 +1,4 @@
-package com.pandy.test;
+package com.pandy.classic_150;
 
 public class A003_RemoveDuplicates {
     int i = 0;

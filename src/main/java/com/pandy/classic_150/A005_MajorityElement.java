@@ -1,4 +1,4 @@
-package com.pandy.test;
+package com.pandy.classic_150;
 
 // 摩尔投票法
 public class A005_MajorityElement {
