@@ -1,50 +1,49 @@
 package com.pandy.base.array.package01;
 
+import java.util.Arrays;
+
 /**
  * @author Pandy
  * @date 6/6/2022
  * <p>
  * 分糖果
+ * 贪心算法
  * <p>
- * 我们可以将「相邻的孩子中，评分高的孩子必须获得更多的糖果」这句话拆分为两个规则，分别处理。
- * <p>
- * 左规则：当 ratings[i - 1] < ratings[i] 时，ii 号学生的糖果数量将比 i - 1i−1 号孩子的糖果数量多。
- * <p>
- * 右规则：当 ratings[i] > ratings[i + 1]时，ii 号学生的糖果数量将比 i + 1i+1 号孩子的糖果数量多。
- * <p>
- * 我们遍历该数组两次，处理出每一个学生分别满足左规则或右规则时，最少需要被分得的糖果数量。每个人最终分得的糖果数量即为这两个数量的最大值。
- * <p>
- * 具体地，以左规则为例：我们从左到右遍历该数组，假设当前遍历到位置 ii，如果有 ratings[i - 1] < ratings[i]
- * ratings[i−1]<ratings[i] 那么 ii 号学生的糖果数量将比 i - 1i−1 号孩子的糖果数量多，
- * 我们令 {left}[i] = {left}[i - 1] + 1left[i]=left[i−1]+1 即可，否则我们令 {left}[i] = 1left[i]=1。
- * <p>
- * 在实际代码中，我们先计算出左规则 left 数组，在计算右规则的时候只需要用单个变量记录当前位置的右规则，同时计算答案即可。
+ * 首先，初始化一个数组 candies，数组长度与评分数组 ratings 相同，全部元素初始化为 1，表示每个孩子至少分配到 1 个糖果。
+ * 从左往右遍历评分数组 ratings，对于每个孩子 i，如果 ratings[i] 大于 ratings[i-1]（前一个孩子的评分），
+ * 则 candies[i] = candies[i-1] + 1，即当前孩子获得的糖果数比前一个孩子多 1。
+ * 再从右往左遍历评分数组 ratings，对于每个孩子 i，如果 ratings[i] 大于 ratings[i+1]（后一个孩子的评分），
+ * 且 candies[i] 不大于 candies[i+1]，则 candies[i] = candies[i+1] + 1，即当前孩子获得的糖果数比后一个孩子多 1。
+ * 最终，数组 candies 中的每个元素就表示每个孩子实际获得的糖果数，返回 candies 数组的总和即为最少糖果数目。
+ *
+ *
+ * 之所以遍历两次，是因为我们要确保一个孩子的左右相邻的两边都要进行分配糖果数的满足。
  */
 public class Candy {
 
     public int candy(int[] ratings) {
         int n = ratings.length;
-        int[] left = new int[n];
+        int[] candies = new int[n];
+        Arrays.fill(candies, 1); // 初始化每个孩子至少分配到 1 个糖果
 
-        // 一次遍历求左规则
-        for (int i = 0; i < n; i++) {
-            if (i > 0 && ratings[i] > ratings[i - 1]) {
-                left[i] = left[i - 1] + 1;
-            } else {
-                left[i] = 1;
+        // 从左往右遍历评分数组，保证评分更高的孩子获得更多的糖果
+        for (int i = 1; i < n; i++) {
+            if (ratings[i] > ratings[i - 1]) {
+                candies[i] = candies[i - 1] + 1;
             }
         }
 
-        // 一次遍历求右规则
-        int right = 0, ret = 0;
-        for (int i = n - 1; i >= 0; i--) {
-            if (i < n - 1 && ratings[i] > ratings[i + 1]) {
-                right++;
-            } else {
-                right = 1;
+        // 从右往左遍历评分数组，保证评分更高的孩子获得更多的糖果
+        for (int i = n - 2; i >= 0; i--) {
+            if (ratings[i] > ratings[i + 1]) {
+                // candies[i] 当前孩子的糖果数量
+                // candies[i+1] 右相邻孩子所活得的糖果数量 注意+1是因为如果评分大于右边的孩子 那么 他就必须要获取比右边孩子大一个的糖果数量
+                candies[i] = Math.max(candies[i], candies[i + 1] + 1);
             }
-            ret += Math.max(left[i], right);
         }
-        return ret;
+
+        // 返回最少糖果数目
+        return Arrays.stream(candies).sum();
     }
+
 }
