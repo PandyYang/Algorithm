@@ -1,6 +1,7 @@
 package com.pandy.base.map;
 
 import java.util.HashMap;
+import java.util.HashSet;
 
 /**
  * @author: Pandy
@@ -14,20 +15,22 @@ import java.util.HashMap;
 public class LongestNoRepeatSubString {
 
     public int longest(String str) {
-        if (str == null || str.length() == 0) return 0;
+        int n = str.length();
+        HashSet<Character> set = new HashSet<>();
 
-        HashMap<Character, Integer> temp = new HashMap<>();
-        char[] chars = str.toCharArray();
+        int maxLen = 0;
+        int left = 0, right = 0;
 
-        int res = 0, start = 0;
-
-        for (int i = 0; i < chars.length; i++) {
-            if (temp.containsKey(chars[i])) {
-                start = Math.max(temp.put(chars[i], i) + 1, start);
+        while (right < n) {
+            if (!set.contains(str.charAt(right))) {
+                set.add(str.charAt(right));
+                maxLen = Math.max(maxLen, right - left + 1);
+                right++;
+            } else {
+                set.remove(str.charAt(left));
+                left++;
             }
-            temp.put(chars[i], i);
-            res = Math.max(res, i - start + 1);
         }
-        return res;
+        return maxLen;
     }
 }
