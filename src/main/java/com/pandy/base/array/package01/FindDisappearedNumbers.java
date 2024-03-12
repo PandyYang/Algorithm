@@ -10,7 +10,7 @@ import java.util.List;
  * <p>
  * 数字范围1 - n，而数组下标 0 - n-1 则可用数组原地标记数字是否出现过
  **/
-public class FindDisapperedNumbers {
+public class FindDisappearedNumbers {
 
     public static List<Integer> findDisappearedNumbers(int[] nums) {
 

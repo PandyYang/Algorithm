@@ -1,4 +1,4 @@
-package com.pandy.base.array.package3;
+package com.pandy.base.dynamic;
 
 /**
  * @author: Pandy
