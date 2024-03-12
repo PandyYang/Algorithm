@@ -7,7 +7,9 @@ public class A020_MaxArea {
 
         while (left < right) {
             int h = Math.min(height[left], height[right]); // 当前区域的高度取两个指针对应位置的较小值
-            int area = (right - left) * h; // 计算当前区域的容量
+
+            int area = (Math.abs(right - left)) * h; // 计算当前区域的容量
+
             maxArea = Math.max(maxArea, area); // 更新最大容量
 
             // 移动较短的那条线段对应的指针
