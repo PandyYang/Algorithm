@@ -18,7 +18,7 @@ public class KthFromTail {
         }
 
         ListNode node1 = a;
-        ListNode node2 = null;
+        ListNode node2 = a;
         // 快链表先走k步
         for (int i = 0; i < k - 1; i++) {
             if (node1.next == null) {
@@ -30,8 +30,6 @@ public class KthFromTail {
 
         // node1是快指针 先走k步
         // node2从头出发
-        node2 = a;
-
         while (node1.next != null) {
             node1 = node1.next;
             node2 = node2.next;

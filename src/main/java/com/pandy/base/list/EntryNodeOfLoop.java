@@ -15,7 +15,7 @@ public class EntryNodeOfLoop {
         if (listNode == null || listNode.next == null) return null;
         ListNode l1 = listNode;
         ListNode l2 = listNode;
-        // 避免走两步时空指针
+        // 避免走两步时 空指针
         while (l2 != null && l2.next != null) {
             l1 = l1.next;
             l2 = l2.next.next;

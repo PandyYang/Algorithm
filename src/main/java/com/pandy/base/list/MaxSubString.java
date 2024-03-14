@@ -18,6 +18,7 @@ public class MaxSubString {
         int res = 0;
         int i = 0, j = 0;
         int len = s.length();
+
         while (i < len && j < len) {
             if (!set.contains(s.charAt(j))) {
                 set.add(s.charAt(j));
