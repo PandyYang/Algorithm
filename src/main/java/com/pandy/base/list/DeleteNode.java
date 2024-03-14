@@ -52,12 +52,16 @@ public class DeleteNode {
         if (head == null) return head;
         ListNode cur = head;
         ListNode pre = null;
+        // 是头节点 则直接返回下一个节点
         if (cur.val == val) return head.next;
+
         while (cur.val != val) {
+            // 记录上一个节点
             pre = cur;
             cur = cur.next;
         }
 
+        // 在此处进行删除
         pre.next = pre.next.next;
         return head;
     }

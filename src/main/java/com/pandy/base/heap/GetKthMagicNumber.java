@@ -16,13 +16,18 @@ public class GetKthMagicNumber {
 
         // 最小符合的数字
         result[0] = 1;
+
+        // 追踪因子
         int p0 = 0, p1 = 0, p2 = 0;
+
+        // 循环生成k个魔法数字
         for (int i = 1; i < k; i++) {
+
             int v1 = result[p0] * 3;
             int v2 = result[p1] * 5;
             int v3 = result[p2] * 7;
 
-            // 取最小数
+            // 然后选择这三个结果中的最小值作为当前位置的魔法数字。这确保了魔法数字是按照从小到大的顺序被填充的。
             int min = Math.min(v1, v2);
             min = Math.min(min, v3);
             result[i] = min;
