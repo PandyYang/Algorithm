@@ -3,8 +3,8 @@ package com.pandy.classic_150;
 import java.util.*;
 
 public class A011_RandomizedSet {
-    List<Integer> list = new ArrayList();
-    Map<Integer, Integer> map = new HashMap();
+    List<Integer> list = new ArrayList<>();
+    Map<Integer, Integer> map = new HashMap<>();
     Random random = new Random();
 
     public void RandomizedSet() {

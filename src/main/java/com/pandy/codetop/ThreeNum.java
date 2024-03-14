@@ -13,7 +13,7 @@ public class ThreeNum {
         for (int i = 0; i < nums.length; i++) {
             int left = i + 1;
             int right = nums.length - 1;
-            // ±Æ½ü·¨
+            // é€¼è¿‘æ³•
             while (left < right) {
                 if (nums[i] + nums[left] + nums[right] == 0) {
                     res.add(new ArrayList<>(Arrays.asList(nums[i], nums[left], nums[right])));

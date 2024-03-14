@@ -28,7 +28,7 @@ public class LRUCache {
         if (map.keySet().contains(key)) {
             map.remove(key);
             map.put(key, value);
-            // 到达容量 要清空最旧的元素
+            // 鍒拌揪瀹归噺 瑕佹竻绌烘渶鏃х殑鍏冪礌
         }else if (map.size() == cap) {
             Iterator<Map.Entry<Integer, Integer>> iterator = map.entrySet().iterator();
             if (iterator.hasNext()) {

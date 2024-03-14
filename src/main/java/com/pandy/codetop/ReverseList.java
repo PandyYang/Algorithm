@@ -7,10 +7,10 @@ public class ReverseList {
     public static ListNode reverseList(ListNode head) {
         ListNode pre = null;
         ListNode cur = head;
-        // Ã¿´ÎÑ­»·£¬¶¼½«µ±Ç°½ÚµãÖ¸ÏòËüÇ°ÃæµÄ½Úµã£¬È»ºóµ±Ç°½ÚµãºÍÇ°½ÚµãºóÒÆ
+        // æ¯æ¬¡å¾ªç¯ï¼Œéƒ½å°†å½“å‰èŠ‚ç‚¹æŒ‡å‘å®ƒå‰é¢çš„èŠ‚ç‚¹ï¼Œç„¶åå½“å‰èŠ‚ç‚¹å’Œå‰èŠ‚ç‚¹åç§»
         while (cur != null) {
-            ListNode temp = cur.next; // ÓÃÓÚºóÒÆµÄ½Úµã
-            cur.next = pre; // µ±Ç°½ÚµãÖ¸ÏòÇ°¶ËµÄ½çÃæ
+            ListNode temp = cur.next; // ç”¨äºåç§»çš„èŠ‚ç‚¹
+            cur.next = pre; // å½“å‰èŠ‚ç‚¹æŒ‡å‘å‰ç«¯çš„ç•Œé¢
             pre = cur;
             cur = temp;
         }

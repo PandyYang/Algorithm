@@ -2,48 +2,48 @@ package com.pandy.codetop;
 
 public class QuickSort {
 
-    // ¿ìËÙÅÅĞòÈë¿Úº¯Êı
+    // å¿«é€Ÿæ’åºå…¥å£å‡½æ•°
     public void quickSort(int[] array) {
         if (array == null || array.length == 0) {
-            return; // Èç¹ûÊı×éÎª¿Õ»òÕß³¤¶ÈÎª0£¬Ôò²»ĞèÒªÅÅĞò£¬Ö±½Ó·µ»Ø
+            return; // å¦‚æœæ•°ç»„ä¸ºç©ºæˆ–è€…é•¿åº¦ä¸º0ï¼Œåˆ™ä¸éœ€è¦æ’åºï¼Œç›´æ¥è¿”å›
         }
         int length = array.length;
-        quickSortHelper(array, 0, length - 1); // µ÷ÓÃ¸¨Öúº¯Êı½øĞĞ¿ìËÙÅÅĞò
+        quickSortHelper(array, 0, length - 1); // è°ƒç”¨è¾…åŠ©å‡½æ•°è¿›è¡Œå¿«é€Ÿæ’åº
     }
 
-    // ¿ìËÙÅÅĞòµÄ¸¨Öúº¯Êı
+    // å¿«é€Ÿæ’åºçš„è¾…åŠ©å‡½æ•°
     private void quickSortHelper(int[] array, int low, int high) {
         if (low < high) {
-            int pivotIndex = partition(array, low, high); // »ñÈ¡»ù×¼ÔªËØµÄË÷ÒıÎ»ÖÃ
-            // µİ¹éµØ¶Ô»ù×¼ÔªËØ×óÓÒÁ½±ßµÄ×ÓÊı×é½øĞĞ¿ìËÙÅÅĞò
+            int pivotIndex = partition(array, low, high); // è·å–åŸºå‡†å…ƒç´ çš„ç´¢å¼•ä½ç½®
+            // é€’å½’åœ°å¯¹åŸºå‡†å…ƒç´ å·¦å³ä¸¤è¾¹çš„å­æ•°ç»„è¿›è¡Œå¿«é€Ÿæ’åº
             quickSortHelper(array, low, pivotIndex - 1);
             quickSortHelper(array, pivotIndex + 1, high);
         }
     }
 
-    // ·ÖÇøº¯Êı£¬ÓÃÓÚÈ·¶¨»ù×¼ÔªËØµÄÎ»ÖÃ
+    // åˆ†åŒºå‡½æ•°ï¼Œç”¨äºç¡®å®šåŸºå‡†å…ƒç´ çš„ä½ç½®
     private int partition(int[] array, int low, int high) {
-        int pivot = array[high]; // Ñ¡Ôñ×îºóÒ»¸öÔªËØ×÷Îª»ù×¼ÔªËØ
-        int i = low - 1; // ³õÊ¼»¯ i Ö¸Õë£¬Ö¸ÏòµÍÎ»µÄÇ°Ò»¸öÎ»ÖÃ
+        int pivot = array[high]; // é€‰æ‹©æœ€åä¸€ä¸ªå…ƒç´ ä½œä¸ºåŸºå‡†å…ƒç´ 
+        int i = low - 1; // åˆå§‹åŒ– i æŒ‡é’ˆï¼ŒæŒ‡å‘ä½ä½çš„å‰ä¸€ä¸ªä½ç½®
         for (int j = low; j < high; j++) {
-            // Èç¹ûµ±Ç°ÔªËØĞ¡ÓÚµÈÓÚ»ù×¼ÔªËØ£¬Ôò½«Æä·ÅÈëµÍÎ»ÇøÓò
+            // å¦‚æœå½“å‰å…ƒç´ å°äºç­‰äºåŸºå‡†å…ƒç´ ï¼Œåˆ™å°†å…¶æ”¾å…¥ä½ä½åŒºåŸŸ
             if (array[j] <= pivot) {
                 i++;
-                swap(array, i, j); // ½»»»ÔªËØ£¬½«Ğ¡ÓÚµÈÓÚ»ù×¼ÔªËØµÄÔªËØ·ÅÈëµÍÎ»ÇøÓò
+                swap(array, i, j); // äº¤æ¢å…ƒç´ ï¼Œå°†å°äºç­‰äºåŸºå‡†å…ƒç´ çš„å…ƒç´ æ”¾å…¥ä½ä½åŒºåŸŸ
             }
         }
-        swap(array, i + 1, high); // ½«»ù×¼ÔªËØ·ÅÈëÕıÈ·µÄÎ»ÖÃ
-        return i + 1; // ·µ»Ø»ù×¼ÔªËØµÄ×îÖÕÎ»ÖÃ
+        swap(array, i + 1, high); // å°†åŸºå‡†å…ƒç´ æ”¾å…¥æ­£ç¡®çš„ä½ç½®
+        return i + 1; // è¿”å›åŸºå‡†å…ƒç´ çš„æœ€ç»ˆä½ç½®
     }
 
-    // ½»»»Êı×éÖĞÁ½¸öÔªËØµÄÎ»ÖÃ
+    // äº¤æ¢æ•°ç»„ä¸­ä¸¤ä¸ªå…ƒç´ çš„ä½ç½®
     private void swap(int[] array, int i, int j) {
         int temp = array[i];
         array[i] = array[j];
         array[j] = temp;
     }
 
-    // ²âÊÔ¿ìËÙÅÅĞòËã·¨
+    // æµ‹è¯•å¿«é€Ÿæ’åºç®—æ³•
     public static void main(String[] args) {
         QuickSort sorter = new QuickSort();
         int[] arr = {7, 2, 1, 6, 8, 5, 3, 4};

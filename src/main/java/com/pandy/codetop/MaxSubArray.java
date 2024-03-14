@@ -6,11 +6,11 @@ public class MaxSubArray {
         int sum = 0;
         int max = nums[0];
         for (int i = 0; i < nums.length; i++) {
-            // ÓĞÔöÒæ Ôò¿ÉÒÔ¼ÌĞøÔö¼ÓÔªËØ
+            // æœ‰å¢ç›Š åˆ™å¯ä»¥ç»§ç»­å¢åŠ å…ƒç´ 
             if (sum > 0) {
                 sum += nums[i];
             } else {
-                // Ã»ÓĞÔöÒæ Ôò½«ÆäÖÃÎªµ±Ç°Öµ
+                // æ²¡æœ‰å¢ç›Š åˆ™å°†å…¶ç½®ä¸ºå½“å‰å€¼
                 sum = nums[i];
             }
             max = Math.max(sum, max);
