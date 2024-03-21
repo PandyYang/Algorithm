@@ -2,7 +2,7 @@ package com.pandy.codetop;
 
 import com.pandy.common.ListNode;
 
-public class ReverseList {
+public class C002_ReverseList {
 
     public static ListNode reverseList(ListNode head) {
         ListNode pre = null;
@@ -30,7 +30,7 @@ public class ReverseList {
         node3.next = node4;
 
 
-        ListNode node = ReverseList.reverseList(node0);
+        ListNode node = C002_ReverseList.reverseList(node0);
         System.out.println("node = " + node);
     }
 }

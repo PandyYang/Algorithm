@@ -1,12 +1,10 @@
 package com.pandy.codetop;
 
-import com.pandy.base.tree.traversal.In;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class ThreeNum {
+public class C006_ThreeNum {
     public List<List<Integer>> threeSum(int[] nums) {
         Arrays.sort(nums);
         List<List<Integer>> res =  new ArrayList<>();

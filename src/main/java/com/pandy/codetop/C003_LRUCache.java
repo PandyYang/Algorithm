@@ -1,16 +1,15 @@
 package com.pandy.codetop;
 
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class LRUCache {
+public class C003_LRUCache {
 
     private int cap;
     private Map<Integer, Integer> map = new LinkedHashMap<>();
 
-    public LRUCache(int capacity) {
+    public C003_LRUCache(int capacity) {
         this.cap = capacity;
     }
 
