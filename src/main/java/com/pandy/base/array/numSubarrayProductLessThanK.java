@@ -8,10 +8,10 @@ public class numSubarrayProductLessThanK {
         for (int i = 0; i < nums.length; i++) {
             product *= nums[i];
             while (left <= i && product >= k) {
-                // Ê¹ÓÃÒ»¸ö while Ñ­»·£¬µ± product ´óÓÚ»òµÈÓÚ k Ê±£¬´Ó product ÖÐ³ýÈ¥×ó±ß½çµÄÔªËØ (nums[left]) ²¢ÒÆ¶¯×ó±ß½ç£¨left++£©¡£
+                // ä½¿ç”¨ä¸€ä¸ª while å¾ªçŽ¯ï¼Œå½“ product å¤§äºŽæˆ–ç­‰äºŽ k æ—¶ï¼Œä»Ž product ä¸­é™¤åŽ»å·¦è¾¹ç•Œçš„å…ƒç´  (nums[left]) å¹¶ç§»åŠ¨å·¦è¾¹ç•Œï¼ˆleft++ï¼‰ã€‚
                 product /= nums[left++];
             }
-            // µ±´°¿ÚÄÚµÄ³Ë»ýÐ¡ÓÚ k Ê±£¬´Óµ±Ç°×ó±ß½çµ½ÓÒ±ß½çµÄËùÓÐ×ÓÊý×é¶¼»áÂú×ãÌõ¼þ¡£
+            // å½“çª—å£å†…çš„ä¹˜ç§¯å°äºŽ k æ—¶ï¼Œä»Žå½“å‰å·¦è¾¹ç•Œåˆ°å³è¾¹ç•Œçš„æ‰€æœ‰å­æ•°ç»„éƒ½ä¼šæ»¡è¶³æ¡ä»¶ã€‚
             count += i >= left? i - left + 1 : 0;
         }
         return count;

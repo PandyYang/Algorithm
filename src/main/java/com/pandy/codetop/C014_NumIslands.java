@@ -31,7 +31,9 @@ public class C014_NumIslands {
             return 0;
         }
 
+        // 标记为已访问
         grid[i][j] = '0';
+        // 前后左右 依次处理
         dfs(grid, i+1, j);
         dfs(grid, i-1, j);
         dfs(grid, i, j+1);
