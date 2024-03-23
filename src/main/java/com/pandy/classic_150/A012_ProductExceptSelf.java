@@ -4,23 +4,23 @@ public class A012_ProductExceptSelf {
     public int[] productExceptSelf(int[] nums) {
         int n = nums.length;
 
-        // -------------------------- ÔªËØ×ó±ßµÄÖµ -------------------------
+        // -------------------------- å…ƒç´ å·¦è¾¹çš„å€¼ -------------------------
         int[] leftProducts = new int[n];
-        // ÒòÎª×î×ó±ßµÄµÚÒ»¸öÊı¾İ Ã»ÓĞ¸ü×óµÄÊı×Ö Ö»ÄÜÊÇ1
+        // å› ä¸ºæœ€å·¦è¾¹çš„ç¬¬ä¸€ä¸ªæ•°æ® æ²¡æœ‰æ›´å·¦çš„æ•°å­— åªèƒ½æ˜¯1
         leftProducts[0] = 1;
         for (int i = 1; i < n; i++) {
-            // ×¢Òâ
+            // æ³¨æ„
             leftProducts[i] = leftProducts[i-1] * nums[i-1];
         }
 
-        // --------------------------- ÔªËØÓÒ±ßµÄÖµ -------------------------
+        // --------------------------- å…ƒç´ å³è¾¹çš„å€¼ -------------------------
         int[] rightProducts = new int[n];
         rightProducts[n-1] = 1;
         for (int i = n-2; i >= 0; i--) {
             rightProducts[i] = rightProducts[i+1] * nums[i+1];
         }
 
-        // ---------------------------×óÓÒµÄÔªËØÏà³Ë-------------------------
+        // ---------------------------å·¦å³çš„å…ƒç´ ç›¸ä¹˜-------------------------
         int[] answer = new int[n];
         for (int i = 0; i < n; i++) {
             answer[i] = leftProducts[i] * rightProducts[i];
