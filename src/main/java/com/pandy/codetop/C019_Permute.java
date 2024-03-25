@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.Queue;
 
 /**
+ *
+ * 深度优先遍历
  * 给定一个不含重复数字的数组 nums ，返回其 所有可能的全排列 。你可以 按任意顺序 返回答案。
  *
  * 示例 1：
@@ -25,7 +27,6 @@ public class C019_Permute {
     public List<List<Integer>> permute(int[] nums) {
 
         List<List<Integer>> res = new ArrayList<>();
-//        ArrayList<Integer> arr = new ArrayList<>();
         List<Integer> queue = new ArrayList<>();
         dfs(res, nums, queue);
         return res;

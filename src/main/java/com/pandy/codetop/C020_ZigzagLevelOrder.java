@@ -1,65 +1,69 @@
 package com.pandy.codetop;
 
 import com.pandy.common.TreeNode;
+import com.sun.org.apache.xpath.internal.operations.Bool;
 
 import java.util.ArrayList;
 import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * 广度优先遍历
+ */
 public class C020_ZigzagLevelOrder {
 
-    public List<List<Integer>> treeNode(TreeNode root) {
-        List<List<Integer>> res = new ArrayList<>();
+    // 遍历树的每一层
+    public List<List<Integer>> tree(TreeNode root) {
+        List<List<Integer>> result = new ArrayList<>();
+        if (root == null) return result;
+
         Deque<TreeNode> queue = new LinkedList<>();
         queue.add(root);
+
+        while (!queue.isEmpty()) {
+            List<Integer> level = new ArrayList<>();
+            for (int i = 0; i < queue.size(); i++) {
+                root = queue.remove();
+                level.add(root.val);
+                if (root.left != null) queue.add(root.left);
+                if (root.right != null) queue.add(root.right);
+            }
+            result.add(level);
+        }
+        return result;
+    }
+
+    public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+        List<List<Integer>> result = new ArrayList<>();
+        if (root == null) return result;
+        Deque<TreeNode> queue = new LinkedList<>();
+        Boolean left2Right = true;
+        queue.offer(root);
         while (!queue.isEmpty()) {
             List<Integer> level = new ArrayList<>();
             int size = queue.size();
             for (int i = 0; i < size; i++) {
-                root = queue.poll();
-                level.add(root.val);
 
-                if (root.left != null) {
-                    queue.add(root.left);
-                }
-
-                if (root.right != null) {
-                    queue.add(root.right);
-                }
-            }
-            res.add(level);
-        }
-        return res;
-    }
-
-    public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
-        List<List<Integer>> res = new ArrayList<>();
-        Deque<TreeNode> queue = new LinkedList<>();
-        boolean isLeftToRight = false;
-        queue.add(root);
-        while (!queue.isEmpty()) {
-            Deque<Integer> level = new LinkedList<>();
-            int size = queue.size();
-            for (int i = 0; i < size; i++) {
                 root = queue.poll();
 
-                if (isLeftToRight) {
-                    level.offerFirst(root.val);
+                if (left2Right) {
+                   level.add(root.val);
                 } else {
-                    level.offerLast(root.val);
+                    level.add(0, root.val);
                 }
 
                 if (root.left != null) {
-                    queue.add(root.left);
+                    queue.offer(root.left);
                 }
 
                 if (root.right != null) {
-                    queue.add(root.right);
+                    queue.offer(root.right);
                 }
             }
-            res.add(new ArrayList<>(level));
+            left2Right = !left2Right;
+            result.add(level);
         }
-        return res;
+        return result;
     }
 }
