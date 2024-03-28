@@ -32,11 +32,9 @@ public class BuildTree {
             // 中序遍历的右边 都是根节点的右边
             if (pre[0] == in[i]) {
                 // 找到左子树
-                root.left = reConstructBinaryTree(Arrays.copyOfRange(pre, 1, i + 1),
-                        Arrays.copyOfRange(in, 0, i));
+                root.left = reConstructBinaryTree(Arrays.copyOfRange(pre, 1, i + 1), Arrays.copyOfRange(in, 0, i));
                 // 找到右子树
-                root.right = reConstructBinaryTree(Arrays.copyOfRange(pre, i + 1, pre.length),
-                        Arrays.copyOfRange(in, i + 1, in.length));
+                root.right = reConstructBinaryTree(Arrays.copyOfRange(pre, i + 1, pre.length), Arrays.copyOfRange(in, i + 1, in.length));
             }
         }
         return root;

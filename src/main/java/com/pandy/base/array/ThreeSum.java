@@ -16,7 +16,7 @@ public class ThreeSum {
                 twoSum(nums, i, result);
                 int temp = nums[i];
 
-                // 过滤掉起点重复的[1,1,1,2,3,-2,-3]
+                // 杩囨护鎺夎捣鐐归噸澶嶇殑[1,1,1,2,3,-2,-3]
                 while (i < nums.length && nums[i] == temp) {
                     ++i;
                 }
@@ -26,14 +26,14 @@ public class ThreeSum {
     }
 
     private void twoSum(int[] nums, int i, List<List<Integer>> result) {
-        int j = i + 1; // 最左边
-        int k = nums.length - 1; // 最右边
+        int j = i + 1; // 鏈�宸﹁竟
+        int k = nums.length - 1; // 鏈�鍙宠竟
         while (j < k) {
             if (nums[i] + nums[j] + nums[k] == 0) {
                 result.add(Arrays.asList(nums[i], nums[j], nums[k]));
 
                 int temp = nums[j];
-                // 过滤掉重复的
+                // 杩囨护鎺夐噸澶嶇殑
                 while (nums[j] == temp && j < k) {
                     ++j;
                 }
