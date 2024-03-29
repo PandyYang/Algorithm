@@ -15,26 +15,21 @@ public class C003_LRUCache {
 
     public int get(int key) {
         if (map.keySet().contains(key)) {
-            Integer v = map.get(key);
-            map.remove(v);
-            map.put(key, v);
-            return v;
+            Integer value = map.remove(key); // 正确地移除key
+            map.put(key, value); // 然后将其重新放入map，确保它在末尾
+            return value;
         }
         return -1;
     }
 
     public void put(int key, int value) {
-        if (map.keySet().contains(key)) {
+        if (map.containsKey(key)) {
             map.remove(key);
-            map.put(key, value);
-            // 到达容量 要清空最旧的元素
-        }else if (map.size() == cap) {
-            Iterator<Map.Entry<Integer, Integer>> iterator = map.entrySet().iterator();
-            if (iterator.hasNext()) {
-                iterator.next();
-                iterator.remove();
-                map.put(key,value);
-            }
+        } else if (map.size() == cap) {
+            Integer firstKey = map.keySet().iterator().next(); // 直接获取第一个键
+            map.remove(firstKey); // 移除最早的元素
         }
+        map.put(key, value); // 添加新元素或更新旧元素的位置
     }
+
 }

@@ -10,6 +10,9 @@ public class C027_RemoveNthFromEnd {
         ListNode fast = dummy;
         ListNode slow = dummy;
 
+        fast.next = head;
+        slow.next = head;
+
         for (int i = 0; i <= n; i++) {
             fast = fast.next;
         }
