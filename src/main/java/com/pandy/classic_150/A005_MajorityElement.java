@@ -6,7 +6,6 @@ public class A005_MajorityElement {
         int a = nums[0];
         int count = 1;
         for (int i = 1; i < nums.length; i++) {
-
             if (count == 0) {
                 a = nums[i];
                 count = 1;
