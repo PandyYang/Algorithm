@@ -24,13 +24,18 @@ import java.util.Scanner;
 public class Main2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+
+        // 总人数
         int N = Integer.parseInt(scanner.nextLine());
+        // 确诊病例人员编号
         String[] confirms = scanner.nextLine().split(",");
 
-        //
+        // 创建接触矩阵
         boolean[][] techie = new boolean[N][N];
+        // 创建访问记录数组
         boolean[] visited = new boolean[N];
 
+        // 构建接触矩阵
         for (int i = 0; i < N; i++) {
             String[] row = scanner.nextLine().split(",");
             for (int j = 0; j < N; j++) {
@@ -38,15 +43,21 @@ public class Main2 {
             }
         }
 
+        // 对每个病人进行深度优先搜索
         for (String person : confirms) {
             int i = Integer.parseInt(person);
             dfs(techie, visited, i);
         }
 
+        // 需要进行核酸检测的人数
         int count = 0;
+        // 遍历访问记录数组 统计需要检测的人数
         for (int i = 0; i < N; i++) {
+            // 如果该人员曾经被访问过
             if (visited[i]){
+                // 检查该人员是否为确诊病例
                 boolean contains = Arrays.asList(confirms).contains(String.valueOf(i));
+                // 如果这个人不是确诊病例，但通过传播链条被访问过，那么他们需要进行核酸检测，因此计数器 count 加一。
                 if (!contains){
                     count++;
                 }
@@ -58,7 +69,9 @@ public class Main2 {
     public static void dfs(boolean[][] jiechu, boolean[] visited,int index) {
         visited[index]= true;
         for (int i = 0; i < jiechu.length; i++) {
+            // 当前节点与其他节点有接触且节点未被访问过
             if (jiechu[index][i] && !visited[i]) {
+                // 递归访问该节点
                 dfs(jiechu, visited, i);
             }
         }
