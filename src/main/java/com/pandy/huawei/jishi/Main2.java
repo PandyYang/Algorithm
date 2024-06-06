@@ -46,6 +46,7 @@ public class Main2 {
         // 对每个病人进行深度优先搜索
         for (String person : confirms) {
             int i = Integer.parseInt(person);
+            // 接触矩阵 标记访问 当前人员
             dfs(techie, visited, i);
         }
 
