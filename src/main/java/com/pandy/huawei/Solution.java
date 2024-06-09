@@ -1,29 +1,35 @@
 package com.pandy.huawei;
 
-import java.util.ArrayDeque;
-import java.util.Deque;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 class Solution {
-    public static int longestValidParentheses(String s) {
-        if (s == null || s.length() == 0) return 0;
-        Deque<Integer> stack = new ArrayDeque<>();
-        stack.push(-1);
-        int res = 0;
-        for (int i = 0; i < s.length(); i++) {
-            if (s.charAt(i) == '(') stack.push(i);
-            else {
-                stack.pop();
-                if (stack.isEmpty()) stack.push(i);
-                else {
-                    res = Math.max(res, i-stack.peek());
-                }
-            }
-        }
+    public static List<List<Integer>> permute(int[] nums) {
+        List<List<Integer>> res = new ArrayList<>();
+        dfs(res, nums, new ArrayList<Integer>(), new boolean[nums.length], 0);
         return res;
     }
 
+    private static void dfs(List<List<Integer>> res, int[] nums, ArrayList<Integer> list, boolean[] visited, int index) {
+
+        if (list.size() == nums.length) {
+            res.add(new ArrayList<>(list));
+            return;
+        }
+
+        for (int i = 0; i < nums.length; i++) {
+            if (visited[i]) continue;
+            list.add(nums[i]);
+            visited[i] = true;
+            dfs(res, nums, list, visited, index + 1);
+            visited[i] = false;
+            list.remove(list.size() - 1);
+        }
+    }
+
     public static void main(String[] args) {
-        int i = longestValidParentheses("(()");
-        System.out.println("i = " + i);
+        List<List<Integer>> permute = permute(new int[]{1, 2, 3});
+        System.out.println(Arrays.toString(permute.toArray()));
     }
 }
