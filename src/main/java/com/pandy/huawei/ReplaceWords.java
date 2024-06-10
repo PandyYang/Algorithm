@@ -1,6 +1,29 @@
 package com.pandy.huawei;
 
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
+
 public class ReplaceWords {
+
+    public String replace2(String[] dictionary, String sentence) {
+        String[] words = sentence.split(" ");
+        Set<String> dicSet = new HashSet<>(Arrays.asList(dictionary));
+
+        for (int i = 0; i < words.length; i++) {
+            String word = words[i];
+            for (int j = 0; j < word.length(); j++) {
+                String substring = word.substring(0, j + 1);
+                if (dicSet.contains(substring)) {
+                    words[i] = substring;
+                    break;
+                }
+            }
+        }
+        return String.join(" ", words);
+    }
+
     public String replace(String[] dictionary, String sentence) {
         String[] sentSplitList = sentence.split(" ");
 
