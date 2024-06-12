@@ -1,4 +1,4 @@
-package com.pandy.huawei;
+package com.pandy.huawei.shousi;
 
 import java.util.HashSet;
 
