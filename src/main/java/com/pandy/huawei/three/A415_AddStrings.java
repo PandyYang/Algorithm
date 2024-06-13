@@ -5,6 +5,7 @@ public class A415_AddStrings {
 
         int i = num1.length() - 1;
         int j = num2.length() - 1;
+
         int carry = 0;
         StringBuilder stringBuilder = new StringBuilder();
 

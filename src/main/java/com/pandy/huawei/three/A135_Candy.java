@@ -1,6 +1,6 @@
 package com.pandy.huawei.three;
 
-public class A135 {
+public class A135_Candy {
     public int candy(int[] ratings) {
 
         int[] dp = new int[ratings.length];
