@@ -7,6 +7,7 @@ public class A415_AddStrings {
         int j = num2.length() - 1;
         int carry = 0;
         StringBuilder stringBuilder = new StringBuilder();
+
         while (i >= 0 || j >= 0) {
 
             if (i >= 0) {
