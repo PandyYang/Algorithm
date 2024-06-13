@@ -5,8 +5,10 @@ import java.util.Arrays;
 public class A522_FindLUSLength {
     public int findLUSLength(String[] strs) {
         Arrays.sort(strs, (a1, a2) -> a2.length() - a1.length());
+
         for (int i = 0; i < strs.length; i++) {
             boolean isUncommon = true;
+
             for (int j = 0; j < strs.length; j++) {
                 if (i != j && isSubsequence(strs[i], strs[j])) {
                     isUncommon = false;

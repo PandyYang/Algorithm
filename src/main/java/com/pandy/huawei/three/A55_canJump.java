@@ -10,7 +10,9 @@ package com.pandy.huawei.three;
 public class A55_canJump {
     public boolean canJump(int[] nums) {
         int tar = nums.length - 1;
+
         for (int i = nums.length - 2; i >= 0; i--) {
+
             if (i + nums[i] >= tar) {
                 tar = i;
             }

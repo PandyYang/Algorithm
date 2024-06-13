@@ -4,6 +4,7 @@ import com.pandy.common.ListNode;
 
 /**
  * 删除链表中的重复元素II
+ * 给定一个已排序的链表的头 head ， 删除原始链表中所有重复数字的节点，只留下不同的数字 。返回 已排序的链表 。
  */
 public class A82_DeleteDuplicates {
     public ListNode deleteDuplicates(ListNode head) {

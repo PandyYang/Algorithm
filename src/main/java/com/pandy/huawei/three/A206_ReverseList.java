@@ -4,9 +4,8 @@ import com.pandy.common.ListNode;
 
 public class A206_ReverseList {
     public ListNode reverseList(ListNode head) {
-        ListNode cur;
+        ListNode cur = head;
         ListNode pre = null;
-        cur = head;
 
         while (cur != null) {
             ListNode next = cur.next;

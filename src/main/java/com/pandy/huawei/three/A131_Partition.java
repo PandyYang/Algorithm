@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * 分割的全部回文串
+ */
 public class A131_Partition {
     public List<List<String>> partition(String s) {
         List<List<String>> res = new ArrayList<>();

@@ -5,6 +5,7 @@ public class A504_ConvertToBase7 {
         if (num == 0) return "0";
         boolean flag = num < 0;
         num = Math.abs(num);
+
         StringBuilder stringBuilder = new StringBuilder();
         while (num > 0) {
             stringBuilder.append(num % 7);
